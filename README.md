@@ -13,6 +13,7 @@
 - So a **long download** if you select lots of territories and/or the app is popular.
 - Needs an **interesting and informative progress bar** to deal with apps that have either too much data or not much at all.
 - Servers tend to block if too much activity.
+- All pages need to be downloaded at once. For this particular app we are not interested in just the latest reviews.
 
 ## The App Solution
 - **Show each territory** as it's own little loader bar. **Color coded** to reflect errors, and quantity of downloads.
