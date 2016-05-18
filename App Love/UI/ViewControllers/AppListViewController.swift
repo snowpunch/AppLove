@@ -48,7 +48,7 @@ class AppListViewController: UIViewController {
     
     // apps to display initially, to check out how the app functions
     func loadDefaultApps () {
-        let defaultAppIds = [Const.MusketSmoke]
+        let defaultAppIds = [Const.MusketSmoke, Const.AppLove]
         
         for appId:Int in defaultAppIds {
             AppInfo.get(String(appId)) { (model, succeeded, error) -> Void in

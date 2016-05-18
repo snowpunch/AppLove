@@ -23,4 +23,5 @@ class Const {
     
     // app id's
     static let MusketSmoke = 436684234
+    static let AppLove = 1099336831
 }
