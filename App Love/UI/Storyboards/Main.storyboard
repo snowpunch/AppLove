@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="N6z-7V-uz9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="N6z-7V-uz9">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--AppList-->
+        <scene sceneID="DEb-Rf-a4Q">
+            <objects>
+                <viewController id="YCd-Jn-7Ba" customClass="WHCViewController" customModule="App_Love" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kcN-mC-97i"/>
+                        <viewControllerLayoutGuide type="bottom" id="imt-pQ-ueU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Ff-Sw-xTf">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="AppList" id="go3-8Z-AI8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fAi-ez-c7W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="-433"/>
+        </scene>
         <!--App Love-->
         <scene sceneID="1jE-tw-2EP">
             <objects>
@@ -77,6 +96,11 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="App Love" id="OC5-Qh-ifu">
+                        <barButtonItem key="leftBarButtonItem" systemItem="camera" id="igH-Of-oIN" userLabel="QRCode">
+                            <connections>
+                                <action selector="onQRCode:" destination="NVk-Cm-fE5" id="24Q-bZ-gFd"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="udO-Pk-BvG">
                             <connections>
                                 <action selector="onSearch:" destination="NVk-Cm-fE5" id="0Tb-vr-x1f"/>
@@ -89,6 +113,8 @@
                         <segue destination="AkT-Aw-bQp" kind="show" identifier="AppSearch" id="Hee-3q-lkN"/>
                         <segue destination="3uy-ap-lbe" kind="show" identifier="reviewList" id="VzQ-lk-XIW"/>
                         <segue destination="kCD-r3-SBh" kind="show" identifier="about" id="1Sc-aV-EYG"/>
+                        <segue destination="YCd-Jn-7Ba" kind="show" identifier="AppList" id="VRY-0Y-Xh7"/>
+                        <segue destination="tlq-UO-UIu" kind="show" identifier="QRCode" id="Srd-uk-hfK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jOo-6s-Jna" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -421,6 +447,25 @@
             </objects>
             <point key="canvasLocation" x="2440" y="1056"/>
         </scene>
+        <!--QRCodeViewCntroller-->
+        <scene sceneID="ue5-6G-4ZO">
+            <objects>
+                <viewController title="QRCodeViewCntroller" id="tlq-UO-UIu" customClass="QRCodeViewController" customModule="App_Love" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q6D-vA-2Ez"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZbG-yK-ba1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2V6-cD-gaj">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="QRCode" id="vXa-PT-UOj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2vy-JQ-RHz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21" y="-433"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="wxf-vs-aP3">
             <objects>
@@ -436,7 +481,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="140-5L-v1K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="299"/>
+            <point key="canvasLocation" x="21" y="324"/>
         </scene>
         <!--About-->
         <scene sceneID="jqy-c9-Cf5">
@@ -484,15 +529,55 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="About" id="lQ8-Vd-Pi9"/>
+                    <navigationItem key="navigationItem" title="About" id="lQ8-Vd-Pi9">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="H6t-p9-M9x">
+                            <connections>
+                                <action selector="Test:" destination="kCD-r3-SBh" id="hUS-yQ-kzw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="skview" destination="jPM-Xq-i52" id="Q7M-99-cO0"/>
                         <outlet property="textView" destination="Cck-9Y-INm" id="xZ7-ni-sdU"/>
+                        <segue destination="PyV-i1-zCH" kind="show" identifier="test" id="1Iv-Zt-EPo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zRb-tL-B5A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="788" y="1032"/>
+        </scene>
+        <!--test-->
+        <scene sceneID="t8t-2R-1m5">
+            <objects>
+                <viewController storyboardIdentifier="test" title="test" id="PyV-i1-zCH" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HIW-nt-7Bg"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Gu-od-U9o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sEc-o0-a2l">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hello Test" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3W-CT-6kL">
+                                <rect key="frame" x="71" y="63" width="458" height="122"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1Gu-od-U9o" firstAttribute="top" secondItem="f3W-CT-6kL" secondAttribute="bottom" constant="351" id="LK7-EJ-Un1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="f3W-CT-6kL" secondAttribute="trailing" constant="51" id="QWv-ZU-P3W"/>
+                            <constraint firstItem="f3W-CT-6kL" firstAttribute="top" secondItem="HIW-nt-7Bg" secondAttribute="bottom" constant="63" id="VjO-Uu-O0P"/>
+                            <constraint firstItem="f3W-CT-6kL" firstAttribute="leading" secondItem="sEc-o0-a2l" secondAttribute="leadingMargin" constant="51" id="fyk-C1-ndR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Test" id="jMT-zk-Neh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jTh-1d-qGj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1601" y="1472"/>
         </scene>
     </scenes>
     <resources>

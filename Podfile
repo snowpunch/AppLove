@@ -7,4 +7,5 @@ target 'App Love' do
 	pod 'SwiftyJSON'
 	pod 'SDWebImage', '~>3.7'
 	pod 'SwiftyGlyphs'
+    pod 'libqrencode', '~> 3.4.2'
 end

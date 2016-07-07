@@ -36,12 +36,14 @@ class AboutViewController: UIViewController {
         
         textView.backgroundColor = .clearColor()
         textView.text = aboutText
+        
+        showAnimatedVersion()
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        showAnimatedVersion()
+
     }
  
     func showAnimatedVersion() {
@@ -52,4 +54,14 @@ class AboutViewController: UIViewController {
         glyphSprites.centerTextToView()
         AboutAnimation().startAnimation(glyphSprites)
     }
+    
+    @IBAction func Test(sender: AnyObject) {
+        if let storyboard = self.storyboard {
+            let testVC = storyboard.instantiateViewControllerWithIdentifier("test")
+            self.navigationController!.pushViewController(testVC, animated: true)
+
+        }
+        
+    }
+    
 }
