@@ -133,7 +133,7 @@ class LoadingProgressBar: UIView {
         self.loadStates[code] = LoadState(territory: code)
         self.addSubview(piece)
         piece.center = CGPoint(x: xPosition, y: 1)
-        xPosition += piece.width + spacing
+        xPosition += piece.width1 + spacing
         loaderPieces[code] = piece
     }
     
