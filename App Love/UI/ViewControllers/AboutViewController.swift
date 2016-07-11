@@ -11,15 +11,15 @@
 import UIKit
 import SpriteKit
 import SwiftyGlyphs
+import ElasticTransition
 
-class AboutViewController: UIViewController {
+class AboutViewController: ElasticModalViewController {
 
     @IBOutlet weak var skview: SKView!
     @IBOutlet weak var textView: UITextView!
-    lazy var glyphSprites = SpriteGlyphs(fontName: "HelveticaNeue-Light", size:24)
+    var glyphSprites:SpriteGlyphs? = nil
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         populateText()
     }
@@ -36,20 +36,29 @@ class AboutViewController: UIViewController {
         
         textView.backgroundColor = .clearColor()
         textView.text = aboutText
+        textView.userInteractionEnabled = false
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
         showAnimatedVersion()
     }
  
     func showAnimatedVersion() {
         guard let version = getVersion() else { return }
+        if glyphSprites == nil {
+            glyphSprites = SpriteGlyphs(fontName: "HelveticaNeue-Light", size:24)
+        }
         
-        glyphSprites.text = "Version "+version
-        glyphSprites.setLocation(skview, pos: CGPoint(x:0,y:30))
-        glyphSprites.centerTextToView()
-        AboutAnimation().startAnimation(glyphSprites)
+        if let glyphs = glyphSprites {
+            glyphs.text = "Version "+version
+            glyphs.setLocation(skview, pos: CGPoint(x:0,y:30))
+            glyphs.centerTextToView()
+            AboutAnimation().startAnimation(glyphs)
+        }
+    }
+    
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }

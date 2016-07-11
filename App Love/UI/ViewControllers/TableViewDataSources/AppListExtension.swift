@@ -34,7 +34,7 @@ extension AppListViewController: UITableViewDataSource {
         
         if let storyboard = self.storyboard {
             let reviewListVC = storyboard.instantiateViewControllerWithIdentifier("reviewList")
-            self.navigationController!.pushViewController(reviewListVC, animated: true)
+            showDetailViewController(reviewListVC, sender: self)
         }
         return indexPath
     }

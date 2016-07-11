@@ -42,13 +42,12 @@ class LoadingProgressBar: UIView {
     
     func registerNotifications() {
         unregisterNotifications()
-        let nc = NSNotificationCenter.defaultCenter()
-        nc.addObserver(self, selector: .loadStart, name: Const.loadStart, object: nil)
-        nc.addObserver(self, selector: .dataError, name: Const.dataError, object:nil)
-        nc.addObserver(self, selector: .territoryStarted, name: Const.territoryStart, object: nil)
-        nc.addObserver(self, selector: .territoryCompleted, name: Const.territoryDone, object: nil)
-        nc.addObserver(self, selector: .updateAmount, name: Const.updateAmount, object: nil)
-        nc.addObserver(self, selector: .reRenderForNewWidth, name: Const.orientationChange, object: nil)
+        NSNotificationCenter.addObserver(self,sel:.loadStart, name: Const.load.loadStart)
+        NSNotificationCenter.addObserver(self,sel:.dataError, name: Const.load.dataError)
+        NSNotificationCenter.addObserver(self,sel:.territoryStarted, name: Const.load.territoryStart)
+        NSNotificationCenter.addObserver(self,sel:.territoryCompleted, name: Const.load.territoryDone)
+        NSNotificationCenter.addObserver(self,sel:.updateAmount, name: Const.load.updateAmount)
+        NSNotificationCenter.addObserver(self,sel:.reRenderForNewWidth, name: Const.load.orientationChange)
     }
     
     func unregisterNotifications() {

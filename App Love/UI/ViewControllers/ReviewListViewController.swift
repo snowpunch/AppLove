@@ -52,7 +52,7 @@ class ReviewListViewController: UIViewController {
         allReviews.removeAll()
         self.tableView.reloadData()
         self.bottomToolbar.hidden = true
-        loadStopButton.title = "Stop"
+        loadStopButton.title = "Stop" // crash
         ReviewLoadManager.sharedInst.loadReviews()
         self.refreshControl?.endRefreshing()
     }
@@ -64,9 +64,8 @@ class ReviewListViewController: UIViewController {
     }
     
     func registerNotifications() {
-        let nc = NSNotificationCenter.defaultCenter()
-        nc.addObserver(self, selector: .reloadData, name: Const.reloadData, object: nil)
-        nc.addObserver(self, selector: .displayToolbar, name: Const.displayToolbar, object: nil)
+        NSNotificationCenter.addObserver(self, sel: .reloadData, name: Const.load.reloadData)
+        NSNotificationCenter.addObserver(self, sel: .displayToolbar, name: Const.load.displayToolbar)
     }
     
     func unregisterNotifications() {
@@ -79,8 +78,7 @@ class ReviewListViewController: UIViewController {
     }
     
     override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
-        let nc = NSNotificationCenter.defaultCenter()
-        nc.postNotificationName(Const.orientationChange, object: self)
+        NSNotificationCenter.post(Const.load.orientationChange)
     }
     
     @IBAction func onStopLoadToggle(button: UIBarButtonItem) {
@@ -102,8 +100,7 @@ class ReviewListViewController: UIViewController {
 
     func stopButtonPressed() {
         ReviewLoadManager.sharedInst.cancelLoading()
-        let nc = NSNotificationCenter.defaultCenter()
-        nc.postNotificationName(Const.reloadData, object: self)
+        NSNotificationCenter.post(Const.load.reloadData)
         loadStopButton.title = "Load"
         self.bottomToolbar.hidden = false
         finishedRefreshing()
@@ -163,7 +160,8 @@ extension ReviewListViewController {
         let selectTerritoriesAction = UIAlertAction(title: "Select Territories", style: .Destructive) { action -> Void in
             if let storyboard = self.storyboard {
                 let selectCountryVC = storyboard.instantiateViewControllerWithIdentifier("selectCountry")
-                self.navigationController!.pushViewController(selectCountryVC, animated: true)
+                self.showViewController(selectCountryVC, sender: self)
+                //self.navigationController!.pushViewController(selectCountryVC, animated: true)
             }
         }
         let viewInAppStoreAction = UIAlertAction(title: "View In App Store", style: .Default) { action -> Void in

@@ -15,6 +15,10 @@ import UIKit
 import SpriteKit
 import SDWebImage
 
+private extension Selector {
+    static let updateHeader = #selector(ReviewHeaderCell.updateHeader)
+}
+
 class ReviewHeaderCell: UITableViewCell {
 
     @IBOutlet weak var appIcon: UIImageView!
@@ -35,8 +39,7 @@ class ReviewHeaderCell: UITableViewCell {
     }
     
     func registerNotifications() {
-        let nc = NSNotificationCenter.defaultCenter()
-        nc.addObserver(self, selector: .updateHeader, name: Const.updateAmount, object:nil)
+        NSNotificationCenter.addObserver(self, sel: .updateHeader, name:Const.load.updateAmount)
     }
     
     func unregisterNotifications() {
@@ -68,8 +71,4 @@ class ReviewHeaderCell: UITableViewCell {
         }
         unregisterNotifications()
     }
-}
-
-private extension Selector {
-    static let updateHeader = #selector(ReviewHeaderCell.updateHeader)
 }

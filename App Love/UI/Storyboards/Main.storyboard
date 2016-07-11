@@ -18,59 +18,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cXJ-ZC-K2V" userLabel="Menu Territories" customClass="MenuButton" customModule="App_Love" customModuleProvider="target">
-                                <rect key="frame" x="10" y="27" width="118" height="37"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cXJ-ZC-K2V" userLabel="MenuButton Territories" customClass="MenuButton" customModule="App_Love" customModuleProvider="target">
+                                <rect key="frame" x="10" y="27" width="145" height="37"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="flag"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Territories"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onTerritoryOptions:" destination="SFE-65-t6s" eventType="touchUpInside" id="UUB-ZR-hDV"/>
+                                </connections>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ehq-ZD-DWe" userLabel="Menu Load" customClass="MenuButton" customModule="App_Love" customModuleProvider="target">
-                                <rect key="frame" x="10" y="72" width="118" height="37"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ehq-ZD-DWe" userLabel="MenuButton Load" customClass="MenuButton" customModule="App_Love" customModuleProvider="target">
+                                <rect key="frame" x="10" y="77" width="145" height="37"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="options_gear_white"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Load"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onLoadOptions:" destination="SFE-65-t6s" eventType="touchUpInside" id="kSP-QS-cfc"/>
+                                </connections>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s7m-4j-f6Z" userLabel="Menu About" customClass="MenuButton" customModule="App_Love" customModuleProvider="target">
-                                <rect key="frame" x="10" y="117" width="118" height="37"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s7m-4j-f6Z" userLabel="MenuButton Translate" customClass="MenuButton" customModule="App_Love" customModuleProvider="target">
+                                <rect key="frame" x="10" y="127" width="145" height="37"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="translate_white"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Translate"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onTranslateOptions:" destination="SFE-65-t6s" eventType="touchUpInside" id="h2w-Dn-W7W"/>
+                                </connections>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o9t-B9-pvS" userLabel="Menu Translate" customClass="MenuButton" customModule="App_Love" customModuleProvider="target">
-                                <rect key="frame" x="10" y="162" width="118" height="37"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o9t-B9-pvS" userLabel="MenuButton Share" customClass="MenuButton" customModule="App_Love" customModuleProvider="target">
+                                <rect key="frame" x="10" y="177" width="145" height="37"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="share"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Share"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onShareAppList:" destination="SFE-65-t6s" eventType="touchUpInside" id="CaB-EW-8CG"/>
+                                </connections>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YIL-jh-wi5" userLabel="Menu Share" customClass="MenuButton" customModule="App_Love" customModuleProvider="target">
-                                <rect key="frame" x="10" y="207" width="118" height="37"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YIL-jh-wi5" userLabel="MenuButton Add Review" customClass="MenuButton" customModule="App_Love" customModuleProvider="target">
+                                <rect key="frame" x="10" y="227" width="145" height="37"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="heartplus"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Add"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onAddAppReview:" destination="SFE-65-t6s" eventType="touchUpInside" id="dfs-fr-NId"/>
+                                </connections>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="orV-TM-DYh" userLabel="Menu Add" customClass="MenuButton" customModule="App_Love" customModuleProvider="target">
-                                <rect key="frame" x="10" y="252" width="118" height="37"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="orV-TM-DYh" userLabel="MenuButton help" customClass="MenuButton" customModule="App_Love" customModuleProvider="target">
+                                <rect key="frame" x="10" y="277" width="145" height="37"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="help"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Help"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onHelp:" destination="SFE-65-t6s" eventType="touchUpInside" id="z4a-SD-ueB"/>
+                                </connections>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D7K-LL-XuY" userLabel="Menu Help" customClass="MenuButton" customModule="App_Love" customModuleProvider="target">
-                                <rect key="frame" x="10" y="297" width="118" height="37"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D7K-LL-XuY" userLabel="MenuButton About" customClass="MenuButton" customModule="App_Love" customModuleProvider="target">
+                                <rect key="frame" x="10" y="327" width="145" height="37"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="about"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="About"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onAbout:" destination="SFE-65-t6s" eventType="touchUpInside" id="fxW-gT-3XZ"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.029303707182407379" green="0.24776312708854675" blue="0.4240475594997406" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.92377331340000002" green="0.94775050750000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fk2-7b-JgZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -98,11 +120,6 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="B9e-0e-p3L"/>
-                                    <barButtonItem image="options_gear" id="yqr-LH-ogl" userLabel="Share">
-                                        <connections>
-                                            <action selector="onShare:" destination="NVk-Cm-fE5" id="KWO-j7-aZv"/>
-                                        </connections>
-                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MZa-D6-ttk">
@@ -147,14 +164,17 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="App Love" id="OC5-Qh-ifu">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="U8A-hh-4ld">
+                        <barButtonItem key="leftBarButtonItem" id="U8A-hh-4ld">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sWb-w4-r8d" userLabel="HamburgerMenu" customClass="HamburgerButton" customModule="App_Love" customModuleProvider="target">
                                 <rect key="frame" x="20" y="11" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <connections>
+                                    <action selector="onSideMenuButton:" destination="NVk-Cm-fE5" eventType="touchUpInside" id="ftd-qh-hsa"/>
+                                </connections>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="udO-Pk-BvG">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="udO-Pk-BvG">
                             <connections>
                                 <action selector="onSearch:" destination="NVk-Cm-fE5" id="0Tb-vr-x1f"/>
                             </connections>
@@ -282,7 +302,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Search" id="ksy-Kh-KYR"/>
+                    <navigationItem key="navigationItem" title="Add Apps" id="ksy-Kh-KYR"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="searchBar" destination="bbC-3s-RTF" id="Mrd-W1-MWC"/>
@@ -316,8 +336,8 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Oz1-wf-TZA"/>
                                 </items>
                             </toolbar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lL5-qb-5Lk">
-                                <rect key="frame" x="0.0" y="20" width="600" height="536"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lL5-qb-5Lk">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="3uy-ap-lbe" id="WNB-eg-lan"/>
@@ -377,7 +397,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="udc-N4-P96" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2178" y="-739"/>
+            <point key="canvasLocation" x="2264" y="-547"/>
         </scene>
         <!--Territories-->
         <scene sceneID="KQ0-qq-qSv">
@@ -478,16 +498,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view hidden="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jat-J2-C3n" userLabel="SKView" customClass="SKView">
-                                <rect key="frame" x="150" y="0.0" width="300" height="50"/>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jat-J2-C3n" userLabel="SKView" customClass="SKView">
+                                <rect key="frame" x="150" y="20" width="300" height="50"/>
                                 <color key="backgroundColor" red="0.53646198140000001" green="1" blue="0.738758621" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0B5-m5-SCL"/>
                                     <constraint firstAttribute="width" constant="300" id="Lge-gF-mEn"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="A bunch of text" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EpU-sZ-blJ">
-                                <rect key="frame" x="29" y="51" width="542" height="466"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="A bunch of text" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EpU-sZ-blJ">
+                                <rect key="frame" x="29" y="70" width="542" height="510"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -604,7 +624,6 @@
         <image name="flag" width="36" height="36"/>
         <image name="heartplus" width="36" height="36"/>
         <image name="help" width="36" height="36"/>
-        <image name="options_gear" width="24" height="24"/>
         <image name="options_gear_white" width="36" height="36"/>
         <image name="share" width="36" height="36"/>
         <image name="translate_white" width="36" height="36"/>

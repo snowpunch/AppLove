@@ -12,16 +12,14 @@ import UIKit
 import SpriteKit
 import SwiftyGlyphs
 
-class HelpViewController: UIViewController {
+class HelpViewController: ElasticModalViewController {
 
     @IBOutlet weak var textView: UITextView!
-   
     @IBOutlet weak var skview: SKView!
-    lazy var glyphSprites = SpriteGlyphs(fontName: "MarkerFelt-Wide", size:24)
+    var glyphSprites:SpriteGlyphs? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         populateHelpText()
     }
 
@@ -33,19 +31,28 @@ class HelpViewController: UIViewController {
 
         textView.backgroundColor = .clearColor()
         textView.text = helpText
+        textView.userInteractionEnabled = false
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
         showAnimatedText()
     }
     
     func showAnimatedText() {
-        glyphSprites.text = "At Your Service!"
-        glyphSprites.setLocation(skview, pos: CGPoint(x:0,y:20))
-        glyphSprites.centerTextToView()
-
-        HelpAnimation().startAnimation(glyphSprites, viewWidth:skview.frame.width)
+        if glyphSprites == nil {
+            glyphSprites = SpriteGlyphs(fontName: "HelveticaNeue-Light", size:24)
+        }
+        
+        if let glyphs = glyphSprites {
+            glyphs.text = "At Your Service!"
+            glyphs.setLocation(skview, pos: CGPoint(x:0,y:20))
+            glyphs.centerTextToView()
+            HelpAnimation().startAnimation(glyphs, viewWidth:skview.frame.width)
+        }
+    }
+    
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }
