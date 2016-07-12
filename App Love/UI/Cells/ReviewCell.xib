@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -16,19 +16,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGr-QE-VJK">
-                        <rect key="frame" x="13" y="8" width="293" height="17"/>
+                        <rect key="frame" x="13" y="8" width="283" height="17"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkw-y3-DAF">
-                        <rect key="frame" x="13" y="28" width="308" height="17"/>
-                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
+                        <rect key="frame" x="13" y="28" width="308" height="22"/>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGb-xk-VR7">
-                        <rect key="frame" x="81" y="47" width="240" height="20"/>
+                        <rect key="frame" x="81" y="52" width="240" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="dUV-n8-oPk"/>
                         </constraints>
@@ -36,8 +36,8 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="translate" translatesAutoresizingMaskIntoConstraints="NO" id="kcg-Mf-Cbb">
-                        <rect key="frame" x="314" y="5" width="23" height="23"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="translate" translatesAutoresizingMaskIntoConstraints="NO" id="kcg-Mf-Cbb">
+                        <rect key="frame" x="304" y="-1" width="35" height="35"/>
                     </imageView>
                 </subviews>
                 <constraints>
@@ -67,7 +67,7 @@
                     <constraint firstAttribute="trailingMargin" secondItem="hGb-xk-VR7" secondAttribute="trailing" id="htu-J8-pQB"/>
                     <constraint firstAttribute="bottomMargin" secondItem="jkw-y3-DAF" secondAttribute="bottom" priority="250" constant="19" id="j22-Io-LmT"/>
                     <constraint firstItem="hGb-xk-VR7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="9" id="nOR-5y-GmX"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="iGr-QE-VJK" secondAttribute="trailing" constant="30" id="nmn-h5-Xba"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="iGr-QE-VJK" secondAttribute="trailing" constant="40" id="nmn-h5-Xba"/>
                     <constraint firstItem="iGr-QE-VJK" firstAttribute="top" secondItem="hGb-xk-VR7" secondAttribute="bottom" constant="-3" id="rsG-CD-U27"/>
                     <constraint firstItem="jkw-y3-DAF" firstAttribute="top" secondItem="iGr-QE-VJK" secondAttribute="bottom" constant="-2" id="t6c-Eb-BeI"/>
                     <constraint firstItem="iGr-QE-VJK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="tjk-3g-6bO"/>
@@ -107,6 +107,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="translate" width="23" height="23"/>
+        <image name="translate" width="35" height="35"/>
     </resources>
 </document>
