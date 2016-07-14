@@ -6,6 +6,26 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="KZn-7I-QOy">
+            <objects>
+                <navigationController toolbarHidden="NO" id="qfz-5y-zE8" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JJ9-YJ-K7C">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="dCV-Ar-XlW">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="3uy-ap-lbe" kind="relationship" relationship="rootViewController" id="jQj-iK-zMX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1mN-os-COL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-237" y="206"/>
+        </scene>
         <!--Side Menu View Controller-->
         <scene sceneID="M81-3g-Tw3">
             <objects>
@@ -107,21 +127,9 @@
                         <viewControllerLayoutGuide type="bottom" id="6bV-Mn-C7b"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ojg-6b-qS5">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfd-WN-Hqp">
-                                <rect key="frame" x="0.0" y="492" width="600" height="44"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <barButtonItem title="Edit" id="gxt-XO-2E8">
-                                        <connections>
-                                            <action selector="editMode:" destination="NVk-Cm-fE5" id="SK1-er-1v4"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="B9e-0e-p3L"/>
-                                </items>
-                            </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MZa-D6-ttk">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -135,19 +143,12 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="MZa-D6-ttk" firstAttribute="top" secondItem="AGQ-wF-zhG" secondAttribute="bottom" id="6Io-jB-vLh"/>
-                            <constraint firstItem="Zfd-WN-Hqp" firstAttribute="leading" secondItem="ojg-6b-qS5" secondAttribute="leading" id="6nx-pF-GNN"/>
-                            <constraint firstItem="Zfd-WN-Hqp" firstAttribute="leading" secondItem="ojg-6b-qS5" secondAttribute="leadingMargin" constant="-20" id="Arm-Ug-HTI"/>
-                            <constraint firstItem="Zfd-WN-Hqp" firstAttribute="trailing" secondItem="MZa-D6-ttk" secondAttribute="trailing" id="HhO-Fv-r5a"/>
-                            <constraint firstAttribute="trailing" secondItem="MZa-D6-ttk" secondAttribute="trailing" id="Lci-A6-VWz"/>
-                            <constraint firstItem="MZa-D6-ttk" firstAttribute="top" secondItem="AGQ-wF-zhG" secondAttribute="bottom" id="Qjl-NJ-Cpd"/>
+                            <constraint firstItem="MZa-D6-ttk" firstAttribute="bottom" secondItem="6bV-Mn-C7b" secondAttribute="top" id="7AV-Xu-cRf"/>
+                            <constraint firstAttribute="trailing" secondItem="MZa-D6-ttk" secondAttribute="trailing" id="EpQ-a4-xpT"/>
                             <constraint firstItem="MZa-D6-ttk" firstAttribute="leading" secondItem="ojg-6b-qS5" secondAttribute="leadingMargin" constant="-20" id="ViI-Ix-Dfx"/>
                             <constraint firstItem="6bV-Mn-C7b" firstAttribute="top" secondItem="MZa-D6-ttk" secondAttribute="bottom" constant="24" id="WZj-Xt-zIg"/>
-                            <constraint firstItem="6bV-Mn-C7b" firstAttribute="top" secondItem="Zfd-WN-Hqp" secondAttribute="bottom" id="YH1-8A-oNn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Zfd-WN-Hqp" secondAttribute="trailing" constant="-20" id="aq6-Cz-MJd"/>
-                            <constraint firstItem="Zfd-WN-Hqp" firstAttribute="bottom" secondItem="6bV-Mn-C7b" secondAttribute="top" id="fwp-Hd-Jdy"/>
-                            <constraint firstItem="MZa-D6-ttk" firstAttribute="leading" secondItem="Zfd-WN-Hqp" secondAttribute="leading" id="gZP-GI-CM8"/>
-                            <constraint firstItem="Zfd-WN-Hqp" firstAttribute="top" secondItem="AGQ-wF-zhG" secondAttribute="bottom" constant="492" id="kVi-DO-rSI"/>
-                            <constraint firstItem="Zfd-WN-Hqp" firstAttribute="top" secondItem="MZa-D6-ttk" secondAttribute="bottom" id="xSI-zo-8R9"/>
+                            <constraint firstItem="MZa-D6-ttk" firstAttribute="leading" secondItem="ojg-6b-qS5" secondAttribute="leading" id="hsW-mr-uR4"/>
+                            <constraint firstItem="MZa-D6-ttk" firstAttribute="top" secondItem="AGQ-wF-zhG" secondAttribute="bottom" id="psE-TP-Cw9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MZa-D6-ttk" secondAttribute="trailing" constant="-20" id="z2d-BX-7NE"/>
                         </constraints>
                         <variation key="default">
@@ -155,14 +156,17 @@
                                 <exclude reference="6Io-jB-vLh"/>
                                 <exclude reference="ViI-Ix-Dfx"/>
                                 <exclude reference="z2d-BX-7NE"/>
-                                <exclude reference="Arm-Ug-HTI"/>
-                                <exclude reference="aq6-Cz-MJd"/>
-                                <exclude reference="kVi-DO-rSI"/>
                                 <exclude reference="WZj-Xt-zIg"/>
-                                <exclude reference="YH1-8A-oNn"/>
                             </mask>
                         </variation>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Edit" id="gxt-XO-2E8">
+                            <connections>
+                                <action selector="editMode:" destination="NVk-Cm-fE5" id="SK1-er-1v4"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="App Love" id="OC5-Qh-ifu">
                         <barButtonItem key="leftBarButtonItem" id="U8A-hh-4ld">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sWb-w4-r8d" userLabel="HamburgerMenu" customClass="HamburgerButton" customModule="App_Love" customModuleProvider="target">
@@ -180,20 +184,20 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <connections>
                         <outlet property="hamburgerButton" destination="sWb-w4-r8d" id="Yt9-Hg-aSE"/>
                         <outlet property="tableView" destination="MZa-D6-ttk" id="JBt-Ib-sqy"/>
-                        <outlet property="toolBar" destination="Zfd-WN-Hqp" id="b5P-xh-a63"/>
                         <segue destination="AkT-Aw-bQp" kind="show" identifier="AppSearch" id="Hee-3q-lkN"/>
-                        <segue destination="3uy-ap-lbe" kind="showDetail" identifier="reviewList" action="showViewController:sender:" id="VzQ-lk-XIW"/>
                         <segue destination="kCD-r3-SBh" kind="presentation" identifier="about" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="1Sc-aV-EYG"/>
                         <segue destination="SFE-65-t6s" kind="presentation" identifier="menu" modalPresentationStyle="overCurrentContext" id="516-fK-1mi"/>
                         <segue destination="ejk-Z1-f1t" kind="show" identifier="selectCountry" id="yhB-YG-Yw1"/>
+                        <segue destination="qfz-5y-zE8" kind="showDetail" identifier="detailReviews" id="1Xj-UA-kmf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jOo-6s-Jna" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="646" y="212"/>
+            <point key="canvasLocation" x="632" y="228"/>
         </scene>
         <!--Search Apps-->
         <scene sceneID="ADZ-QG-OJB">
@@ -301,7 +305,13 @@
                             <outlet property="delegate" destination="AkT-Aw-bQp" id="7Ok-ii-BHK"/>
                         </connections>
                     </tableView>
-                    <toolbarItems/>
+                    <toolbarItems>
+                        <barButtonItem title="Search Tips" id="dZP-F6-SPF">
+                            <connections>
+                                <action selector="onSearchTips:" destination="AkT-Aw-bQp" id="Dqe-hX-OFP"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Add Apps" id="ksy-Kh-KYR"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -322,20 +332,9 @@
                         <viewControllerLayoutGuide type="bottom" id="T0V-bP-O15"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dRh-Zo-0Kd">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="28B-7k-b3H">
-                                <rect key="frame" x="0.0" y="492" width="600" height="44"/>
-                                <items>
-                                    <barButtonItem title="Sort" id="rfJ-sT-YqC">
-                                        <connections>
-                                            <action selector="onSort:" destination="3uy-ap-lbe" id="ORI-dM-r0m"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Oz1-wf-TZA"/>
-                                </items>
-                            </toolbar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lL5-qb-5Lk">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -347,27 +346,25 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="lL5-qb-5Lk" firstAttribute="bottom" secondItem="28B-7k-b3H" secondAttribute="top" id="40O-cB-76q"/>
-                            <constraint firstItem="lL5-qb-5Lk" firstAttribute="top" secondItem="dE1-9O-2lw" secondAttribute="bottom" id="6Sz-aF-vW6"/>
-                            <constraint firstAttribute="trailing" secondItem="28B-7k-b3H" secondAttribute="trailing" id="QwF-Te-IEW"/>
-                            <constraint firstItem="lL5-qb-5Lk" firstAttribute="trailing" secondItem="28B-7k-b3H" secondAttribute="trailing" id="a1z-sE-eRo"/>
-                            <constraint firstItem="lL5-qb-5Lk" firstAttribute="trailing" secondItem="28B-7k-b3H" secondAttribute="trailing" id="fpt-8E-fSw"/>
-                            <constraint firstItem="28B-7k-b3H" firstAttribute="leading" secondItem="dRh-Zo-0Kd" secondAttribute="leading" id="hI8-IQ-zP5"/>
-                            <constraint firstItem="lL5-qb-5Lk" firstAttribute="leading" secondItem="28B-7k-b3H" secondAttribute="leading" id="sWw-4t-uK0"/>
-                            <constraint firstItem="lL5-qb-5Lk" firstAttribute="leading" secondItem="28B-7k-b3H" secondAttribute="leading" id="w3l-si-dH5"/>
-                            <constraint firstItem="28B-7k-b3H" firstAttribute="bottom" secondItem="T0V-bP-O15" secondAttribute="top" id="yBd-e4-USt"/>
+                            <constraint firstAttribute="trailing" secondItem="lL5-qb-5Lk" secondAttribute="trailing" id="3zt-qx-x2f"/>
+                            <constraint firstItem="lL5-qb-5Lk" firstAttribute="leading" secondItem="dRh-Zo-0Kd" secondAttribute="leading" id="CgL-b6-Uk0"/>
+                            <constraint firstItem="lL5-qb-5Lk" firstAttribute="bottom" secondItem="T0V-bP-O15" secondAttribute="top" id="i91-CX-IwK"/>
+                            <constraint firstItem="lL5-qb-5Lk" firstAttribute="top" secondItem="dE1-9O-2lw" secondAttribute="bottom" id="zjK-VQ-d2d"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="a1z-sE-eRo"/>
-                                <exclude reference="sWw-4t-uK0"/>
-                            </mask>
-                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Reviews" id="Tnu-ww-dxN"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <toolbarItems>
+                        <barButtonItem title="Sort" id="rfJ-sT-YqC">
+                            <connections>
+                                <action selector="onSort:" destination="3uy-ap-lbe" id="ORI-dM-r0m"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Reviews" id="Tnu-ww-dxN">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="na1-wz-Tp3"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <connections>
-                        <outlet property="bottomToolbar" destination="28B-7k-b3H" id="82d-KL-ME6"/>
                         <outlet property="tableView" destination="lL5-qb-5Lk" id="sMC-1E-gVn"/>
                         <segue destination="aYm-Dk-3tH" kind="showDetail" identifier="help" id="Rm9-MJ-k6v"/>
                     </connections>
@@ -403,8 +400,8 @@
         <scene sceneID="KQ0-qq-qSv">
             <objects>
                 <tableViewController storyboardIdentifier="selectCountry" id="ejk-Z1-f1t" customClass="SelectCountryViewController" customModule="App_Love" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="j1a-h7-av7">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                    <tableView key="view" contentMode="scaleAspectFit" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="j1a-h7-av7">
+                        <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -470,6 +467,14 @@
                             <outlet property="delegate" destination="ejk-Z1-f1t" id="BOT-wC-i3e"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <toolbarItems>
+                        <barButtonItem title="Default Territories" id="tW2-Mx-1Uw">
+                            <connections>
+                                <action selector="onDefaultTerritories:" destination="ejk-Z1-f1t" id="ip7-CO-Eoy"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Territories" id="fb3-ZZ-Z3y">
                         <barButtonItem key="backBarButtonItem" title="App Love" id="Gd4-Dp-RPp"/>
                         <barButtonItem key="rightBarButtonItem" title="ALL" id="0w6-93-kbF">
@@ -478,6 +483,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <connections>
                         <outlet property="tableView" destination="j1a-h7-av7" id="r2s-zV-WUH"/>
                     </connections>
@@ -539,21 +545,26 @@
                 <splitViewController id="YeO-fM-KIj" customClass="GlobalSplitViewController" customModule="App_Love" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="N6z-7V-uz9" kind="relationship" relationship="masterViewController" id="Nap-L7-ilh"/>
+                        <segue destination="qfz-5y-zE8" kind="relationship" relationship="detailViewController" id="cB5-UF-G9N"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJD-Yp-uXx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-301" y="-552"/>
+            <point key="canvasLocation" x="-581" y="-547"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wxf-vs-aP3">
             <objects>
-                <navigationController id="N6z-7V-uz9" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="currentContext" toolbarHidden="NO" id="N6z-7V-uz9" sceneMemberID="viewController">
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Ziu-g0-dHV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="gcy-B3-vYr">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="NVk-Cm-fE5" kind="relationship" relationship="rootViewController" id="AH6-84-UED"/>
                     </connections>
@@ -628,4 +639,7 @@
         <image name="share" width="36" height="36"/>
         <image name="translate_white" width="36" height="36"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="1Xj-UA-kmf"/>
+    </inferredMetricsTieBreakers>
 </document>

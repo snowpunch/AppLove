@@ -31,11 +31,7 @@ extension AppListViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
         let item = AppList.sharedInst.appModels[indexPath.row]
         AppList.sharedInst.setSelectedModel(item)
-        
-        if let storyboard = self.storyboard {
-            let reviewListVC = storyboard.instantiateViewControllerWithIdentifier("reviewList")
-            showDetailViewController(reviewListVC, sender: self)
-        }
+        performSegueWithIdentifier("detailReviews", sender: self)
         return indexPath
     }
     

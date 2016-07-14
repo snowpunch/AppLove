@@ -16,20 +16,20 @@ class ReviewListViewController: UIViewController {
     var allReviews = [ReviewModel]()
     var refreshControl: UIRefreshControl!
     @IBOutlet var tableView: UITableView!
-    @IBOutlet weak var bottomToolbar: UIToolbar!
-    @IBOutlet weak var loadStopButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableSetup()
         registerNotifications()
-        Theme.toolBar(bottomToolbar)
         addRefreshControl()
+        
+        if let toolbar = self.navigationController?.toolbar {
+            Theme.toolBar(toolbar)
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        bottomToolbar.hidden = true
         ReviewLoadManager.sharedInst.loadReviews()
     }
 
@@ -43,7 +43,6 @@ class ReviewListViewController: UIViewController {
         self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         self.refreshControl.addTarget(self, action: .refresh, forControlEvents: UIControlEvents.ValueChanged)
         self.tableView.addSubview(self.refreshControl)
-        self.bottomToolbar.hidden = false
     }
 
     func refresh(sender:AnyObject) {
@@ -51,8 +50,6 @@ class ReviewListViewController: UIViewController {
         CacheManager.sharedInst.startIgnoringCache()
         allReviews.removeAll()
         self.tableView.reloadData()
-        self.bottomToolbar.hidden = true
-        loadStopButton.title = "Stop" // crash
         ReviewLoadManager.sharedInst.loadReviews()
         self.refreshControl?.endRefreshing()
     }
@@ -73,8 +70,8 @@ class ReviewListViewController: UIViewController {
     }
 
     func displayToolbar() {
-        self.bottomToolbar.hidden = false
         finishedRefreshing()
+        self.splitViewController?.preferredDisplayMode = UISplitViewControllerDisplayMode.AllVisible
     }
     
     override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
@@ -101,15 +98,11 @@ class ReviewListViewController: UIViewController {
     func stopButtonPressed() {
         ReviewLoadManager.sharedInst.cancelLoading()
         NSNotificationCenter.post(Const.load.reloadData)
-        loadStopButton.title = "Load"
-        self.bottomToolbar.hidden = false
         finishedRefreshing()
     }
     
     func loadButtonPressed() {
         ReviewLoadManager.sharedInst.loadReviews()
-        loadStopButton.title = "Stop"
-        self.bottomToolbar.hidden = true
     }
     
     deinit {
@@ -166,7 +159,6 @@ extension ReviewListViewController {
         }
         let viewInAppStoreAction = UIAlertAction(title: "View In App Store", style: .Default) { action -> Void in
             self.showStore((AppList.sharedInst.getSelectedModel()?.appId)!)
-            self.bottomToolbar.hidden = true
         }
         let helpAction = UIAlertAction(title: "Help", style: .Default) { action -> Void in
             if let storyboard = self.storyboard {
@@ -207,7 +199,6 @@ extension ReviewListViewController: SKStoreProductViewControllerDelegate {
     
     func productViewControllerDidFinish(viewController: SKStoreProductViewController) {
         viewController.dismissViewControllerAnimated(true, completion: nil)
-        self.bottomToolbar.hidden = false
     }
 }
 

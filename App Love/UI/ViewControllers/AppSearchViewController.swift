@@ -38,4 +38,7 @@ class AppSearchViewController: UITableViewController, UISearchBarDelegate {
             }
         }
     }
+
+    @IBAction func onSearchTips(sender: AnyObject) {
+    }
 }

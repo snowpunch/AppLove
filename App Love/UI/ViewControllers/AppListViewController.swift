@@ -26,17 +26,20 @@ private extension Selector {
 class AppListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var toolBar: UIToolbar!
     @IBOutlet weak var hamburgerButton: HamburgerButton!
     var transition = ElasticTransition()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initTableView()
-        Theme.toolBar(toolBar)
         displayAppList()
         addObservers()
         initElasticTransitions()
+        if let toolbar = self.navigationController?.toolbar {
+            Theme.toolBar(toolbar)
+        }
+
+        self.splitViewController?.preferredDisplayMode = UISplitViewControllerDisplayMode.Automatic
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -48,6 +51,7 @@ class AppListViewController: UIViewController {
         if hamburgerButton.showsMenu == false {
             hamburgerButton.showsMenu = true
         }
+        self.navigationController?.toolbarHidden = false
     }
     
     func addObservers() {
@@ -154,7 +158,23 @@ class AppListViewController: UIViewController {
         performSegueWithIdentifier("selectCountry", sender: nil)
     }
     
+    func addSplitViewCollapseButton(segue:UIStoryboardSegue) {
+        var destination = segue.destinationViewController
+        if let nc = destination as? UINavigationController,
+            let visibleVC = nc.visibleViewController {
+            destination = visibleVC
+            destination.navigationItem.leftBarButtonItem =
+                self.splitViewController?.displayModeButtonItem()
+            destination.navigationItem.leftItemsSupplementBackButton = true
+        }
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "detailReviews" {
+            addSplitViewCollapseButton(segue)
+            return
+        }
+
         let vc = segue.destinationViewController
         vc.transitioningDelegate = transition
         vc.modalPresentationStyle = .Custom

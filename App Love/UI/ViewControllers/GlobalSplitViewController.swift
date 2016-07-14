@@ -13,7 +13,7 @@ class GlobalSplitViewController: UISplitViewController, UISplitViewControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
-        self.preferredDisplayMode = UISplitViewControllerDisplayMode.Automatic
+        self.preferredDisplayMode = UISplitViewControllerDisplayMode.AllVisible
     }
     
     func splitView(splitView: UISplitViewController, shouldHideDividerAtIndex dividerIndex: Int) -> Bool {

@@ -12,7 +12,7 @@ import UIKit
 
 class SelectCountryViewController: UITableViewController {
 
-    let countries = TerritoryMgr.sharedInst.getArrayOfModels()
+    var countries = TerritoryMgr.sharedInst.getArrayOfModels()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,5 +47,12 @@ class SelectCountryViewController: UITableViewController {
         for country in countries {
             country.isSelected = true
         }
+    }
+    
+    @IBAction func onDefaultTerritories(sender: AnyObject) {
+        clearAll()
+        TerritoryMgr.sharedInst.setDefaultCountries()
+        countries = TerritoryMgr.sharedInst.getArrayOfModels()
+        self.tableView.reloadData()
     }
 }
