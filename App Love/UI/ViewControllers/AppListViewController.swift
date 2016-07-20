@@ -33,6 +33,11 @@ class AppListViewController: UIViewController {
         if (SearchList.sharedInst.appModelDic.count > 0) {
             addAppsSelectedFromSearchResults()
         }
+        
+        // Deselect the cell that is currently selected
+        if let selectedCellIndexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRowAtIndexPath(selectedCellIndexPath, animated: animated)
+        }
     }
     
     func addAppsSelectedFromSearchResults() {
