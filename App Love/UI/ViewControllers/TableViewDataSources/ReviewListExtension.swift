@@ -18,6 +18,7 @@ extension ReviewListViewController: UITableViewDataSource {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 44
         self.tableView.estimatedSectionHeaderHeight = 90;
+        self.tableView.delegate = self
     }
     
     func updateHeaderPosition() {
@@ -33,25 +34,11 @@ extension ReviewListViewController: UITableViewDataSource {
         })
     }
     
-    // header
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> ReviewHeaderCell? {
-        if let headerCell = self.tableView.dequeueReusableCellWithIdentifier("ReviewHeaderCellID") as? ReviewHeaderCell,
-            let appModel = AppList.sharedInst.getSelectedModel() {
-                headerCell.setup(appModel)
-                return headerCell
-        }
-        return nil
-    }
-    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ReviewCellID", forIndexPath: indexPath) as! ReviewCell
         let model = self.allReviews[indexPath.row]
         cell.setup(model)
         return cell
-    }
-
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 90
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -60,5 +47,27 @@ extension ReviewListViewController: UITableViewDataSource {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
+    }
+}
+
+// MARK: UITableViewDelegate
+
+extension ReviewListViewController: UITableViewDelegate {
+    // header
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        var headerView: UIView?
+        
+        if let headerCell = self.tableView.dequeueReusableCellWithIdentifier("ReviewHeaderCellID") as? ReviewHeaderCell,
+            let appModel = AppList.sharedInst.getSelectedModel() {
+            headerCell.setup(appModel)
+            
+            headerView = headerCell
+        }
+        
+        return headerView
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 90
     }
 }
