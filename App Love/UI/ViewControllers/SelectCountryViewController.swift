@@ -49,10 +49,60 @@ class SelectCountryViewController: UITableViewController {
         }
     }
     
-    @IBAction func onDefaultTerritories(sender: AnyObject) {
-        clearAll()
-        TerritoryMgr.sharedInst.setDefaultCountries()
-        countries = TerritoryMgr.sharedInst.getArrayOfModels()
-        self.tableView.reloadData()
+    @IBAction func onDefaultTerritories(button: UIBarButtonItem) {
+        useDefaultTeritoriesActionSheet(button)
+    }
+    
+    @IBAction func onSaveAsDefault(button: UIBarButtonItem) {
+         saveDefaultTeritoriesActionSheet(button)
+    }
+}
+
+// action sheets
+extension SelectCountryViewController {
+    
+    func saveDefaultTeritoriesActionSheet(button: UIBarButtonItem){
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+        
+        let saveDefaultsAction = UIAlertAction(title: "Save Selected as Default", style: .Default) { action -> Void in
+            TerritoryMgr.sharedInst.saveSelectedAsDefault()
+        }
+
+        let actionCancel = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        
+        alertController.addAction(saveDefaultsAction)
+        alertController.addAction(actionCancel)
+        Theme.alertController(alertController)
+        if let popoverController = alertController.popoverPresentationController {
+            popoverController.barButtonItem = button
+        }
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func useDefaultTeritoriesActionSheet(button: UIBarButtonItem){
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+        
+        let useDefaultsAction = UIAlertAction(title: "Use Saved Defaults", style: .Default) { action -> Void in
+            self.clearAll()
+            TerritoryMgr.sharedInst.setDefaultCountries()
+            self.countries = TerritoryMgr.sharedInst.getArrayOfModels()
+            self.tableView.reloadData()
+        }
+        let useOriginalDefaultsAction = UIAlertAction(title: "Use Original Defaults", style: .Default) { action -> Void in
+            self.clearAll()
+            TerritoryMgr.sharedInst.setOriginalDefaults()
+            self.countries = TerritoryMgr.sharedInst.getArrayOfModels()
+            self.tableView.reloadData()
+        }
+        let actionCancel = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        
+        alertController.addAction(useDefaultsAction)
+        alertController.addAction(useOriginalDefaultsAction)
+        alertController.addAction(actionCancel)
+        Theme.alertController(alertController)
+        if let popoverController = alertController.popoverPresentationController {
+            popoverController.barButtonItem = button
+        }
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
 }
