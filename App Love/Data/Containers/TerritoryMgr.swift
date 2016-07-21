@@ -35,7 +35,7 @@ class TerritoryMgr: NSObject {
 
     // Default 15 app store selected (out of possible 155)
     func getDefaultCountryCodes() -> [String] {
-        return ["US","JP","GB","DE","AU","CA","IE","AT","CN","ES","IT","HR","RU","GR","PT"]
+        return ["US","JP","GB","DE","AU","CA","IE","AT","CN","SG","IT","HR","RU","GR","PT"]
     }
     
     func setDefaultCountries() {
