@@ -34,47 +34,39 @@ class SideMenuViewController: UIViewController {
     func onMenuClose() {
         self.dismissViewControllerAnimated(true, completion:nil)
     }
+    
+    func sideMenuButtonPressed(notificationStrConst:String) {
+        self.dismissViewControllerAnimated(true) {
+            NSNotificationCenter.post(notificationStrConst)
+        }
+    }
 
     @IBAction func onTerritoryOptions(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true) {
-            NSNotificationCenter.post(Const.sideMenu.territories)
-        }
+        sideMenuButtonPressed(Const.sideMenu.territories)
     }
     
     @IBAction func onLoadOptions(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true) {
-            NSNotificationCenter.post(Const.sideMenu.loadOptions)
-        }
+        sideMenuButtonPressed(Const.sideMenu.loadOptions)
     }
     
     @IBAction func onTranslateOptions(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true) {
-            NSNotificationCenter.post(Const.sideMenu.translateOptions)
-        }
+        sideMenuButtonPressed(Const.sideMenu.translateOptions)
     }
     
     @IBAction func onShareAppList(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true) {
-            NSNotificationCenter.post(Const.sideMenu.share)
-        }
+        sideMenuButtonPressed(Const.sideMenu.share)
     }
     
     @IBAction func onAddAppReview(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true) {
-            NSNotificationCenter.post(Const.sideMenu.askReview)
-        }
+        sideMenuButtonPressed(Const.sideMenu.askReview)
     }
     
     @IBAction func onHelp(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true) {
-            NSNotificationCenter.post(Const.sideMenu.help)
-        }
+        sideMenuButtonPressed(Const.sideMenu.help)
     }
     
     @IBAction func onAbout(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true) {
-            NSNotificationCenter.post(Const.sideMenu.about)
-        }
+        sideMenuButtonPressed(Const.sideMenu.about)
     }
 }
 

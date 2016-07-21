@@ -244,12 +244,12 @@ extension AppListViewController {
     }
     
     func onAskReview(sender: UIBarButtonItem) {
-        let alertController = UIAlertController(title: "Your Awesome!", message: "thank you", preferredStyle: .Alert)
+        let alertController = UIAlertController(title: "You're Awesome!", message: "Thank you helping this app.\nApp Love needs your feedback.", preferredStyle: .Alert)
         let addReviewAction = UIAlertAction(title: "add review", style: .Default) { action -> Void in
             self.doAppReview()
         }
         addReviewAction.setValue(UIImage(named: "heartplus"), forKey: "image")
-        let addStarsAction = UIAlertAction(title: "or tap stars", style: .Default) { action -> Void in
+        let addStarsAction = UIAlertAction(title: "or just tap stars", style: .Default) { action -> Void in
             self.doAppReview()
         }
         addStarsAction.setValue(UIImage(named: "rating"), forKey: "image")
