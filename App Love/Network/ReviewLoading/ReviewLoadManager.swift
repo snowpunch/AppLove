@@ -139,6 +139,16 @@ class ReviewLoadManager: NSObject, ProgressDelegate {
     func cancelLoading() {
         self.loadingQueue?.cancelAllOperations()
     }
+    
+    func getNonEmptyTerritories() -> [String] {
+        var emptyArray = [String]()
+        for (territory,loadState) in loadStates {
+            if loadState.count > 0 {
+                emptyArray.append(territory)
+            }
+        }
+        return emptyArray;
+    }
 }
 
 private extension Selector {

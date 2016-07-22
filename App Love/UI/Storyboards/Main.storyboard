@@ -359,9 +359,20 @@
                                 <action selector="onSort:" destination="3uy-ap-lbe" id="ORI-dM-r0m"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="JSi-po-lOI"/>
+                        <barButtonItem image="options_gear" style="plain" id="Ijw-oP-qYr">
+                            <connections>
+                                <action selector="onRemoveEmptyTerritories:" destination="3uy-ap-lbe" id="Ia1-4u-a1P"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Reviews" id="Tnu-ww-dxN">
                         <barButtonItem key="backBarButtonItem" title="Back" id="na1-wz-Tp3"/>
+                        <barButtonItem key="rightBarButtonItem" title="App Store" id="1hS-A6-qfr">
+                            <connections>
+                                <action selector="onAppStore:" destination="3uy-ap-lbe" id="BKM-wB-kk8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <connections>
@@ -472,6 +483,12 @@
                         <barButtonItem title="Default Territories" id="tW2-Mx-1Uw">
                             <connections>
                                 <action selector="onDefaultTerritories:" destination="ejk-Z1-f1t" id="ip7-CO-Eoy"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="JwD-BB-SWu"/>
+                        <barButtonItem title="Save as Default" id="IK5-1L-GNA">
+                            <connections>
+                                <action selector="onSaveAsDefault:" destination="ejk-Z1-f1t" id="5HF-9X-kSc"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
@@ -635,6 +652,7 @@
         <image name="flag" width="36" height="36"/>
         <image name="heartplus" width="36" height="36"/>
         <image name="help" width="36" height="36"/>
+        <image name="options_gear" width="24" height="24"/>
         <image name="options_gear_white" width="36" height="36"/>
         <image name="share" width="36" height="36"/>
         <image name="translate_white" width="36" height="36"/>

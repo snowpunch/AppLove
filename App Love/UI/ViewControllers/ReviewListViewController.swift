@@ -78,32 +78,47 @@ class ReviewListViewController: UIViewController {
         NSNotificationCenter.post(Const.load.orientationChange)
     }
     
-    @IBAction func onStopLoadToggle(button: UIBarButtonItem) {
-        if button.title == "Stop" {
-            stopButtonPressed()
-        }
-        else if button.title == "Load" {
-            loadButtonPressed()
-        }
-    }
+//    @IBAction func onStopLoadToggle(button: UIBarButtonItem) {
+//        if button.title == "Stop" {
+//            stopButtonPressed()
+//        }
+//        else if button.title == "Load" {
+//            loadButtonPressed()
+//        }
+//    }
     
     @IBAction func onSort(sender: UIBarButtonItem) {
         displaySortActionSheet(sender)
     }
     
-    @IBAction func onOptions(sender: UIBarButtonItem) {
-        displayOptionsActionSheet(sender)
-    }
+//    @IBAction func onOptions(sender: UIBarButtonItem) {
+//        displayOptionsActionSheet(sender)
+//    }
 
-    func stopButtonPressed() {
-        ReviewLoadManager.sharedInst.cancelLoading()
-        NSNotificationCenter.post(Const.load.reloadData)
-        finishedRefreshing()
+//    func stopButtonPressed() {
+//        ReviewLoadManager.sharedInst.cancelLoading()
+//        NSNotificationCenter.post(Const.load.reloadData)
+//        finishedRefreshing()
+//    }
+//    
+//    func loadButtonPressed() {
+//        ReviewLoadManager.sharedInst.loadReviews()
+//    }
+    
+    
+    @IBAction func onAppStore(sender: AnyObject) {
+        // show loading indicator.
+        
+        if let appId = AppList.sharedInst.getSelectedModel()?.appId {
+            showStore(appId)
+        }
     }
     
-    func loadButtonPressed() {
-        ReviewLoadManager.sharedInst.loadReviews()
+    @IBAction func onRemoveEmptyTerritories(button: UIBarButtonItem) {
+        
+        removeEmptyTerritories(button)
     }
+    
     
     deinit {
         unregisterNotifications()
@@ -148,32 +163,34 @@ extension ReviewListViewController {
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
-    func displayOptionsActionSheet(sender: UIBarButtonItem) {
-        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
-        let selectTerritoriesAction = UIAlertAction(title: "Select Territories", style: .Destructive) { action -> Void in
-            if let storyboard = self.storyboard {
-                let selectCountryVC = storyboard.instantiateViewControllerWithIdentifier("selectCountry")
-                self.showViewController(selectCountryVC, sender: self)
-                //self.navigationController!.pushViewController(selectCountryVC, animated: true)
-            }
+    func removeEmptyTerritories(button: UIBarButtonItem){
+        let alertController = UIAlertController(title: "Territory Options", message: "To hand pick territories use the side menu.", preferredStyle: .ActionSheet)
+
+        let loadAllAction = UIAlertAction(title: "Load All Territories", style: .Default) { action -> Void in
+            TerritoryMgr.sharedInst.selectAllTerritories()
+            self.refresh("")
         }
-        let viewInAppStoreAction = UIAlertAction(title: "View In App Store", style: .Default) { action -> Void in
-            self.showStore((AppList.sharedInst.getSelectedModel()?.appId)!)
+
+        let loadDefaultAction = UIAlertAction(title: "Load Default Territories", style: .Default) { action -> Void in
+            let defaultTerritories = TerritoryMgr.sharedInst.getDefaultCountryCodes()
+            TerritoryMgr.sharedInst.setSelectedTerritories(defaultTerritories)
+            self.refresh("")
         }
-        let helpAction = UIAlertAction(title: "Help", style: .Default) { action -> Void in
-            if let storyboard = self.storyboard {
-                let helpVC = storyboard.instantiateViewControllerWithIdentifier("help")
-                self.navigationController!.pushViewController(helpVC, animated: true)
-            }
+        
+        let removeEmptyAction = UIAlertAction(title: "Remove Empty Territories", style: .Destructive) { action -> Void in
+            let nonEmptyTeritories = ReviewLoadManager.sharedInst.getNonEmptyTerritories()
+            TerritoryMgr.sharedInst.setSelectedTerritories(nonEmptyTeritories)
+            self.refresh("")
         }
         let actionCancel = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
-        alertController.addAction(selectTerritoriesAction)
-        alertController.addAction(viewInAppStoreAction)
-        alertController.addAction(helpAction)
+
+        alertController.addAction(loadAllAction)
+        alertController.addAction(loadDefaultAction)
+        alertController.addAction(removeEmptyAction)
         alertController.addAction(actionCancel)
         Theme.alertController(alertController)
         if let popoverController = alertController.popoverPresentationController {
-            popoverController.barButtonItem = sender
+            popoverController.barButtonItem = button
         }
         self.presentViewController(alertController, animated: true, completion: nil)
     }

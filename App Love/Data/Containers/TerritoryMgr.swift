@@ -42,6 +42,16 @@ class TerritoryMgr: NSObject {
         }
     }
     
+    func setSelectedTerritories(selectedTerritories:[String]) {
+        
+        for model in self.modelDictionary.values {
+            model.isSelected = false
+        }
+        for code in selectedTerritories {
+            modelDictionary[code]?.isSelected = true
+        }
+    }
+    
     // for table
     func getArrayOfModels() -> [CountryModel] {
         var array = Array(modelDictionary.values)
@@ -89,6 +99,12 @@ extension TerritoryMgr {
     func getOriginalDefaults() -> [String] {
         defaultTerritories = ["US","JP","GB","DE","AU","CA","IE","AT","CN","SG","IT","HR","RU","GR","PT"];
         return defaultTerritories
+    }
+    
+    func selectAllTerritories() {
+        for model in self.modelDictionary.values {
+            model.isSelected = true
+        }
     }
     
     func setOriginalDefaults() {
