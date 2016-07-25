@@ -69,7 +69,7 @@ class QRCodeViewController: UIViewController, ZBarReaderDelegate, AVCaptureMetad
         
         let qrView:QRView = QRView(frame: self.view.frame)
         
-        print("\(NSStringFromCGRect(self.view.frame))")
+//        print("\(NSStringFromCGRect(self.view.frame))")
         
         var size:CGSize = CGSizeZero
         if self.view.frame.size.width > 320 {

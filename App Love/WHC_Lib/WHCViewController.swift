@@ -26,6 +26,9 @@ extension UIColor {
 
 class WHCViewController: UIViewController, WHC_MenuViewDelegate {
     
+    //to do
+    var AppCategoryList:[AppCategoryItem] = [AppCategoryItem]();
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil);
     }
@@ -33,17 +36,117 @@ class WHCViewController: UIViewController, WHC_MenuViewDelegate {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder);
     }
+    
+    var images:[String]! = []
+    var titles:[String]! = []
+    var menuView:WHC_MenuView!
 
+    
+    func initAppCategoryList() -> [AppCategoryItem] {
+        let data:NSData = NSData(contentsOfFile: NSBundle.mainBundle().pathForResource("customdir", ofType: "json")!)!
+        
+        let dataDic:NSDictionary = try! NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments) as! NSDictionary
+        
+        let dataArray:NSArray = dataDic.objectForKey("data") as! NSArray
+        var newArray:[AppCategoryItem] = [AppCategoryItem]()
+        for item in dataArray {
+            let appCategoryItem:AppCategoryItem = AppCategoryItem(dic: item as! NSDictionary)
+            newArray.append(appCategoryItem)
+        }
+        return newArray
+    }
+    
+    func getAppCategoryItemByMenu(array:[AppCategoryItem],menu:String) -> AppCategoryItem? {
+        for item in array {
+            if menu == item.title! {
+                return item
+            }
+        }
+        return nil
+    }
+    
+    func getNewImages() -> [String] {
+        var menus = self.menuView.getMenuItemTitles()
+        menus.removeLast()
+        
+        var newImages:[String] = [String]();
+        
+        for menu in menus {
+            for item in self.AppCategoryList {
+                if menu == item.title {
+                    newImages.append(item.icon!)
+                    break;
+                }
+            }
+        }
+        
+        return newImages;
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "WHC-集合菜单样式一";
-        let menuParam = WHC_MenuViewParam.getWHCMenuViewDefaultParam(titles: ["WHC","公司通知","直销客户","渠道客户","拜访管理","拜访回馈","回馈问题","销售计划","项目报备","项目跟踪","合同管理","收款管理","工作小结","请假申请","费用申请","汇总统计","发布通知","客户审核","回馈批注","小结批注","报备审核","市场推广","售后服务","费用审核","请假审批","w","h","c","吴海超","吴","超","海","iOS","Android","WP","手机","苹果","大神"], imageNames: ["icon1","icon2","icon3","icon1","icon2","icon3","icon1","icon2","icon3","icon1","icon2","icon3","icon1","icon2","icon3","icon1","icon2","icon3","icon1","icon2","icon3","icon1","icon2","icon3","icon1","icon2","icon3","icon1","icon2","icon3","icon1","icon2","icon3","icon1","icon2","icon3","icon1","icon2"], cacheWHCMenuKey: "WHC-集合菜单样式一");
-        print(CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width, UIScreen.mainScreen().bounds.size.height + 50))
+        self.navigationItem.title = "App Love";
+        let rightBarItem:UIBarButtonItem = UIBarButtonItem(title: "返回", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(WHCViewController.refreshAction(_:)))
+        self.navigationItem.rightBarButtonItem = rightBarItem;
+        weak var weakSelf = self as WHCViewController
         
-        let menuView = WHC_MenuView(frame:CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width, UIScreen.mainScreen().bounds.size.height - 64), menuViewParam: menuParam);
-        menuView.delegate = self;
-        self.view.addSubview(menuView);
+        //self.AppCategoryList = self.initAppCategoryList()
+//        print("AppCategoryList:\(self.AppCategoryList.last?.title)")
+        
+        weakSelf?.delay(0.5, Block: {
+
+            let url = BaseHttper().getUrl()
+            
+            MyAppInfo.getInit(url as String, completion: { (resultArray, succeeded, error) in
+                if(succeeded){
+                    for result in resultArray!{
+                        self.images.append((result["icon"] as? String)!)
+                        self.titles.append((result["title"] as? String)!)
+                        let appCategoryItem:AppCategoryItem = AppCategoryItem(dic: result as! NSDictionary)
+                        self.AppCategoryList.append(appCategoryItem)
+                    }
+//                    print(self.AppCategoryList.last?.title)
+                    
+                    self.initList(weakSelf)
+                }else{
+                    
+                }
+            })
+        })
         // Do any additional setup after loading the view.
+    }
+    
+    func refreshAction(sender:AnyObject?) -> Void {
+        
+        let newImages = self.getNewImages();
+        self.menuView.update(imagesName: newImages, titles: self.menuView.getMenuItemTitles(), deleteImages: nil, deleteTitles: nil)
+
+    }
+    
+    func initList(weakSelf:WHCViewController?) -> Void {
+        weakSelf?.delay(2.0, Block: {
+
+            let menuParam = WHC_MenuViewParam.getWHCMenuViewDefaultParam(titles:self.titles, imageNames: self.images, cacheWHCMenuKey: "App Love");
+            
+            self.menuView = WHC_MenuView(frame:CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width, self.view.frame.size.height), menuViewParam: menuParam);
+            
+            self.menuView.delegate = self;
+            self.view.addSubview(self.menuView);
+            
+        })
+    }
+    
+    func delay(time: NSTimeInterval, Block block: (() -> Void)){
+        
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(time * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(),
+            block
+        )
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,6 +156,16 @@ class WHCViewController: UIViewController, WHC_MenuViewDelegate {
     
     func WHCMenuView(menuView: WHC_MenuView ,item: WHC_MenuItem, title: String){
         print(title);
+        
+        if let item:AppCategoryItem = self.getAppCategoryItemByMenu(self.AppCategoryList, menu: title) {
+            let url = item.url! + (NSString(format: BASEPART, item.sort!, 1, 25) as String)
+            
+            let myAppListTableViewController:MyAppListTableViewController = MyAppListTableViewController()
+            myAppListTableViewController.mainUrl = url
+            
+            self.navigationController?.pushViewController(myAppListTableViewController, animated: true)
+        }
+        
     }
     func WHCMenuViewClickDelete(item: WHC_MenuItem){
         

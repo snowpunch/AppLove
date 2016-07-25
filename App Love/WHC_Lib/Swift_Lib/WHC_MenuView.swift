@@ -57,6 +57,7 @@ class  WHC_MenuViewParam{
     var segmentPartTitles: [String]!;
     /// 分段图片集合
     var segmentPartImageNames: [String]!;
+    var imageDatas:NSMutableArray!
     /// 分段文字颜色
     var txtColor = UIColor.grayColor();
     /// 选择背景色
@@ -95,13 +96,16 @@ class  WHC_MenuViewParam{
     var autoStretchHeight = false;
     /// 是否是更多界面
     var isMoreMenuItem = false;
+    //to do
     /// 获取默认视图菜单配置参数
     class func getWHCMenuViewDefaultParam(titles
                                titles: [String]! ,
                            imageNames: [String]! ,
                       cacheWHCMenuKey: String)->WHC_MenuViewParam{
 
+
         let param = WHC_MenuViewParam();
+
         param.segmentPartTitles = titles;
         param.segmentPartImageNames = imageNames;
         param.selectedBackgroundColor = UIColor.themeBackgroundColor();
@@ -116,6 +120,8 @@ class WHC_MenuView: UIView ,WHC_MenuItemDelegate , WHC_MoreMenuItemVCDelegate , 
     private let kWHCTitlesKey = "WHC-TitlesKey";
     private let kWHCDeleteTitlesKey = "WHC-DeleteTitlesKey";
     private let kWHCImageNamesKey = "WHC-ImageNamesKey";
+    private let kWHCAppsKey = "WHC-AppsKey";
+    private let kWHCDeleteAppsKey = "WHC-DeleteAppsKey";
     private let kWHCDeleteImageNamesKey = "WHC-DeleteImageNamesKey";
     /// 页控件高度
     private let kPageCtlHeight: CGFloat = 20.0;
@@ -131,8 +137,10 @@ class WHC_MenuView: UIView ,WHC_MenuItemDelegate , WHC_MoreMenuItemVCDelegate , 
     private var deletedMenuItemTitles = [String]();
     /// 被删除菜单项图片名称集合
     private var deletedMenuItemImageNames = [String]();
+
     /// 初始菜单项标题集合
     private var menuItemTitles: [String]!;
+
     /// 初始菜单项图片名称集合
     private var menuItemImageNames: [String]!;
     /// 开始按下点
@@ -211,6 +219,7 @@ class WHC_MenuView: UIView ,WHC_MenuItemDelegate , WHC_MoreMenuItemVCDelegate , 
                     if object != nil {
                         let cacheInfoDict: NSDictionary = object as! NSDictionary;
                         var titles: [String]!;
+                        
                         var imageNames: [String]!;
                         var deleteTitles: [String]!;
                         var deleteImageNames: [String]!;
@@ -234,11 +243,13 @@ class WHC_MenuView: UIView ,WHC_MenuItemDelegate , WHC_MoreMenuItemVCDelegate , 
                             for (_ , title) in self.menuViewParam.segmentPartTitles.enumerate() {
                                 if !titles.contains(title) &&
                                     !deleteTitles.contains(title) {
+                                        //to do
                                         reset = true;
                                         break;
                                 }
                             }
                         }else {
+                            //to do
                             reset = true;
                         }
                         if reset {
@@ -253,6 +264,7 @@ class WHC_MenuView: UIView ,WHC_MenuItemDelegate , WHC_MoreMenuItemVCDelegate , 
                             self.menuItemImageNames = imageNames;
                             self.deletedMenuItemTitles = deleteTitles;
                             self.deletedMenuItemImageNames = deleteImageNames;
+//                            print(titles, deleteTitles)
                         }
                     }else {
                         us.setObject([kWHCTitlesKey: self.menuViewParam.segmentPartTitles ,
@@ -535,7 +547,8 @@ class WHC_MenuView: UIView ,WHC_MenuItemDelegate , WHC_MoreMenuItemVCDelegate , 
             self.setHeight(contentHeight);
             self.scrollView.setHeight(contentHeight);
         }else {
-            self.scrollView.contentSize = CGSizeMake(self.width(), contentHeight);
+            self.scrollView.contentSize = CGSizeMake(self.width(), contentHeight + 10);
+//            print("scrollView-contentHeight:\(self.scrollView.contentSize)")
         }
     }
     //MARK: - 类方法
@@ -580,13 +593,22 @@ class WHC_MenuView: UIView ,WHC_MenuItemDelegate , WHC_MoreMenuItemVCDelegate , 
     }
     
     /// 更新图片集合
-    func update(imagesName imagesName: [String] , titles: [String]!){
+    func update(imagesName imagesName: [String] , titles: [String]! , deleteImages:[String]!, deleteTitles:[String]!){
+        
+        if deleteImages != nil {
+            self.deletedMenuItemImageNames = deleteImages
+        }
+        
+        if deleteTitles != nil {
+            self.deletedMenuItemTitles = deleteTitles
+        }
     
         if imagesName.count == self.menuItems.count {
             for (i , menuItem) in self.menuItems.enumerate() {
                 menuItem.imageName = imagesName[i];
             }
-            self.dynamicCalcSelfHeight();
+//            self.dynamicCalcSelfHeight();
+            self.createGridViewLayout();
         }else if imagesName.count > self.menuItems.count {
             if self.menuItemImageNames != nil {
                 self.menuItemImageNames.removeAll();
@@ -626,7 +648,8 @@ class WHC_MenuView: UIView ,WHC_MenuItemDelegate , WHC_MoreMenuItemVCDelegate , 
                 for (i , menuItem) in self.menuItems.enumerate() {
                     menuItem.imageName = imagesName[i];
                 }
-                self.dynamicCalcSelfHeight();
+//                self.dynamicCalcSelfHeight();
+                self.createGridViewLayout();
             }else{
                 self.createGridViewLayout();
             }

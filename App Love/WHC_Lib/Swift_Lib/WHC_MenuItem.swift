@@ -14,6 +14,7 @@
 
 
 import UIKit
+import SDWebImage
 
 
 @objc protocol WHC_MenuItemDelegate{
@@ -29,7 +30,7 @@ private class WHC_UIButton:UIButton {
     /// 标题
     var title: String = "";
     /// 字体大小
-    var fontSize: CGFloat = 10.0;
+    var fontSize: CGFloat = 12.0;
     /// 是否有图
     var hasImage = true;
     private func titleSize() -> CGSize{
@@ -63,11 +64,12 @@ private class WHC_UIButton:UIButton {
             let txtSize = self.titleSize();
             var tempPading: CGFloat = self.pading;
             if self.pading < txtSize.height {
-                tempPading = txtSize.height;
+                tempPading = txtSize.height * 0.8;
             }
             if fontSize == 0 || title == "" {
-                tempPading = self.pading;
+                tempPading = self.pading * 0.8;
             }
+
             return CGRectMake(tempPading,
                 self.pading,
                 CGRectGetWidth(contentRect) - tempPading * 2.0,
@@ -123,6 +125,17 @@ class WHC_MenuItem: UIView {
         willSet{
             if newValue.containsString("http") {
 //                self.button.loadImageWithUrl(Account.shared.mainUrl + newValue, defaultImageName: "home_default_login");
+//                print("test:\(newValue)")
+                
+                if let url =  NSURL(string:newValue) {
+                    self.button.imageView?.layer.cornerRadius = 12.0
+                    self.button.imageView?.layer.masksToBounds = true
+                    self.button.sd_setImageWithURL(url, forState: .Normal, placeholderImage: UIImage(named:"defaulticon"))
+
+                }
+
+//                self.button
+                
             }else{
                 if newValue.characters.count > 0{
                     self.button.setImage(UIImage(named: newValue), forState: .Normal);

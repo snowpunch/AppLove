@@ -20,6 +20,7 @@ class AppListViewController: UIViewController {
         initTableView()
         Theme.toolBar(toolBar)
         displayAppList()
+//        BaseHttper()
     }
     
     func displayAppList() {

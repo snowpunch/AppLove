@@ -15,7 +15,9 @@ class SearchApps {
     
     class func get(searchStr:String, completion: (appsFound:[AppModel]?,succeeded: Bool, error:NSError?) -> Void) {
         let array = searchStr.characters.split {$0 == " "}.map(String.init)
+        
         let searchTermsStr = array.joinWithSeparator("+").lowercaseString
+        print("array:\(array),\(searchTermsStr),\(searchStr)")
         let url = "https://itunes.apple.com/search?term=\(searchTermsStr)&entity=software"
         
         Alamofire.request(.GET, url).responseJSON { response in

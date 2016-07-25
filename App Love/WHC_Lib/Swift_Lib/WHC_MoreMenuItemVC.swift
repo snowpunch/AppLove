@@ -23,6 +23,7 @@ class WHC_MoreMenuItemVC: UIViewController{
 
     /// 缓存菜单key
     var cacheWHCMenuKey: String!;
+    var AppCategoryList:[AppCategoryItem]!
     /// 菜单项标题集合
     var menuItemTitles: [String]!;
     /// 菜单项图片名称集合
@@ -57,6 +58,8 @@ class WHC_MoreMenuItemVC: UIViewController{
         self.navigationItem.leftBarButtonItem = cancelBarItem;
         
         let menuViewParam = WHC_MenuViewParam.getWHCMenuViewDefaultParam(titles: self.menuItemTitles, imageNames: self.menuItemImageNames, cacheWHCMenuKey: self.cacheWHCMenuKey);
+        //by louis
+//        let menuViewParam = WHC_MenuViewParam.getWHCMenuViewDefaultParam(self.AppCategoryList, cacheWHCMenuKey: self.cacheWHCMenuKey);
         menuViewParam.canDelete = false;
         menuViewParam.canAdd = true;
         menuViewParam.canSort = true;

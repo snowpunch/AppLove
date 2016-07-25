@@ -55,6 +55,12 @@
 		0CE289131CB578B4008A309A /* LoadReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE289121CB578B4008A309A /* LoadReviews.swift */; };
 		0CE289171CB59F3E008A309A /* ReviewParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE289161CB59F3E008A309A /* ReviewParser.swift */; };
 		0CE289221CB5A294008A309A /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE289211CB5A294008A309A /* SWXMLHash.swift */; };
+		18173AF81D45C6E9003CB7D7 /* MyAppListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18173AF71D45C6E9003CB7D7 /* MyAppListTableViewController.swift */; };
+		185CD9C91D376A870024B499 /* MyAppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185CD9C81D376A870024B499 /* MyAppInfo.swift */; };
+		185CD9CB1D3770B60024B499 /* MyAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185CD9CA1D3770B60024B499 /* MyAppModel.swift */; };
+		185EE0AA1D3E2809003B8AAF /* AppCategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185EE0A91D3E2809003B8AAF /* AppCategoryItem.swift */; };
+		186844551D348D07003C2E17 /* BaseHttper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186844541D348D07003C2E17 /* BaseHttper.swift */; };
+		186E20091D3A3650004156C6 /* customdir.json in Resources */ = {isa = PBXBuildFile; fileRef = 186E20081D3A3650004156C6 /* customdir.json */; };
 		18DB71481D2407D800094A8E /* UIView+WHC_AutoAdapterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB71451D2407D800094A8E /* UIView+WHC_AutoAdapterView.m */; };
 		18DB71491D2407D800094A8E /* UIView+WHC_ViewProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB71471D2407D800094A8E /* UIView+WHC_ViewProperty.m */; };
 		18DB71541D24083400094A8E /* WHC_CameraVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB714C1D24083400094A8E /* WHC_CameraVC.m */; };
@@ -138,6 +144,12 @@
 		0CE289121CB578B4008A309A /* LoadReviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadReviews.swift; sourceTree = "<group>"; };
 		0CE289161CB59F3E008A309A /* ReviewParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewParser.swift; sourceTree = "<group>"; };
 		0CE289211CB5A294008A309A /* SWXMLHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWXMLHash.swift; sourceTree = "<group>"; };
+		18173AF71D45C6E9003CB7D7 /* MyAppListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAppListTableViewController.swift; sourceTree = "<group>"; };
+		185CD9C81D376A870024B499 /* MyAppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAppInfo.swift; sourceTree = "<group>"; };
+		185CD9CA1D3770B60024B499 /* MyAppModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAppModel.swift; sourceTree = "<group>"; };
+		185EE0A91D3E2809003B8AAF /* AppCategoryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCategoryItem.swift; sourceTree = "<group>"; };
+		186844541D348D07003C2E17 /* BaseHttper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseHttper.swift; sourceTree = "<group>"; };
+		186E20081D3A3650004156C6 /* customdir.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = customdir.json; sourceTree = "<group>"; };
 		18DB71441D2407D800094A8E /* UIView+WHC_AutoAdapterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WHC_AutoAdapterView.h"; sourceTree = "<group>"; };
 		18DB71451D2407D800094A8E /* UIView+WHC_AutoAdapterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WHC_AutoAdapterView.m"; sourceTree = "<group>"; };
 		18DB71461D2407D800094A8E /* UIView+WHC_ViewProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WHC_ViewProperty.h"; sourceTree = "<group>"; };
@@ -262,6 +274,7 @@
 				0CE288E91CB309A2008A309A /* Custom */,
 				0CE289201CB5A294008A309A /* ThirdParty */,
 				0C6D7F0E1CAF2ADB008AD13B /* Supporting files */,
+				186844541D348D07003C2E17 /* BaseHttper.swift */,
 			);
 			path = "App Love";
 			sourceTree = "<group>";
@@ -297,6 +310,7 @@
 				0C6D7ED21CAF2A5C008AD13B /* ReviewModel.swift */,
 				0CC230011CC2095500FFF10A /* LoadState.swift */,
 				0CC230021CC2095500FFF10A /* PageInfo.swift */,
+				185CD9CA1D3770B60024B499 /* MyAppModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -307,6 +321,7 @@
 				0C6D7ED51CAF2A5C008AD13B /* ReviewLoading */,
 				0C6D7ED41CAF2A5C008AD13B /* AppInfo.swift */,
 				0C6D7ED91CAF2A5C008AD13B /* SearchApps.swift */,
+				185CD9C81D376A870024B499 /* MyAppInfo.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -374,6 +389,7 @@
 			children = (
 				0C6D7F0F1CAF2ADB008AD13B /* AppDelegate.swift */,
 				0C6D7F101CAF2ADB008AD13B /* Info.plist */,
+				186E20081D3A3650004156C6 /* customdir.json */,
 			);
 			name = "Supporting files";
 			path = "Data/Supporting files";
@@ -418,12 +434,22 @@
 			path = ThirdParty;
 			sourceTree = "<group>";
 		};
+		185EE0A81D3E1D85003B8AAF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				185EE0A91D3E2809003B8AAF /* AppCategoryItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		18DB71401D24077300094A8E /* WHC_Lib */ = {
 			isa = PBXGroup;
 			children = (
+				185EE0A81D3E1D85003B8AAF /* Models */,
 				18DB71421D24079800094A8E /* Swift_Lib */,
 				18DB71411D24078700094A8E /* OC_Lib */,
 				18DB716B1D240A1A00094A8E /* WHCViewController.swift */,
+				18173AF71D45C6E9003CB7D7 /* MyAppListTableViewController.swift */,
 			);
 			path = WHC_Lib;
 			sourceTree = "<group>";
@@ -654,6 +680,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C6D7F041CAF2A5C008AD13B /* ReviewHeaderCell.xib in Resources */,
+				186E20091D3A3650004156C6 /* customdir.json in Resources */,
 				18DB71591D24083400094A8E /* WHC_PictureListVC.xib in Resources */,
 				18E85BAA1D2140C3006272EF /* zbar-back.png in Resources */,
 				18E85BAC1D2140C3006272EF /* zbar-helpicons.png in Resources */,
@@ -728,6 +755,7 @@
 			files = (
 				0C6D7EF11CAF2A5C008AD13B /* CacheManager.swift in Sources */,
 				0CE289171CB59F3E008A309A /* ReviewParser.swift in Sources */,
+				185CD9CB1D3770B60024B499 /* MyAppModel.swift in Sources */,
 				0CE288FF1CB35BC6008A309A /* AppListExtension.swift in Sources */,
 				18DB716C1D240A1A00094A8E /* WHCViewController.swift in Sources */,
 				0C6D7F001CAF2A5C008AD13B /* CountrySelectCell.swift in Sources */,
@@ -737,9 +765,12 @@
 				18DB71581D24083400094A8E /* WHC_PictureListVC.m in Sources */,
 				0C6D7F031CAF2A5C008AD13B /* ReviewHeaderCell.swift in Sources */,
 				0C6D7F0D1CAF2A5C008AD13B /* SelectCountryViewController.swift in Sources */,
+				186844551D348D07003C2E17 /* BaseHttper.swift in Sources */,
 				0CC22FFC1CB9663100FFF10A /* TerritoryBar.swift in Sources */,
+				185EE0AA1D3E2809003B8AAF /* AppCategoryItem.swift in Sources */,
 				0C6D7EF81CAF2A5C008AD13B /* AppInfo.swift in Sources */,
 				18DB71691D24087300094A8E /* WHC_MoreMenuItemVC.swift in Sources */,
+				18173AF81D45C6E9003CB7D7 /* MyAppListTableViewController.swift in Sources */,
 				0C6D7F011CAF2A5C008AD13B /* ReviewCell.swift in Sources */,
 				18DB716A1D24087300094A8E /* WHC_Refresh.swift in Sources */,
 				0C6D7F111CAF2ADB008AD13B /* AppDelegate.swift in Sources */,
@@ -770,6 +801,7 @@
 				0C5CB8B91CCD910300B55450 /* HelpAnimation.swift in Sources */,
 				0CC230061CC40C6B00FFF10A /* SelectCountryExtension.swift in Sources */,
 				0CE289221CB5A294008A309A /* SWXMLHash.swift in Sources */,
+				185CD9C91D376A870024B499 /* MyAppInfo.swift in Sources */,
 				0C6D7EF31CAF2A5C008AD13B /* TerritoryList.swift in Sources */,
 				18DB71661D24087300094A8E /* WHC_ImageDisplayView.swift in Sources */,
 				0C6D7EFC1CAF2A5C008AD13B /* SearchApps.swift in Sources */,
