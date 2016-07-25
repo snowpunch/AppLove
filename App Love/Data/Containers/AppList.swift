@@ -47,6 +47,8 @@ class AppList {
     func load() -> Bool {
         if let pathWithFileName = getFilePath(),
             let models = NSKeyedUnarchiver.unarchiveObjectWithFile(pathWithFileName) as? [AppModel] {
+            
+//            print("pathWithFileName:\(pathWithFileName)")
             self.appModels = models
             return true
         }

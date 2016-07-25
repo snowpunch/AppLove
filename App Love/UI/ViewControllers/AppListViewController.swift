@@ -20,6 +20,7 @@ class AppListViewController: UIViewController {
         initTableView()
         Theme.toolBar(toolBar)
         displayAppList()
+//        BaseHttper()
     }
     
     func displayAppList() {
@@ -70,6 +71,10 @@ class AppListViewController: UIViewController {
         }
     }
  
+    @IBAction func onQRCode(sender: AnyObject) {
+        performSegueWithIdentifier("QRCode", sender: nil)
+        
+    }
     @IBAction func onSearch(sender: AnyObject) {
         performSegueWithIdentifier("AppSearch", sender: nil)
     }
@@ -85,9 +90,26 @@ class AppListViewController: UIViewController {
     }
     
     @IBAction func onAbout(sender: AnyObject) {
-        if let storyboard = self.storyboard {
-            let aboutVC = storyboard.instantiateViewControllerWithIdentifier("about")
-            self.navigationController!.pushViewController(aboutVC, animated: true)
+        
+        let alertController:UIAlertController = UIAlertController(title: "About", message: "where did you want to go", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        
+        let action1:UIAlertAction = UIAlertAction(title: "AppList", style: UIAlertActionStyle.Default) { (action:UIAlertAction) in
+            self.performSegueWithIdentifier("AppList", sender: nil)
         }
+        
+        let action2:UIAlertAction = UIAlertAction(title: "about", style: UIAlertActionStyle.Default) { (action:UIAlertAction) in
+            if let storyboard = self.storyboard {
+                let aboutVC = storyboard.instantiateViewControllerWithIdentifier("about")
+                self.navigationController!.pushViewController(aboutVC, animated: true)
+            }
+        }
+        let action3:UIAlertAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
+        
+        alertController.addAction(action1)
+        alertController.addAction(action2)
+        alertController.addAction(action3)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+
     }
 }

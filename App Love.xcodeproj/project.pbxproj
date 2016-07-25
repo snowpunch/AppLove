@@ -55,7 +55,43 @@
 		0CE289131CB578B4008A309A /* LoadReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE289121CB578B4008A309A /* LoadReviews.swift */; };
 		0CE289171CB59F3E008A309A /* ReviewParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE289161CB59F3E008A309A /* ReviewParser.swift */; };
 		0CE289221CB5A294008A309A /* SWXMLHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE289211CB5A294008A309A /* SWXMLHash.swift */; };
-		F5F1490A7537C883C3B449F0 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A76BCD08019B2EF573D098A /* Pods.framework */; };
+		18173AF81D45C6E9003CB7D7 /* MyAppListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18173AF71D45C6E9003CB7D7 /* MyAppListTableViewController.swift */; };
+		185CD9C91D376A870024B499 /* MyAppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185CD9C81D376A870024B499 /* MyAppInfo.swift */; };
+		185CD9CB1D3770B60024B499 /* MyAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185CD9CA1D3770B60024B499 /* MyAppModel.swift */; };
+		185EE0AA1D3E2809003B8AAF /* AppCategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185EE0A91D3E2809003B8AAF /* AppCategoryItem.swift */; };
+		186844551D348D07003C2E17 /* BaseHttper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186844541D348D07003C2E17 /* BaseHttper.swift */; };
+		186E20091D3A3650004156C6 /* customdir.json in Resources */ = {isa = PBXBuildFile; fileRef = 186E20081D3A3650004156C6 /* customdir.json */; };
+		18DB71481D2407D800094A8E /* UIView+WHC_AutoAdapterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB71451D2407D800094A8E /* UIView+WHC_AutoAdapterView.m */; };
+		18DB71491D2407D800094A8E /* UIView+WHC_ViewProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB71471D2407D800094A8E /* UIView+WHC_ViewProperty.m */; };
+		18DB71541D24083400094A8E /* WHC_CameraVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB714C1D24083400094A8E /* WHC_CameraVC.m */; };
+		18DB71551D24083400094A8E /* WHC_CameraVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DB714D1D24083400094A8E /* WHC_CameraVC.xib */; };
+		18DB71561D24083400094A8E /* WHC_ChoicePictureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB714F1D24083400094A8E /* WHC_ChoicePictureVC.m */; };
+		18DB71571D24083400094A8E /* WHC_ChoicePictureVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DB71501D24083400094A8E /* WHC_ChoicePictureVC.xib */; };
+		18DB71581D24083400094A8E /* WHC_PictureListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB71521D24083400094A8E /* WHC_PictureListVC.m */; };
+		18DB71591D24083400094A8E /* WHC_PictureListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DB71531D24083400094A8E /* WHC_PictureListVC.xib */; };
+		18DB715F1D24085B00094A8E /* WHC_Asset.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB715C1D24085B00094A8E /* WHC_Asset.m */; };
+		18DB71601D24085B00094A8E /* WHC_PhotoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB715E1D24085B00094A8E /* WHC_PhotoListCell.m */; };
+		18DB71661D24087300094A8E /* WHC_ImageDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DB71611D24087300094A8E /* WHC_ImageDisplayView.swift */; };
+		18DB71671D24087300094A8E /* WHC_MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DB71621D24087300094A8E /* WHC_MenuItem.swift */; };
+		18DB71681D24087300094A8E /* WHC_MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DB71631D24087300094A8E /* WHC_MenuView.swift */; };
+		18DB71691D24087300094A8E /* WHC_MoreMenuItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DB71641D24087300094A8E /* WHC_MoreMenuItemVC.swift */; };
+		18DB716A1D24087300094A8E /* WHC_Refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DB71651D24087300094A8E /* WHC_Refresh.swift */; };
+		18DB716C1D240A1A00094A8E /* WHCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DB716B1D240A1A00094A8E /* WHCViewController.swift */; };
+		18E85B7B1D212D09006272EF /* libiconv.2.4.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E85B7A1D212D09006272EF /* libiconv.2.4.0.tbd */; };
+		18E85B871D213FF3006272EF /* qr_scan_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E85B7F1D213FF3006272EF /* qr_scan_line@2x.png */; };
+		18E85B881D213FF3006272EF /* QRCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E85B811D213FF3006272EF /* QRCodeGenerator.m */; };
+		18E85B891D213FF3006272EF /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E85B821D213FF3006272EF /* QRCodeViewController.swift */; };
+		18E85B8A1D213FF3006272EF /* QRView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E85B841D213FF3006272EF /* QRView.m */; };
+		18E85B8B1D213FF3006272EF /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E85B861D213FF3006272EF /* UIView+Layout.m */; };
+		18E85BAA1D2140C3006272EF /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E85BA61D2140C3006272EF /* zbar-back.png */; };
+		18E85BAB1D2140C3006272EF /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = 18E85BA71D2140C3006272EF /* zbar-help.html */; };
+		18E85BAC1D2140C3006272EF /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E85BA81D2140C3006272EF /* zbar-helpicons.png */; };
+		18E85BAD1D2140C3006272EF /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E85BA91D2140C3006272EF /* zbar-samples.png */; };
+		18F3A9E91D22178C00849B37 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F3A9E81D22178C00849B37 /* QuartzCore.framework */; };
+		18F3A9EB1D22179900849B37 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F3A9EA1D22179900849B37 /* CoreVideo.framework */; };
+		18F3A9ED1D2217A400849B37 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F3A9EC1D2217A400849B37 /* CoreMedia.framework */; };
+		18F3A9EF1D2217AA00849B37 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F3A9EE1D2217AA00849B37 /* AVFoundation.framework */; };
+		EA70D2B2CAB8F695AD54F3AA /* Pods_App_Love.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5CD5E131E4985E0FA7821D /* Pods_App_Love.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,9 +144,77 @@
 		0CE289121CB578B4008A309A /* LoadReviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadReviews.swift; sourceTree = "<group>"; };
 		0CE289161CB59F3E008A309A /* ReviewParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewParser.swift; sourceTree = "<group>"; };
 		0CE289211CB5A294008A309A /* SWXMLHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWXMLHash.swift; sourceTree = "<group>"; };
-		55AB01220B052B63215CDB6E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		7A76BCD08019B2EF573D098A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		94DFE5CEA5EBCD72E8AD9822 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		18173AF71D45C6E9003CB7D7 /* MyAppListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAppListTableViewController.swift; sourceTree = "<group>"; };
+		185CD9C81D376A870024B499 /* MyAppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAppInfo.swift; sourceTree = "<group>"; };
+		185CD9CA1D3770B60024B499 /* MyAppModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAppModel.swift; sourceTree = "<group>"; };
+		185EE0A91D3E2809003B8AAF /* AppCategoryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCategoryItem.swift; sourceTree = "<group>"; };
+		186844541D348D07003C2E17 /* BaseHttper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseHttper.swift; sourceTree = "<group>"; };
+		186E20081D3A3650004156C6 /* customdir.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = customdir.json; sourceTree = "<group>"; };
+		18DB71441D2407D800094A8E /* UIView+WHC_AutoAdapterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WHC_AutoAdapterView.h"; sourceTree = "<group>"; };
+		18DB71451D2407D800094A8E /* UIView+WHC_AutoAdapterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WHC_AutoAdapterView.m"; sourceTree = "<group>"; };
+		18DB71461D2407D800094A8E /* UIView+WHC_ViewProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WHC_ViewProperty.h"; sourceTree = "<group>"; };
+		18DB71471D2407D800094A8E /* UIView+WHC_ViewProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WHC_ViewProperty.m"; sourceTree = "<group>"; };
+		18DB714B1D24083400094A8E /* WHC_CameraVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHC_CameraVC.h; sourceTree = "<group>"; };
+		18DB714C1D24083400094A8E /* WHC_CameraVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHC_CameraVC.m; sourceTree = "<group>"; };
+		18DB714D1D24083400094A8E /* WHC_CameraVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WHC_CameraVC.xib; sourceTree = "<group>"; };
+		18DB714E1D24083400094A8E /* WHC_ChoicePictureVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHC_ChoicePictureVC.h; sourceTree = "<group>"; };
+		18DB714F1D24083400094A8E /* WHC_ChoicePictureVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHC_ChoicePictureVC.m; sourceTree = "<group>"; };
+		18DB71501D24083400094A8E /* WHC_ChoicePictureVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WHC_ChoicePictureVC.xib; sourceTree = "<group>"; };
+		18DB71511D24083400094A8E /* WHC_PictureListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHC_PictureListVC.h; sourceTree = "<group>"; };
+		18DB71521D24083400094A8E /* WHC_PictureListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHC_PictureListVC.m; sourceTree = "<group>"; };
+		18DB71531D24083400094A8E /* WHC_PictureListVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WHC_PictureListVC.xib; sourceTree = "<group>"; };
+		18DB715B1D24085B00094A8E /* WHC_Asset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHC_Asset.h; sourceTree = "<group>"; };
+		18DB715C1D24085B00094A8E /* WHC_Asset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHC_Asset.m; sourceTree = "<group>"; };
+		18DB715D1D24085B00094A8E /* WHC_PhotoListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHC_PhotoListCell.h; sourceTree = "<group>"; };
+		18DB715E1D24085B00094A8E /* WHC_PhotoListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHC_PhotoListCell.m; sourceTree = "<group>"; };
+		18DB71611D24087300094A8E /* WHC_ImageDisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WHC_ImageDisplayView.swift; sourceTree = "<group>"; };
+		18DB71621D24087300094A8E /* WHC_MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WHC_MenuItem.swift; sourceTree = "<group>"; };
+		18DB71631D24087300094A8E /* WHC_MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WHC_MenuView.swift; sourceTree = "<group>"; };
+		18DB71641D24087300094A8E /* WHC_MoreMenuItemVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WHC_MoreMenuItemVC.swift; sourceTree = "<group>"; };
+		18DB71651D24087300094A8E /* WHC_Refresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WHC_Refresh.swift; sourceTree = "<group>"; };
+		18DB716B1D240A1A00094A8E /* WHCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WHCViewController.swift; sourceTree = "<group>"; };
+		18E85B7A1D212D09006272EF /* libiconv.2.4.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.2.4.0.tbd; path = usr/lib/libiconv.2.4.0.tbd; sourceTree = SDKROOT; };
+		18E85B7E1D213FF3006272EF /* App Love-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "App Love-Bridging-Header.h"; sourceTree = "<group>"; };
+		18E85B7F1D213FF3006272EF /* qr_scan_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qr_scan_line@2x.png"; sourceTree = "<group>"; };
+		18E85B801D213FF3006272EF /* QRCodeGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeGenerator.h; sourceTree = "<group>"; };
+		18E85B811D213FF3006272EF /* QRCodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeGenerator.m; sourceTree = "<group>"; };
+		18E85B821D213FF3006272EF /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		18E85B831D213FF3006272EF /* QRView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRView.h; sourceTree = "<group>"; };
+		18E85B841D213FF3006272EF /* QRView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRView.m; sourceTree = "<group>"; };
+		18E85B851D213FF3006272EF /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		18E85B861D213FF3006272EF /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		18E85B8E1D21405C006272EF /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzbar.a; sourceTree = "<group>"; };
+		18E85B911D214082006272EF /* zbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zbar.h; sourceTree = "<group>"; };
+		18E85B921D214082006272EF /* ZBarCameraSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCameraSimulator.h; sourceTree = "<group>"; };
+		18E85B931D214082006272EF /* ZBarCaptureReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCaptureReader.h; sourceTree = "<group>"; };
+		18E85B941D214082006272EF /* ZBarHelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarHelpController.h; sourceTree = "<group>"; };
+		18E85B951D214082006272EF /* ZBarImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImage.h; sourceTree = "<group>"; };
+		18E85B961D214082006272EF /* ZBarImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImageScanner.h; sourceTree = "<group>"; };
+		18E85B971D214082006272EF /* ZBarReaderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderController.h; sourceTree = "<group>"; };
+		18E85B981D214082006272EF /* ZBarReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderView.h; sourceTree = "<group>"; };
+		18E85B991D214082006272EF /* ZBarReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderViewController.h; sourceTree = "<group>"; };
+		18E85B9A1D214082006272EF /* ZBarSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSDK.h; sourceTree = "<group>"; };
+		18E85B9B1D214082006272EF /* ZBarSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSymbol.h; sourceTree = "<group>"; };
+		18E85B9D1D2140AD006272EF /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
+		18E85B9E1D2140AD006272EF /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
+		18E85B9F1D2140AD006272EF /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		18E85BA01D2140AD006272EF /* ImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScanner.h; sourceTree = "<group>"; };
+		18E85BA11D2140AD006272EF /* Processor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Processor.h; sourceTree = "<group>"; };
+		18E85BA21D2140AD006272EF /* Scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scanner.h; sourceTree = "<group>"; };
+		18E85BA31D2140AD006272EF /* Symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Symbol.h; sourceTree = "<group>"; };
+		18E85BA41D2140AD006272EF /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		18E85BA51D2140AD006272EF /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
+		18E85BA61D2140C3006272EF /* zbar-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-back.png"; sourceTree = "<group>"; };
+		18E85BA71D2140C3006272EF /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
+		18E85BA81D2140C3006272EF /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
+		18E85BA91D2140C3006272EF /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
+		18F3A9E81D22178C00849B37 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		18F3A9EA1D22179900849B37 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		18F3A9EC1D2217A400849B37 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		18F3A9EE1D2217AA00849B37 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1A48F3B19CFCD10CBA110F3F /* Pods-App Love.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App Love.release.xcconfig"; path = "Pods/Target Support Files/Pods-App Love/Pods-App Love.release.xcconfig"; sourceTree = "<group>"; };
+		3C5CD5E131E4985E0FA7821D /* Pods_App_Love.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_Love.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7056123D74DD740F57DA2840 /* Pods-App Love.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App Love.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App Love/Pods-App Love.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +222,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5F1490A7537C883C3B449F0 /* Pods.framework in Frameworks */,
+				18F3A9EF1D2217AA00849B37 /* AVFoundation.framework in Frameworks */,
+				18F3A9ED1D2217A400849B37 /* CoreMedia.framework in Frameworks */,
+				18F3A9EB1D22179900849B37 /* CoreVideo.framework in Frameworks */,
+				18F3A9E91D22178C00849B37 /* QuartzCore.framework in Frameworks */,
+				18E85B7B1D212D09006272EF /* libiconv.2.4.0.tbd in Frameworks */,
+				EA70D2B2CAB8F695AD54F3AA /* Pods_App_Love.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,8 +250,8 @@
 				0C6D7EB51CAF2606008AD13B /* App Love */,
 				0C6D7EBD1CAF2606008AD13B /* Assets.xcassets */,
 				0C6D7EB41CAF2606008AD13B /* Products */,
-				2AF106C9D5FF5104EE6D20A3 /* Pods */,
 				69374C9ECDA5859BA5BF7068 /* Frameworks */,
+				4CB198BAB63DEFAD8268C246 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,12 +266,15 @@
 		0C6D7EB51CAF2606008AD13B /* App Love */ = {
 			isa = PBXGroup;
 			children = (
+				18DB71401D24077300094A8E /* WHC_Lib */,
+				18E85B7C1D213FA0006272EF /* QRCode */,
 				0C6D7EDA1CAF2A5C008AD13B /* UI */,
 				0C6D7EC81CAF2A5C008AD13B /* Data */,
 				0C6D7ED31CAF2A5C008AD13B /* Network */,
 				0CE288E91CB309A2008A309A /* Custom */,
 				0CE289201CB5A294008A309A /* ThirdParty */,
 				0C6D7F0E1CAF2ADB008AD13B /* Supporting files */,
+				186844541D348D07003C2E17 /* BaseHttper.swift */,
 			);
 			path = "App Love";
 			sourceTree = "<group>";
@@ -198,6 +310,7 @@
 				0C6D7ED21CAF2A5C008AD13B /* ReviewModel.swift */,
 				0CC230011CC2095500FFF10A /* LoadState.swift */,
 				0CC230021CC2095500FFF10A /* PageInfo.swift */,
+				185CD9CA1D3770B60024B499 /* MyAppModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -208,6 +321,7 @@
 				0C6D7ED51CAF2A5C008AD13B /* ReviewLoading */,
 				0C6D7ED41CAF2A5C008AD13B /* AppInfo.swift */,
 				0C6D7ED91CAF2A5C008AD13B /* SearchApps.swift */,
+				185CD9C81D376A870024B499 /* MyAppInfo.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -275,6 +389,7 @@
 			children = (
 				0C6D7F0F1CAF2ADB008AD13B /* AppDelegate.swift */,
 				0C6D7F101CAF2ADB008AD13B /* Info.plist */,
+				186E20081D3A3650004156C6 /* customdir.json */,
 			);
 			name = "Supporting files";
 			path = "Data/Supporting files";
@@ -319,11 +434,172 @@
 			path = ThirdParty;
 			sourceTree = "<group>";
 		};
-		2AF106C9D5FF5104EE6D20A3 /* Pods */ = {
+		185EE0A81D3E1D85003B8AAF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				55AB01220B052B63215CDB6E /* Pods.debug.xcconfig */,
-				94DFE5CEA5EBCD72E8AD9822 /* Pods.release.xcconfig */,
+				185EE0A91D3E2809003B8AAF /* AppCategoryItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		18DB71401D24077300094A8E /* WHC_Lib */ = {
+			isa = PBXGroup;
+			children = (
+				185EE0A81D3E1D85003B8AAF /* Models */,
+				18DB71421D24079800094A8E /* Swift_Lib */,
+				18DB71411D24078700094A8E /* OC_Lib */,
+				18DB716B1D240A1A00094A8E /* WHCViewController.swift */,
+				18173AF71D45C6E9003CB7D7 /* MyAppListTableViewController.swift */,
+			);
+			path = WHC_Lib;
+			sourceTree = "<group>";
+		};
+		18DB71411D24078700094A8E /* OC_Lib */ = {
+			isa = PBXGroup;
+			children = (
+				18DB714A1D24082000094A8E /* ChoiceImageMode */,
+				18DB71431D2407B900094A8E /* UIUnit */,
+			);
+			path = OC_Lib;
+			sourceTree = "<group>";
+		};
+		18DB71421D24079800094A8E /* Swift_Lib */ = {
+			isa = PBXGroup;
+			children = (
+				18DB71611D24087300094A8E /* WHC_ImageDisplayView.swift */,
+				18DB71621D24087300094A8E /* WHC_MenuItem.swift */,
+				18DB71631D24087300094A8E /* WHC_MenuView.swift */,
+				18DB71641D24087300094A8E /* WHC_MoreMenuItemVC.swift */,
+				18DB71651D24087300094A8E /* WHC_Refresh.swift */,
+			);
+			path = Swift_Lib;
+			sourceTree = "<group>";
+		};
+		18DB71431D2407B900094A8E /* UIUnit */ = {
+			isa = PBXGroup;
+			children = (
+				18DB71441D2407D800094A8E /* UIView+WHC_AutoAdapterView.h */,
+				18DB71451D2407D800094A8E /* UIView+WHC_AutoAdapterView.m */,
+				18DB71461D2407D800094A8E /* UIView+WHC_ViewProperty.h */,
+				18DB71471D2407D800094A8E /* UIView+WHC_ViewProperty.m */,
+			);
+			path = UIUnit;
+			sourceTree = "<group>";
+		};
+		18DB714A1D24082000094A8E /* ChoiceImageMode */ = {
+			isa = PBXGroup;
+			children = (
+				18DB715A1D24083D00094A8E /* cell */,
+				18DB714B1D24083400094A8E /* WHC_CameraVC.h */,
+				18DB714C1D24083400094A8E /* WHC_CameraVC.m */,
+				18DB714D1D24083400094A8E /* WHC_CameraVC.xib */,
+				18DB714E1D24083400094A8E /* WHC_ChoicePictureVC.h */,
+				18DB714F1D24083400094A8E /* WHC_ChoicePictureVC.m */,
+				18DB71501D24083400094A8E /* WHC_ChoicePictureVC.xib */,
+				18DB71511D24083400094A8E /* WHC_PictureListVC.h */,
+				18DB71521D24083400094A8E /* WHC_PictureListVC.m */,
+				18DB71531D24083400094A8E /* WHC_PictureListVC.xib */,
+			);
+			path = ChoiceImageMode;
+			sourceTree = "<group>";
+		};
+		18DB715A1D24083D00094A8E /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				18DB715B1D24085B00094A8E /* WHC_Asset.h */,
+				18DB715C1D24085B00094A8E /* WHC_Asset.m */,
+				18DB715D1D24085B00094A8E /* WHC_PhotoListCell.h */,
+				18DB715E1D24085B00094A8E /* WHC_PhotoListCell.m */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		18E85B7C1D213FA0006272EF /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				18E85B7F1D213FF3006272EF /* qr_scan_line@2x.png */,
+				18E85B801D213FF3006272EF /* QRCodeGenerator.h */,
+				18E85B811D213FF3006272EF /* QRCodeGenerator.m */,
+				18E85B821D213FF3006272EF /* QRCodeViewController.swift */,
+				18E85B831D213FF3006272EF /* QRView.h */,
+				18E85B841D213FF3006272EF /* QRView.m */,
+				18E85B851D213FF3006272EF /* UIView+Layout.h */,
+				18E85B861D213FF3006272EF /* UIView+Layout.m */,
+				18E85B7D1D213FBD006272EF /* ZBarSDK */,
+				18E85B7E1D213FF3006272EF /* App Love-Bridging-Header.h */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
+		18E85B7D1D213FBD006272EF /* ZBarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				18E85B8E1D21405C006272EF /* libzbar.a */,
+				18E85B8D1D214040006272EF /* Resources */,
+				18E85B8C1D214027006272EF /* Headers */,
+			);
+			path = ZBarSDK;
+			sourceTree = "<group>";
+		};
+		18E85B8C1D214027006272EF /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				18E85B901D214063006272EF /* ZBarSDK */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		18E85B8D1D214040006272EF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				18E85BA61D2140C3006272EF /* zbar-back.png */,
+				18E85BA71D2140C3006272EF /* zbar-help.html */,
+				18E85BA81D2140C3006272EF /* zbar-helpicons.png */,
+				18E85BA91D2140C3006272EF /* zbar-samples.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		18E85B901D214063006272EF /* ZBarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				18E85B9C1D214086006272EF /* zbar */,
+				18E85B911D214082006272EF /* zbar.h */,
+				18E85B921D214082006272EF /* ZBarCameraSimulator.h */,
+				18E85B931D214082006272EF /* ZBarCaptureReader.h */,
+				18E85B941D214082006272EF /* ZBarHelpController.h */,
+				18E85B951D214082006272EF /* ZBarImage.h */,
+				18E85B961D214082006272EF /* ZBarImageScanner.h */,
+				18E85B971D214082006272EF /* ZBarReaderController.h */,
+				18E85B981D214082006272EF /* ZBarReaderView.h */,
+				18E85B991D214082006272EF /* ZBarReaderViewController.h */,
+				18E85B9A1D214082006272EF /* ZBarSDK.h */,
+				18E85B9B1D214082006272EF /* ZBarSymbol.h */,
+			);
+			path = ZBarSDK;
+			sourceTree = "<group>";
+		};
+		18E85B9C1D214086006272EF /* zbar */ = {
+			isa = PBXGroup;
+			children = (
+				18E85B9D1D2140AD006272EF /* Decoder.h */,
+				18E85B9E1D2140AD006272EF /* Exception.h */,
+				18E85B9F1D2140AD006272EF /* Image.h */,
+				18E85BA01D2140AD006272EF /* ImageScanner.h */,
+				18E85BA11D2140AD006272EF /* Processor.h */,
+				18E85BA21D2140AD006272EF /* Scanner.h */,
+				18E85BA31D2140AD006272EF /* Symbol.h */,
+				18E85BA41D2140AD006272EF /* Video.h */,
+				18E85BA51D2140AD006272EF /* Window.h */,
+			);
+			path = zbar;
+			sourceTree = "<group>";
+		};
+		4CB198BAB63DEFAD8268C246 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7056123D74DD740F57DA2840 /* Pods-App Love.debug.xcconfig */,
+				1A48F3B19CFCD10CBA110F3F /* Pods-App Love.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -331,7 +607,12 @@
 		69374C9ECDA5859BA5BF7068 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7A76BCD08019B2EF573D098A /* Pods.framework */,
+				18F3A9EE1D2217AA00849B37 /* AVFoundation.framework */,
+				18F3A9EC1D2217A400849B37 /* CoreMedia.framework */,
+				18F3A9EA1D22179900849B37 /* CoreVideo.framework */,
+				18F3A9E81D22178C00849B37 /* QuartzCore.framework */,
+				18E85B7A1D212D09006272EF /* libiconv.2.4.0.tbd */,
+				3C5CD5E131E4985E0FA7821D /* Pods_App_Love.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -343,12 +624,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C6D7EC51CAF2606008AD13B /* Build configuration list for PBXNativeTarget "App Love" */;
 			buildPhases = (
-				659CEDCB2A4E2A02572FFC4A /* Check Pods Manifest.lock */,
+				80135A2B34790A825F84127C /* [CP] Check Pods Manifest.lock */,
 				0C6D7EAF1CAF2606008AD13B /* Sources */,
 				0C6D7EB01CAF2606008AD13B /* Frameworks */,
 				0C6D7EB11CAF2606008AD13B /* Resources */,
-				897DB04EB4555A24B646D1D3 /* Embed Pods Frameworks */,
-				6498D1F1FF45A7DE29BBE965 /* Copy Pods Resources */,
+				5F0C8D4DEA95F33EC83AA1E3 /* [CP] Embed Pods Frameworks */,
+				40F0D007924D2869858C67F2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -365,7 +646,7 @@
 		0C6D7EAB1CAF2606008AD13B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Snowpunch;
 				TargetAttributes = {
@@ -399,11 +680,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C6D7F041CAF2A5C008AD13B /* ReviewHeaderCell.xib in Resources */,
+				186E20091D3A3650004156C6 /* customdir.json in Resources */,
+				18DB71591D24083400094A8E /* WHC_PictureListVC.xib in Resources */,
+				18E85BAA1D2140C3006272EF /* zbar-back.png in Resources */,
+				18E85BAC1D2140C3006272EF /* zbar-helpicons.png in Resources */,
 				0C6D7F021CAF2A5C008AD13B /* ReviewCell.xib in Resources */,
+				18DB71551D24083400094A8E /* WHC_CameraVC.xib in Resources */,
 				0C6D7F071CAF2A5C008AD13B /* Main.storyboard in Resources */,
 				0C6D7EFE1CAF2A5C008AD13B /* AppCell.xib in Resources */,
+				18DB71571D24083400094A8E /* WHC_ChoicePictureVC.xib in Resources */,
 				0C6D7F061CAF2A5C008AD13B /* LaunchScreen.storyboard in Resources */,
+				18E85BAB1D2140C3006272EF /* zbar-help.html in Resources */,
+				18E85BAD1D2140C3006272EF /* zbar-samples.png in Resources */,
 				0C6D7EBE1CAF2606008AD13B /* Assets.xcassets in Resources */,
+				18E85B871D213FF3006272EF /* qr_scan_line@2x.png in Resources */,
 				0C6D7F121CAF2ADB008AD13B /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,49 +701,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6498D1F1FF45A7DE29BBE965 /* Copy Pods Resources */ = {
+		40F0D007924D2869858C67F2 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-App Love/Pods-App Love-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		659CEDCB2A4E2A02572FFC4A /* Check Pods Manifest.lock */ = {
+		5F0C8D4DEA95F33EC83AA1E3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-App Love/Pods-App Love-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80135A2B34790A825F84127C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		897DB04EB4555A24B646D1D3 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -465,17 +755,28 @@
 			files = (
 				0C6D7EF11CAF2A5C008AD13B /* CacheManager.swift in Sources */,
 				0CE289171CB59F3E008A309A /* ReviewParser.swift in Sources */,
+				185CD9CB1D3770B60024B499 /* MyAppModel.swift in Sources */,
 				0CE288FF1CB35BC6008A309A /* AppListExtension.swift in Sources */,
+				18DB716C1D240A1A00094A8E /* WHCViewController.swift in Sources */,
 				0C6D7F001CAF2A5C008AD13B /* CountrySelectCell.swift in Sources */,
 				0C6D7EF61CAF2A5C008AD13B /* CountryModel.swift in Sources */,
+				18DB71681D24087300094A8E /* WHC_MenuView.swift in Sources */,
+				18E85B8A1D213FF3006272EF /* QRView.m in Sources */,
+				18DB71581D24083400094A8E /* WHC_PictureListVC.m in Sources */,
 				0C6D7F031CAF2A5C008AD13B /* ReviewHeaderCell.swift in Sources */,
 				0C6D7F0D1CAF2A5C008AD13B /* SelectCountryViewController.swift in Sources */,
+				186844551D348D07003C2E17 /* BaseHttper.swift in Sources */,
 				0CC22FFC1CB9663100FFF10A /* TerritoryBar.swift in Sources */,
+				185EE0AA1D3E2809003B8AAF /* AppCategoryItem.swift in Sources */,
 				0C6D7EF81CAF2A5C008AD13B /* AppInfo.swift in Sources */,
+				18DB71691D24087300094A8E /* WHC_MoreMenuItemVC.swift in Sources */,
+				18173AF81D45C6E9003CB7D7 /* MyAppListTableViewController.swift in Sources */,
 				0C6D7F011CAF2A5C008AD13B /* ReviewCell.swift in Sources */,
+				18DB716A1D24087300094A8E /* WHC_Refresh.swift in Sources */,
 				0C6D7F111CAF2ADB008AD13B /* AppDelegate.swift in Sources */,
 				0C6D7EF41CAF2A5C008AD13B /* TerritoryMgr.swift in Sources */,
 				0C5CB8A71CCBF91900B55450 /* AboutAnimation.swift in Sources */,
+				18DB715F1D24085B00094A8E /* WHC_Asset.m in Sources */,
 				0C6D7EFA1CAF2A5C008AD13B /* ReviewLoadManager.swift in Sources */,
 				0C6D7EF51CAF2A5C008AD13B /* AppModel.swift in Sources */,
 				0C6D7EFB1CAF2A5C008AD13B /* TerritoryLoadOperation.swift in Sources */,
@@ -485,19 +786,30 @@
 				0C6D7EFD1CAF2A5C008AD13B /* AppCell.swift in Sources */,
 				0CE289131CB578B4008A309A /* LoadReviews.swift in Sources */,
 				0C6D7F0C1CAF2A5C008AD13B /* ReviewListViewController.swift in Sources */,
+				18DB71561D24083400094A8E /* WHC_ChoicePictureVC.m in Sources */,
+				18DB71481D2407D800094A8E /* UIView+WHC_AutoAdapterView.m in Sources */,
+				18DB71491D2407D800094A8E /* UIView+WHC_ViewProperty.m in Sources */,
+				18E85B8B1D213FF3006272EF /* UIView+Layout.m in Sources */,
 				0C6D7EF71CAF2A5C008AD13B /* ReviewModel.swift in Sources */,
 				0CC22FFE1CB966D400FFF10A /* TerritoryBarWithText.swift in Sources */,
+				18DB71541D24083400094A8E /* WHC_CameraVC.m in Sources */,
+				18DB71671D24087300094A8E /* WHC_MenuItem.swift in Sources */,
 				0C6D7EF01CAF2A5C008AD13B /* AppList.swift in Sources */,
 				0C6D7F091CAF2A5C008AD13B /* AppListViewController.swift in Sources */,
 				0C6D7EF21CAF2A5C008AD13B /* SearchList.swift in Sources */,
+				18E85B891D213FF3006272EF /* QRCodeViewController.swift in Sources */,
 				0C5CB8B91CCD910300B55450 /* HelpAnimation.swift in Sources */,
 				0CC230061CC40C6B00FFF10A /* SelectCountryExtension.swift in Sources */,
 				0CE289221CB5A294008A309A /* SWXMLHash.swift in Sources */,
+				185CD9C91D376A870024B499 /* MyAppInfo.swift in Sources */,
 				0C6D7EF31CAF2A5C008AD13B /* TerritoryList.swift in Sources */,
+				18DB71661D24087300094A8E /* WHC_ImageDisplayView.swift in Sources */,
 				0C6D7EFC1CAF2A5C008AD13B /* SearchApps.swift in Sources */,
+				18DB71601D24085B00094A8E /* WHC_PhotoListCell.m in Sources */,
 				0CE288F21CB30AA7008A309A /* Theme.swift in Sources */,
 				0CE289011CB35C33008A309A /* AppSearchExtension.swift in Sources */,
 				0C2AE4731CAF42E600F875E6 /* AboutViewController.swift in Sources */,
+				18E85B881D213FF3006272EF /* QRCodeGenerator.m in Sources */,
 				0C6D7F0A1CAF2A5C008AD13B /* AppSearchViewController.swift in Sources */,
 				0C5CB8BF1CCD966B00B55450 /* Timing.swift in Sources */,
 				0CE288F71CB31483008A309A /* LoadingProgressBar.swift in Sources */,
@@ -599,31 +911,46 @@
 		};
 		0C6D7EC61CAF2606008AD13B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55AB01220B052B63215CDB6E /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 7056123D74DD740F57DA2840 /* Pods-App Love.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "App Love/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/App",
+					Love/QRCode/ZBarSDK,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.snowpunch.App-Love";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "App Love/QRCode/App Love-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		0C6D7EC71CAF2606008AD13B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94DFE5CEA5EBCD72E8AD9822 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 1A48F3B19CFCD10CBA110F3F /* Pods-App Love.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "App Love/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/App",
+					Love/QRCode/ZBarSDK,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.snowpunch.App-Love";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "App Love/QRCode/App Love-Bridging-Header.h";
 			};
 			name = Release;
 		};

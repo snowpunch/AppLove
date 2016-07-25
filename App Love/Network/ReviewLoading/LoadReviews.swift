@@ -22,6 +22,7 @@ class LoadReviews: NSObject {
     func getPageUrl(pageInfo:PageInfo) -> String {
         var url = "https://itunes.apple.com/\(pageInfo.territory)/rss/customerreviews/page=\(pageInfo.page)/id=\(pageInfo.appId)/sortBy=mostRecent/"
         url += pageInfo.preferJSON ? "json" : "xml"
+//        print("url:\(url)");
         return url
     }
     

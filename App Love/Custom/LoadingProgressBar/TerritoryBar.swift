@@ -17,7 +17,7 @@ class TerritoryBar: UIView {
     var territoryCode:String?
     var backgroundBar = CALayer()
     var reviewCountBar = CALayer()
-    var width:Int = 0
+    var width1:Int = 0
     var maxBarHeight = 0
     var hasStarted = false
     var lightGrayBack = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).CGColor
@@ -25,7 +25,7 @@ class TerritoryBar: UIView {
     
     init(territoryCode:String, width:CGFloat, height:Int) {
         super.init(frame: CGRect.zero)
-        self.width = Int(width)
+        self.width1 = Int(width)
         self.maxBarHeight = height
         self.territoryCode = territoryCode
         
@@ -65,13 +65,13 @@ class TerritoryBar: UIView {
     func showFewReviewsViaBlueBar(reviews:Int) {
         let height = maxBarHeight * reviews/50
         reviewCountBar.backgroundColor = UIColor.blueColor().CGColor
-        updateReviewCountBar(reviews, width: width, height: height)
+        updateReviewCountBar(reviews, width: width1, height: height)
     }
     
     func showManyReviewsViaBlackBar(reviews:Int) {
         let height = maxBarHeight * reviews/500
         reviewCountBar.backgroundColor = UIColor.blackColor().CGColor
-        updateReviewCountBar(reviews, width: width, height: height)
+        updateReviewCountBar(reviews, width: width1, height: height)
     }
     
     func updateReviewCountBar(reviews:Int, width:Int, height:Int) {
@@ -101,7 +101,7 @@ class TerritoryBar: UIView {
         guard hasStarted == false else { return }
 
         backgroundBar.backgroundColor = UIColor.greenColor().CGColor
-        reviewCountBar.frame = CGRect(x: 0,y: maxBarHeight,width: width,height: 0)
+        reviewCountBar.frame = CGRect(x: 0,y: maxBarHeight,width: width1,height: 0)
         self.hasStarted = true
         
         let pos = self.center

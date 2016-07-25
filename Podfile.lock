@@ -1,21 +1,26 @@
 PODS:
   - Alamofire (3.2.0)
-  - SDWebImage (3.7.6):
-    - SDWebImage/Core (= 3.7.6)
-  - SDWebImage/Core (3.7.6)
-  - SwiftyGlyphs (0.1.3)
+  - libqrencode (3.4.2)
+  - SDWebImage (3.8.1):
+    - SDWebImage/Core (= 3.8.1)
+  - SDWebImage/Core (3.8.1)
+  - SwiftyGlyphs (0.1.4)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire (= 3.2.0)
+  - libqrencode (~> 3.4.2)
   - SDWebImage (~> 3.7)
   - SwiftyGlyphs
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
-  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
-  SwiftyGlyphs: b5fa2b0e8c8b2219371ecfbdf28e7dede30567b2
+  libqrencode: 43dc34b89af83ea4b07c409cd8e09c87aa3a1c9f
+  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  SwiftyGlyphs: eb8bb61e593778c7fe16123b677184d79dfc20bf
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: e63aa2574efae890703556b8e0ac6c9ab31daaff
+
+COCOAPODS: 1.0.1

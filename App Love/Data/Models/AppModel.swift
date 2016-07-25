@@ -21,6 +21,7 @@ class AppModel: NSObject, NSCoding{
     var appId:Int = 0
     
     init(resultsDic:[String: AnyObject]) {
+
         self.appName = resultsDic["trackName"] as? String
         self.companyName = resultsDic["artistName"] as? String
         self.icon100 = resultsDic["artworkUrl100"] as? String
@@ -31,6 +32,7 @@ class AppModel: NSObject, NSCoding{
     
     required init(coder decoder: NSCoder) {
         super.init()
+//        print(decoder.decodeObjectForKey("appName"));
         appName = decoder.decodeObjectForKey("appName") as? String
         companyName = decoder.decodeObjectForKey("companyName") as? String
         icon100 = decoder.decodeObjectForKey("icon100") as? String

@@ -30,5 +30,6 @@ class AppInfo {
                 completion(model: nil, succeeded: false , error: error)
             }
         }
+        
     }
 }

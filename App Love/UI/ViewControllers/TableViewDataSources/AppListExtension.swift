@@ -23,6 +23,7 @@ extension AppListViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("AppCellID", forIndexPath: indexPath) as! AppCell
         let model = AppList.sharedInst.appModels[indexPath.row]
+//        print(model);
         cell.setup(model)
         return cell
     }
