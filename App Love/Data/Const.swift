@@ -16,7 +16,7 @@ struct Const {
         static let AppLove = 1099336831
     }
     
-    // NSNotifications
+    // NSNotifications - loading
     struct load {
         static let updateAmount = "updateAmount"
         static let dataError = "dataError"
@@ -29,7 +29,7 @@ struct Const {
         static let displayToolbar = "displayToolbar"
     }
     
-    // NSNotifications
+    // NSNotifications - side menu
     struct sideMenu {
         static let toggleMenuButton = "toggleMenuButton"
         static let openMenu = "openMenu"
@@ -41,5 +41,11 @@ struct Const {
         static let askReview = "askReview"
         static let help = "help"
         static let about = "about"
+    }
+    
+    // NSUserDefaults 
+    struct defaults {
+        static let loadAllVersionsKey = "loadAllVersions"
+        static let maxPagesToLoadKey = "maxPagesToLoad"
     }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C2AE4731CAF42E600F875E6 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2AE4721CAF42E600F875E6 /* AboutViewController.swift */; };
+		0C4B51361D46AE5200F8EA2C /* LoadOptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4B51351D46AE5200F8EA2C /* LoadOptionsVC.swift */; };
 		0C5CB8A71CCBF91900B55450 /* AboutAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5CB8A61CCBF91900B55450 /* AboutAnimation.swift */; };
 		0C5CB8B91CCD910300B55450 /* HelpAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5CB8B81CCD910300B55450 /* HelpAnimation.swift */; };
 		0C5CB8BF1CCD966B00B55450 /* Timing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5CB8BE1CCD966B00B55450 /* Timing.swift */; };
@@ -68,6 +69,7 @@
 
 /* Begin PBXFileReference section */
 		0C2AE4721CAF42E600F875E6 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		0C4B51351D46AE5200F8EA2C /* LoadOptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadOptionsVC.swift; sourceTree = "<group>"; };
 		0C5CB8A61CCBF91900B55450 /* AboutAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutAnimation.swift; sourceTree = "<group>"; };
 		0C5CB8B81CCD910300B55450 /* HelpAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpAnimation.swift; sourceTree = "<group>"; };
 		0C5CB8BE1CCD966B00B55450 /* Timing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timing.swift; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 				0C6D7EED1CAF2A5C008AD13B /* HelpViewController.swift */,
 				0CDF4E321D0B590900CE1622 /* OptionsVC.swift */,
 				0CB6E9E31D0C932B009316E8 /* GlobalSplitViewController.swift */,
+				0C4B51351D46AE5200F8EA2C /* LoadOptionsVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				0CE289131CB578B4008A309A /* LoadReviews.swift in Sources */,
 				0C6D7F0C1CAF2A5C008AD13B /* ReviewListViewController.swift in Sources */,
 				0C6D7EF71CAF2A5C008AD13B /* ReviewModel.swift in Sources */,
+				0C4B51361D46AE5200F8EA2C /* LoadOptionsVC.swift in Sources */,
 				0CC22FFE1CB966D400FFF10A /* TerritoryBarWithText.swift in Sources */,
 				0C6D7EF01CAF2A5C008AD13B /* AppList.swift in Sources */,
 				0C6D7F091CAF2A5C008AD13B /* AppListViewController.swift in Sources */,
