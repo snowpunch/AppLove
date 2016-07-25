@@ -87,7 +87,7 @@ class WHCViewController: UIViewController, WHC_MenuViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "App Love";
-        let rightBarItem:UIBarButtonItem = UIBarButtonItem(title: "返回", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(WHCViewController.refreshAction(_:)))
+        let rightBarItem:UIBarButtonItem = UIBarButtonItem(title: "Refresh", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(WHCViewController.refreshAction(_:)))
         self.navigationItem.rightBarButtonItem = rightBarItem;
         weak var weakSelf = self as WHCViewController
         
