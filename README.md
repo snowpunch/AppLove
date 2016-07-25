@@ -1,7 +1,7 @@
 ![alt tag](https://github.com/snowpunch/AppLove/blob/master/apploveicon.png?raw=true) 
-![alt tag](https://github.com/snowpunch/AppLove/blob/master/0.png?raw=true) 
-![alt tag](https://github.com/snowpunch/AppLove/blob/master/1.png?raw=true) 
-![alt tag](https://github.com/snowpunch/AppLove/blob/master/2.png?raw=true) 
+![alt tag](https://github.com/qianyu09/AppLove/blob/master/0.png?raw=true) 
+![alt tag](https://github.com/qianyu09/AppLove/blob/master/0.png?raw=true) 
+![alt tag](https://github.com/qianyu09/AppLove/blob/master/0.png?raw=true) 
 # App Love
 
 [Download from the App store](https://itunes.apple.com/us/app/app-love/id1099336831?mt=8)
