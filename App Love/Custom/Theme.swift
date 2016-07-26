@@ -16,6 +16,7 @@ internal struct Theme {
     // dark pastel blue
     static let defaultColor = UIColor(red: 43/255, green: 85/255, blue: 127/255, alpha: 1.0)
     static let lighterDefaultColor = UIColor(red: 73/255, green: 115/255, blue: 157/255, alpha: 1.0)
+    static let lightestDefaultColor = UIColor(red: 103/255, green: 145/255, blue: 197/255, alpha: 1.0)
 
     static func navigationBar() {
         let bar = UINavigationBar.appearance()

@@ -26,30 +26,17 @@ class LoadOptionsVC: UIViewController, ElasticMenuTransitionDelegate {
 
         //self.view.backgroundColor = Theme.lightestDefaultColor
         
-        //initVersionsToggleSwitch()
-        initSlider()
+        initUI()
+    }
+    
+    func initUI() {
+        slider.maximumValue = 10
+        slider.minimumValue = 1
         
-        // restore
         let defaults = NSUserDefaults.standardUserDefaults()
         loadVersionSwitch.on = defaults.boolForKey(Const.defaults.loadAllVersionsKey)
         slider.value = Float(defaults.integerForKey(Const.defaults.maxPagesToLoadKey))
         onSliderChanged(slider)
-    }
-    
-    func initSlider() {
-        slider.maximumValue = 10
-        slider.minimumValue = 1
-        slider.continuous = true
-    }
-    
-    func initVersionsToggleSwitch() {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        loadVersionSwitch.on = defaults.boolForKey(Const.defaults.loadAllVersionsKey)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func onSwitchChanged(button: UISwitch) {
@@ -59,7 +46,6 @@ class LoadOptionsVC: UIViewController, ElasticMenuTransitionDelegate {
         else {
             switchLabel.text = "Load only the latest Version"
         }
-        
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setBool(button.on, forKey: Const.defaults.loadAllVersionsKey)
     }
@@ -70,14 +56,14 @@ class LoadOptionsVC: UIViewController, ElasticMenuTransitionDelegate {
     }
     
     @IBAction func onSliderTouchUpInside(sender: UISlider) {
-        snapSave(slider)
+        snapSaveSlider(slider)
     }
     
     @IBAction func onSliderTouchUpOutside(slider: UISlider) {
-        snapSave(slider)
+        snapSaveSlider(slider)
     }
     
-    func snapSave(slider:UISlider) {
+    func snapSaveSlider(slider:UISlider) {
         let sliderIntValue = Int(round(slider.value))
         let snapValue = Float(sliderIntValue)
         slider.value = snapValue
