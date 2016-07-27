@@ -10,7 +10,6 @@
 		0C2AE4731CAF42E600F875E6 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2AE4721CAF42E600F875E6 /* AboutViewController.swift */; };
 		0C4B51361D46AE5200F8EA2C /* LoadOptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4B51351D46AE5200F8EA2C /* LoadOptionsVC.swift */; };
 		0C4B513A1D47C8F900F8EA2C /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4B51391D47C8F900F8EA2C /* Defaults.swift */; };
-		0C4B513C1D481CA600F8EA2C /* TranslationOptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4B513B1D481CA600F8EA2C /* TranslationOptionsVC.swift */; };
 		0C5CB8A71CCBF91900B55450 /* AboutAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5CB8A61CCBF91900B55450 /* AboutAnimation.swift */; };
 		0C5CB8B91CCD910300B55450 /* HelpAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5CB8B81CCD910300B55450 /* HelpAnimation.swift */; };
 		0C5CB8BF1CCD966B00B55450 /* Timing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5CB8BE1CCD966B00B55450 /* Timing.swift */; };
@@ -55,7 +54,6 @@
 		0CDF4E2D1D09DADC00CE1622 /* HamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDF4E2C1D09DADC00CE1622 /* HamburgerButton.swift */; };
 		0CDF4E2F1D09DB6D00CE1622 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDF4E2E1D09DB6D00CE1622 /* SideMenuViewController.swift */; };
 		0CDF4E311D0A032500CE1622 /* ElasticModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDF4E301D0A032500CE1622 /* ElasticModalViewController.swift */; };
-		0CDF4E331D0B590900CE1622 /* OptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDF4E321D0B590900CE1622 /* OptionsVC.swift */; };
 		0CDF4E351D0B5B6E00CE1622 /* SevenSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDF4E341D0B5B6E00CE1622 /* SevenSwitch.swift */; };
 		0CE288F21CB30AA7008A309A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE288F11CB30AA7008A309A /* Theme.swift */; };
 		0CE288F71CB31483008A309A /* LoadingProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE288F51CB31483008A309A /* LoadingProgressBar.swift */; };
@@ -73,7 +71,6 @@
 		0C2AE4721CAF42E600F875E6 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		0C4B51351D46AE5200F8EA2C /* LoadOptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadOptionsVC.swift; sourceTree = "<group>"; };
 		0C4B51391D47C8F900F8EA2C /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
-		0C4B513B1D481CA600F8EA2C /* TranslationOptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationOptionsVC.swift; sourceTree = "<group>"; };
 		0C5CB8A61CCBF91900B55450 /* AboutAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutAnimation.swift; sourceTree = "<group>"; };
 		0C5CB8B81CCD910300B55450 /* HelpAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpAnimation.swift; sourceTree = "<group>"; };
 		0C5CB8BE1CCD966B00B55450 /* Timing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timing.swift; sourceTree = "<group>"; };
@@ -119,7 +116,6 @@
 		0CDF4E2C1D09DADC00CE1622 /* HamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerButton.swift; sourceTree = "<group>"; };
 		0CDF4E2E1D09DB6D00CE1622 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		0CDF4E301D0A032500CE1622 /* ElasticModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElasticModalViewController.swift; sourceTree = "<group>"; };
-		0CDF4E321D0B590900CE1622 /* OptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsVC.swift; sourceTree = "<group>"; };
 		0CDF4E341D0B5B6E00CE1622 /* SevenSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SevenSwitch.swift; sourceTree = "<group>"; };
 		0CE288F11CB30AA7008A309A /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		0CE288F51CB31483008A309A /* LoadingProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingProgressBar.swift; sourceTree = "<group>"; };
@@ -291,10 +287,8 @@
 				0C6D7EEF1CAF2A5C008AD13B /* SelectCountryViewController.swift */,
 				0C2AE4721CAF42E600F875E6 /* AboutViewController.swift */,
 				0C6D7EED1CAF2A5C008AD13B /* HelpViewController.swift */,
-				0CDF4E321D0B590900CE1622 /* OptionsVC.swift */,
 				0CB6E9E31D0C932B009316E8 /* GlobalSplitViewController.swift */,
 				0C4B51351D46AE5200F8EA2C /* LoadOptionsVC.swift */,
-				0C4B513B1D481CA600F8EA2C /* TranslationOptionsVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -515,12 +509,10 @@
 				0C6D7F001CAF2A5C008AD13B /* CountrySelectCell.swift in Sources */,
 				0C6D7EF61CAF2A5C008AD13B /* CountryModel.swift in Sources */,
 				0C6D7F031CAF2A5C008AD13B /* ReviewHeaderCell.swift in Sources */,
-				0C4B513C1D481CA600F8EA2C /* TranslationOptionsVC.swift in Sources */,
 				0C6D7F0D1CAF2A5C008AD13B /* SelectCountryViewController.swift in Sources */,
 				0CC22FFC1CB9663100FFF10A /* TerritoryBar.swift in Sources */,
 				0CDF4E351D0B5B6E00CE1622 /* SevenSwitch.swift in Sources */,
 				0C6D7EF81CAF2A5C008AD13B /* AppInfo.swift in Sources */,
-				0CDF4E331D0B590900CE1622 /* OptionsVC.swift in Sources */,
 				0C6D7F011CAF2A5C008AD13B /* ReviewCell.swift in Sources */,
 				0C6D7F111CAF2ADB008AD13B /* AppDelegate.swift in Sources */,
 				0C6D7EF41CAF2A5C008AD13B /* TerritoryMgr.swift in Sources */,
