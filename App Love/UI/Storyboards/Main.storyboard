@@ -387,7 +387,7 @@
         <!--Load OptionsVC-->
         <scene sceneID="2ZN-2b-wHt">
             <objects>
-                <viewController storyboardIdentifier="options" id="6Yx-A1-YnE" customClass="LoadOptionsVC" customModule="App_Love" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loadOptions" id="6Yx-A1-YnE" customClass="LoadOptionsVC" customModule="App_Love" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HhK-pS-EPV"/>
                         <viewControllerLayoutGuide type="bottom" id="igH-Ed-Yh1"/>
@@ -434,14 +434,14 @@
                         <color key="backgroundColor" red="0.85319381810297401" green="1" blue="0.93914823201402142" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="VJ3-8J-0Op" firstAttribute="centerX" secondItem="akA-ls-IIH" secondAttribute="centerX" id="1dG-mf-sIP"/>
-                            <constraint firstItem="VJ3-8J-0Op" firstAttribute="top" secondItem="HhK-pS-EPV" secondAttribute="bottom" constant="45" id="3Vn-iR-hb6"/>
                             <constraint firstItem="VJ3-8J-0Op" firstAttribute="leading" secondItem="vD9-Ms-aoC" secondAttribute="leading" constant="118" id="6wF-81-xM8"/>
+                            <constraint firstItem="gDX-YC-4SK" firstAttribute="top" secondItem="HhK-pS-EPV" secondAttribute="bottom" constant="17" id="9m2-TK-Bu0"/>
                             <constraint firstItem="8PO-XQ-m5g" firstAttribute="centerX" secondItem="akA-ls-IIH" secondAttribute="centerX" id="Cc5-Ms-336"/>
-                            <constraint firstItem="gDX-YC-4SK" firstAttribute="top" secondItem="HhK-pS-EPV" secondAttribute="bottom" constant="17" id="FZy-HE-2Dv"/>
                             <constraint firstItem="gDX-YC-4SK" firstAttribute="centerX" secondItem="akA-ls-IIH" secondAttribute="centerX" id="RQe-QX-Av1"/>
                             <constraint firstItem="vD9-Ms-aoC" firstAttribute="centerX" secondItem="akA-ls-IIH" secondAttribute="centerX" id="XZa-3L-jd4"/>
-                            <constraint firstItem="vD9-Ms-aoC" firstAttribute="top" secondItem="HhK-pS-EPV" secondAttribute="bottom" constant="130" id="bLN-sf-RpY"/>
-                            <constraint firstItem="8PO-XQ-m5g" firstAttribute="top" secondItem="HhK-pS-EPV" secondAttribute="bottom" constant="101" id="hEO-Hw-TKc"/>
+                            <constraint firstItem="VJ3-8J-0Op" firstAttribute="top" secondItem="HhK-pS-EPV" secondAttribute="bottom" constant="45" id="eZi-NQ-wP7"/>
+                            <constraint firstItem="8PO-XQ-m5g" firstAttribute="top" secondItem="HhK-pS-EPV" secondAttribute="bottom" constant="101" id="fMN-DU-V5i"/>
+                            <constraint firstItem="vD9-Ms-aoC" firstAttribute="top" secondItem="HhK-pS-EPV" secondAttribute="bottom" constant="130" id="j7a-bc-hmS"/>
                             <constraint firstItem="gDX-YC-4SK" firstAttribute="leading" secondItem="VJ3-8J-0Op" secondAttribute="trailing" constant="-136" id="wk5-Ph-whr"/>
                         </constraints>
                         <variation key="default">
@@ -460,7 +460,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="udc-N4-P96" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2263" y="-521"/>
+            <point key="canvasLocation" x="2284" y="-547"/>
+        </scene>
+        <!--Translation OptionsVC-->
+        <scene sceneID="roZ-Sh-Qyb">
+            <objects>
+                <viewController storyboardIdentifier="translationOptions" id="FMi-5W-K01" customClass="TranslationOptionsVC" customModule="App_Love" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HSH-uZ-tCX"/>
+                        <viewControllerLayoutGuide type="bottom" id="nJd-Am-eeY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R3d-C8-5et">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wXC-uR-RxP">
+                                <rect key="frame" x="123" y="52" width="348" height="29"/>
+                                <segments>
+                                    <segment title="OFF"/>
+                                    <segment title="NON-ENG"/>
+                                    <segment title="ALL"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82745098039215681" green="1" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1mt-sl-ZC7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2277" y="109"/>
         </scene>
         <!--Territories-->
         <scene sceneID="KQ0-qq-qSv">

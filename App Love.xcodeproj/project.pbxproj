@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0C2AE4731CAF42E600F875E6 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2AE4721CAF42E600F875E6 /* AboutViewController.swift */; };
 		0C4B51361D46AE5200F8EA2C /* LoadOptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4B51351D46AE5200F8EA2C /* LoadOptionsVC.swift */; };
+		0C4B513A1D47C8F900F8EA2C /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4B51391D47C8F900F8EA2C /* Defaults.swift */; };
+		0C4B513C1D481CA600F8EA2C /* TranslationOptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4B513B1D481CA600F8EA2C /* TranslationOptionsVC.swift */; };
 		0C5CB8A71CCBF91900B55450 /* AboutAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5CB8A61CCBF91900B55450 /* AboutAnimation.swift */; };
 		0C5CB8B91CCD910300B55450 /* HelpAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5CB8B81CCD910300B55450 /* HelpAnimation.swift */; };
 		0C5CB8BF1CCD966B00B55450 /* Timing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5CB8BE1CCD966B00B55450 /* Timing.swift */; };
@@ -70,6 +72,8 @@
 /* Begin PBXFileReference section */
 		0C2AE4721CAF42E600F875E6 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		0C4B51351D46AE5200F8EA2C /* LoadOptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadOptionsVC.swift; sourceTree = "<group>"; };
+		0C4B51391D47C8F900F8EA2C /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		0C4B513B1D481CA600F8EA2C /* TranslationOptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationOptionsVC.swift; sourceTree = "<group>"; };
 		0C5CB8A61CCBF91900B55450 /* AboutAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutAnimation.swift; sourceTree = "<group>"; };
 		0C5CB8B81CCD910300B55450 /* HelpAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpAnimation.swift; sourceTree = "<group>"; };
 		0C5CB8BE1CCD966B00B55450 /* Timing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timing.swift; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 				0C6D7ECF1CAF2A5C008AD13B /* Models */,
 				0CE288FA1CB32022008A309A /* Const.swift */,
 				0CE289161CB59F3E008A309A /* ReviewParser.swift */,
+				0C4B51391D47C8F900F8EA2C /* Defaults.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 				0CDF4E321D0B590900CE1622 /* OptionsVC.swift */,
 				0CB6E9E31D0C932B009316E8 /* GlobalSplitViewController.swift */,
 				0C4B51351D46AE5200F8EA2C /* LoadOptionsVC.swift */,
+				0C4B513B1D481CA600F8EA2C /* TranslationOptionsVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -501,6 +507,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CDF4E311D0A032500CE1622 /* ElasticModalViewController.swift in Sources */,
+				0C4B513A1D47C8F900F8EA2C /* Defaults.swift in Sources */,
 				0C6D7EF11CAF2A5C008AD13B /* CacheManager.swift in Sources */,
 				0CB6E9E81D0DD936009316E8 /* MenuButton.swift in Sources */,
 				0CE289171CB59F3E008A309A /* ReviewParser.swift in Sources */,
@@ -508,6 +515,7 @@
 				0C6D7F001CAF2A5C008AD13B /* CountrySelectCell.swift in Sources */,
 				0C6D7EF61CAF2A5C008AD13B /* CountryModel.swift in Sources */,
 				0C6D7F031CAF2A5C008AD13B /* ReviewHeaderCell.swift in Sources */,
+				0C4B513C1D481CA600F8EA2C /* TranslationOptionsVC.swift in Sources */,
 				0C6D7F0D1CAF2A5C008AD13B /* SelectCountryViewController.swift in Sources */,
 				0CC22FFC1CB9663100FFF10A /* TerritoryBar.swift in Sources */,
 				0CDF4E351D0B5B6E00CE1622 /* SevenSwitch.swift in Sources */,

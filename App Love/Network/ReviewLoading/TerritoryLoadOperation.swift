@@ -26,6 +26,8 @@ class TerritoryLoadOperation: NSOperation {
     var finishedOperation = false
     var loader:LoadReviews?
     var pageInfo:PageInfo
+    
+    var versionsSet = Set<String>()
 
     init(pageInfo:PageInfo) {
         self.pageInfo = pageInfo
@@ -92,6 +94,20 @@ class TerritoryLoadOperation: NSOperation {
                 }
             }
             
+            // check if there are multiple versions loaded so far. If so stop loading.
+            if Defaults.getLoadAllBool() == false {
+                if self.multipleVersionsLoaded(reviews) {
+                    self.finishOperation()
+                    return;
+                }
+            }
+            
+            // check for user set - page limit.
+            if self.pageInfo.page >= Defaults.getMaxPagesToLoadInt() {
+                self.finishOperation()
+                return;
+            }
+            
             // more reviews to load for this territory
             if reviews?.count == 50 && self.pageInfo.page < maxPages && self.finishedOperation == false {
                 self.doNextPageLoad()
@@ -100,5 +116,19 @@ class TerritoryLoadOperation: NSOperation {
             
             self.finishOperation()
         }
+    }
+    
+    // Insert current page of versions into uniqe versionsSet.
+    // note: pages are already in order of newest version to oldest
+    //       so once we hit 2 differnet version then we can stop loading reviews.
+    func multipleVersionsLoaded(reviews:[ReviewModel]?) -> Bool {
+        let versionsInThisPage:[String] = reviews?.map { $0.version ?? "" } ?? []
+        for versionStr in versionsInThisPage {
+            versionsSet.insert(versionStr)
+        }
+        if versionsSet.count > 1 {
+            return true
+        }
+        return false
     }
 }

@@ -36,7 +36,7 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="translate" translatesAutoresizingMaskIntoConstraints="NO" id="kcg-Mf-Cbb">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reviewbutton" translatesAutoresizingMaskIntoConstraints="NO" id="kcg-Mf-Cbb">
                         <rect key="frame" x="304" y="-1" width="35" height="35"/>
                     </imageView>
                 </subviews>
@@ -107,6 +107,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="translate" width="35" height="35"/>
+        <image name="reviewbutton" width="35" height="35"/>
     </resources>
 </document>

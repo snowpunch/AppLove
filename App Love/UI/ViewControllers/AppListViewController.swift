@@ -96,11 +96,11 @@ class AppListViewController: UIViewController {
     }
     
     func onLoadOptions() {
-        displayElasticOptions("options")
+        displayElasticOptions("loadOptions")
     }
     
     func onTranlateOptions() {
-        displayElasticOptions("options")
+        displayElasticOptions("translationOptions")
     }
     
     func onHelp() {
@@ -244,7 +244,7 @@ extension AppListViewController {
     }
     
     func onAskReview(sender: UIBarButtonItem) {
-        let alertController = UIAlertController(title: "You're Awesome!", message: "Thank you helping this app.\nApp Love needs your feedback.", preferredStyle: .Alert)
+        let alertController = UIAlertController(title: "You're Awesome!", message: "Thank you for helping this app.\nApp Love needs your feedback.", preferredStyle: .Alert)
         let addReviewAction = UIAlertAction(title: "add review", style: .Default) { action -> Void in
             self.doAppReview()
         }
