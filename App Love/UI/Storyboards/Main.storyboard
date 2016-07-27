@@ -39,7 +39,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cXJ-ZC-K2V" userLabel="MenuButton Territories" customClass="MenuButton" customModule="App_Love" customModuleProvider="target">
-                                <rect key="frame" x="10" y="27" width="145" height="37"/>
+                                <rect key="frame" x="10" y="30" width="145" height="37"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="flag"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Territories"/>
@@ -49,7 +49,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ehq-ZD-DWe" userLabel="MenuButton Load" customClass="MenuButton" customModule="App_Love" customModuleProvider="target">
-                                <rect key="frame" x="10" y="77" width="145" height="37"/>
+                                <rect key="frame" x="10" y="80" width="145" height="37"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="options_gear_white"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Load"/>
@@ -58,18 +58,8 @@
                                     <action selector="onLoadOptions:" destination="SFE-65-t6s" eventType="touchUpInside" id="kSP-QS-cfc"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s7m-4j-f6Z" userLabel="MenuButton Translate" customClass="MenuButton" customModule="App_Love" customModuleProvider="target">
-                                <rect key="frame" x="10" y="127" width="145" height="37"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="translate_white"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="Translate"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="onTranslateOptions:" destination="SFE-65-t6s" eventType="touchUpInside" id="h2w-Dn-W7W"/>
-                                </connections>
-                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o9t-B9-pvS" userLabel="MenuButton Share" customClass="MenuButton" customModule="App_Love" customModuleProvider="target">
-                                <rect key="frame" x="10" y="177" width="145" height="37"/>
+                                <rect key="frame" x="10" y="130" width="145" height="37"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="share"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Share"/>
@@ -79,7 +69,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YIL-jh-wi5" userLabel="MenuButton Add Review" customClass="MenuButton" customModule="App_Love" customModuleProvider="target">
-                                <rect key="frame" x="10" y="227" width="145" height="37"/>
+                                <rect key="frame" x="10" y="180" width="145" height="37"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="heartplus"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Add"/>
@@ -89,7 +79,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="orV-TM-DYh" userLabel="MenuButton help" customClass="MenuButton" customModule="App_Love" customModuleProvider="target">
-                                <rect key="frame" x="10" y="277" width="145" height="37"/>
+                                <rect key="frame" x="10" y="230" width="145" height="37"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="help"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="Help"/>
@@ -99,7 +89,7 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D7K-LL-XuY" userLabel="MenuButton About" customClass="MenuButton" customModule="App_Love" customModuleProvider="target">
-                                <rect key="frame" x="10" y="327" width="145" height="37"/>
+                                <rect key="frame" x="10" y="280" width="145" height="37"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="about"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="text" value="About"/>
@@ -738,7 +728,6 @@
         <image name="options_gear" width="24" height="24"/>
         <image name="options_gear_white" width="36" height="36"/>
         <image name="share" width="36" height="36"/>
-        <image name="translate_white" width="36" height="36"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="1Xj-UA-kmf"/>

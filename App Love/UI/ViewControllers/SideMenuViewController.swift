@@ -49,10 +49,6 @@ class SideMenuViewController: UIViewController {
         sideMenuButtonPressed(Const.sideMenu.loadOptions)
     }
     
-    @IBAction func onTranslateOptions(sender: AnyObject) {
-        sideMenuButtonPressed(Const.sideMenu.translateOptions)
-    }
-    
     @IBAction func onShareAppList(sender: AnyObject) {
         sideMenuButtonPressed(Const.sideMenu.share)
     }

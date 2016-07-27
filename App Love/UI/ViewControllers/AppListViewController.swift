@@ -16,7 +16,6 @@ private extension Selector {
     static let onMenuOpen = #selector(AppListViewController.onMenuOpen)
     static let onTerritoryOptions = #selector(AppListViewController.onTerritoryOptions)
     static let onLoadOptions = #selector(AppListViewController.onLoadOptions)
-    static let onTranlateOptions = #selector(AppListViewController.onTranlateOptions)
     static let onShare = #selector(AppListViewController.onShare)
     static let onAskReview = #selector(AppListViewController.onAskReview)
     static let onAbout = #selector(AppListViewController.onAbout)
@@ -59,7 +58,6 @@ class AppListViewController: UIViewController {
         NSNotificationCenter.addObserver(self, sel: .onMenuClose, name: Const.sideMenu.closeMenu)
         NSNotificationCenter.addObserver(self, sel: .onTerritoryOptions, name: Const.sideMenu.territories)
         NSNotificationCenter.addObserver(self, sel: .onLoadOptions, name: Const.sideMenu.loadOptions)
-        NSNotificationCenter.addObserver(self, sel: .onTranlateOptions, name: Const.sideMenu.translateOptions)
         NSNotificationCenter.addObserver(self, sel: .onShare, name: Const.sideMenu.share)
         NSNotificationCenter.addObserver(self, sel: .onAskReview, name: Const.sideMenu.askReview)
         NSNotificationCenter.addObserver(self, sel: .onHelp, name: Const.sideMenu.help)
@@ -97,10 +95,6 @@ class AppListViewController: UIViewController {
     
     func onLoadOptions() {
         displayElasticOptions("loadOptions")
-    }
-    
-    func onTranlateOptions() {
-        displayElasticOptions("translationOptions")
     }
     
     func onHelp() {
