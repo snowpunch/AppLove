@@ -10,6 +10,7 @@
 
 import UIKit
 import ElasticTransition
+import MessageUI
 
 private extension Selector {
     static let onMenuClose = #selector(AppListViewController.onMenuClose)
@@ -145,7 +146,7 @@ class AppListViewController: UIViewController {
     }
     
     @IBAction func onShare(sender: AnyObject) {
-        print("share stub")
+          displayAppListComposerEmail()
     }
     
     func onTerritoryOptions(sender: AnyObject) {
@@ -253,5 +254,43 @@ extension AppListViewController {
         alertController.addAction(cancelAction)
         //Theme.alertController(alertController)
         self.presentViewController(alertController, animated: true, completion: nil)
+    }
+}
+
+
+
+extension AppListViewController: MFMailComposeViewControllerDelegate {
+    
+        override func preferredStatusBarStyle() -> UIStatusBarStyle {
+            return UIStatusBarStyle.Default
+        }
+    
+    func displayAppListComposerEmail() {
+        
+        let appListMailComposerVC = AppListEmail.generateAppList()
+        appListMailComposerVC.mailComposeDelegate = self
+        
+  
+        
+        Theme.mailBar(appListMailComposerVC.navigationBar)
+        
+        if MFMailComposeViewController.canSendMail() {
+            
+            self.presentViewController(appListMailComposerVC, animated: true, completion: {
+                //Theme.navigationBar()
+            })
+        } else {
+            self.showSendMailErrorAlert()
+        }
+        
+    }
+    
+    func showSendMailErrorAlert() {
+
+    }
+    
+    // MARK: MFMailComposeViewControllerDelegate Method
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
     }
 }

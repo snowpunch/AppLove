@@ -25,6 +25,13 @@ internal struct Theme {
         bar.translucent = false
         bar.barStyle = .Black
     }
+    
+    static func mailBar(bar:UINavigationBar) {
+        bar.tintColor = .whiteColor()
+        bar.barTintColor = Theme.defaultColor
+        bar.translucent = false
+        bar.barStyle = .Black
+    }
 
     static func toolBar(item:UIToolbar) {
         item.tintColor = .whiteColor()
