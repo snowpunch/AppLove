@@ -11,6 +11,8 @@
 		0C4B51361D46AE5200F8EA2C /* LoadOptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4B51351D46AE5200F8EA2C /* LoadOptionsVC.swift */; };
 		0C4B513A1D47C8F900F8EA2C /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4B51391D47C8F900F8EA2C /* Defaults.swift */; };
 		0C4B513E1D49886200F8EA2C /* AppListEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4B513D1D49886200F8EA2C /* AppListEmail.swift */; };
+		0C4B51401D4A948D00F8EA2C /* ReviewEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4B513F1D4A948D00F8EA2C /* ReviewEmail.swift */; };
+		0C4B51421D4A950500F8EA2C /* String+truncate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4B51411D4A950500F8EA2C /* String+truncate.swift */; };
 		0C5CB8A71CCBF91900B55450 /* AboutAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5CB8A61CCBF91900B55450 /* AboutAnimation.swift */; };
 		0C5CB8B91CCD910300B55450 /* HelpAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5CB8B81CCD910300B55450 /* HelpAnimation.swift */; };
 		0C5CB8BF1CCD966B00B55450 /* Timing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5CB8BE1CCD966B00B55450 /* Timing.swift */; };
@@ -73,6 +75,8 @@
 		0C4B51351D46AE5200F8EA2C /* LoadOptionsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadOptionsVC.swift; sourceTree = "<group>"; };
 		0C4B51391D47C8F900F8EA2C /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		0C4B513D1D49886200F8EA2C /* AppListEmail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppListEmail.swift; sourceTree = "<group>"; };
+		0C4B513F1D4A948D00F8EA2C /* ReviewEmail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewEmail.swift; sourceTree = "<group>"; };
+		0C4B51411D4A950500F8EA2C /* String+truncate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+truncate.swift"; sourceTree = "<group>"; };
 		0C5CB8A61CCBF91900B55450 /* AboutAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutAnimation.swift; sourceTree = "<group>"; };
 		0C5CB8B81CCD910300B55450 /* HelpAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpAnimation.swift; sourceTree = "<group>"; };
 		0C5CB8BE1CCD966B00B55450 /* Timing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timing.swift; sourceTree = "<group>"; };
@@ -231,6 +235,7 @@
 				0C6D7ED41CAF2A5C008AD13B /* AppInfo.swift */,
 				0C6D7ED91CAF2A5C008AD13B /* SearchApps.swift */,
 				0C4B513D1D49886200F8EA2C /* AppListEmail.swift */,
+				0C4B513F1D4A948D00F8EA2C /* ReviewEmail.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				0CA8F9071D2EE73B002F49F1 /* NSNotificationCenter+sugar.swift */,
+				0C4B51411D4A950500F8EA2C /* String+truncate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -524,6 +530,7 @@
 				0C6D7EFA1CAF2A5C008AD13B /* ReviewLoadManager.swift in Sources */,
 				0C6D7EF51CAF2A5C008AD13B /* AppModel.swift in Sources */,
 				0C6D7EFB1CAF2A5C008AD13B /* TerritoryLoadOperation.swift in Sources */,
+				0C4B51421D4A950500F8EA2C /* String+truncate.swift in Sources */,
 				0CC230031CC2095500FFF10A /* LoadState.swift in Sources */,
 				0C6D7EFF1CAF2A5C008AD13B /* AppSelectCell.swift in Sources */,
 				0C6D7F0B1CAF2A5C008AD13B /* HelpViewController.swift in Sources */,
@@ -545,6 +552,7 @@
 				0CE289011CB35C33008A309A /* AppSearchExtension.swift in Sources */,
 				0C2AE4731CAF42E600F875E6 /* AboutViewController.swift in Sources */,
 				0C6D7F0A1CAF2A5C008AD13B /* AppSearchViewController.swift in Sources */,
+				0C4B51401D4A948D00F8EA2C /* ReviewEmail.swift in Sources */,
 				0C5CB8BF1CCD966B00B55450 /* Timing.swift in Sources */,
 				0CE288F71CB31483008A309A /* LoadingProgressBar.swift in Sources */,
 				0CC230041CC2095500FFF10A /* PageInfo.swift in Sources */,

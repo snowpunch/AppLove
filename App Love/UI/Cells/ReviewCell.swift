@@ -16,10 +16,12 @@ class ReviewCell: UITableViewCell {
     @IBOutlet weak var authorLabel: UILabel! 
     @IBOutlet weak var reviewLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var translateIcon: UIImageView!
+    var model:ReviewModel? = nil
     var stars = [UIImageView]()
     
     func setup(model:ReviewModel) {
+        
+        self.model = model;
         
         if let title = model.title, let comment = model.comment {
             titleLabel.text = title
@@ -34,10 +36,6 @@ class ReviewCell: UITableViewCell {
                 let str = "\(territory) v\(version) \(name)"
                 self.authorLabel.text = str
                 self.addStars(ratingNumber)
-                translateIcon.hidden = false
-                if isEnglishCountry(territory) {
-                    translateIcon.hidden = true
-                }
         }
         else {
             authorLabel.text = ""
@@ -80,34 +78,21 @@ class ReviewCell: UITableViewCell {
         stars.append(imageView)
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        let quarterCellWidth = self.frame.width / 4
-        let rightSideHitArea = CGRect(x: quarterCellWidth*3,y: 0,width: quarterCellWidth,height: self.frame.height)
-        let touch = touches.first as UITouch!
-        let touchPoint = touch.locationInView(self)
-
-        if CGRectContainsPoint(rightSideHitArea, touchPoint) {
-            displayGoogleTranslationViaSafari()
-        }
-    }
-    
-    func displayGoogleTranslationViaSafari() {
-        guard let title = titleLabel.text else  { return }
-        
-        let rawUrlStr = "http://translate.google.ca?text="+title + "\n" + reviewLabel.text!
-        if let urlEncoded = rawUrlStr.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet()),
-            let url = NSURL(string: urlEncoded) {
-                UIApplication.sharedApplication().openURL(url)
-        }
-    }
-    
     func removeStars() {
         for imageView in stars {
             imageView.removeFromSuperview()
         }
         stars.removeAll()
     }
-
+    
+    @IBAction func onReviewButton(sender: AnyObject) {
+        if let modelData = self.model {
+            let data:[String:AnyObject] = ["reviewModel":modelData]
+            let nc = NSNotificationCenter.defaultCenter()
+            nc.postNotificationName(Const.reviewOptions.showOptions, object:nil, userInfo:data)
+        }
+    }
+    
     override func prepareForReuse() {
         removeStars()
     }

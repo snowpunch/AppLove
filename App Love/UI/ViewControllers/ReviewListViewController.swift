@@ -10,6 +10,7 @@
 
 import UIKit
 import StoreKit
+import MessageUI
 
 class ReviewListViewController: UIViewController {
     
@@ -63,6 +64,7 @@ class ReviewListViewController: UIViewController {
     func registerNotifications() {
         NSNotificationCenter.addObserver(self, sel: .reloadData, name: Const.load.reloadData)
         NSNotificationCenter.addObserver(self, sel: .displayToolbar, name: Const.load.displayToolbar)
+        NSNotificationCenter.addObserver(self,sel:.onReviewOptions, name: Const.reviewOptions.showOptions)
     }
     
     func unregisterNotifications() {
@@ -119,6 +121,18 @@ class ReviewListViewController: UIViewController {
         removeEmptyTerritories(button)
     }
     
+    func onReviewOptions(notification: NSNotification) {
+        
+        guard let dic = notification.userInfo else { return }
+
+//        guard let territory = dic["territory"] as? String else { return }
+//        guard loaderPieces[territory] != nil else { return }
+        guard let model = dic["reviewModel"] as? ReviewModel else { return }
+//        guard let box = loaderPieces[territory] else { return }
+//        box.updateProgress(loadState)
+        displayReviewOptions(model)
+    }
+
     
     deinit {
         unregisterNotifications()
@@ -194,6 +208,53 @@ extension ReviewListViewController {
         }
         self.presentViewController(alertController, animated: true, completion: nil)
     }
+    
+    func displayReviewOptions(model:ReviewModel) {
+        
+        guard let title = model.title else { return }
+
+        
+        let alertController = UIAlertController(title:nil, message: title, preferredStyle: .ActionSheet)
+        let addFlagAction = UIAlertAction(title: "Flag", style: .Default) { action -> Void in
+            model.flag = true;
+        }
+        let removeFlagAction = UIAlertAction(title: "Remove Flag", style: .Default) { action -> Void in
+            model.flag = false;
+        }
+
+        let emailAction = UIAlertAction(title: "Email", style: .Default) { action -> Void in
+            self.displayReviewEmail(model)
+        }
+        let translateAction = UIAlertAction(title: "Translate", style: .Default) { action -> Void in
+            self.displayGoogleTranslationViaSafari(model)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        
+        if model.flag == false {
+             alertController.addAction(addFlagAction)
+        }
+        else {
+            alertController.addAction(removeFlagAction)
+        }
+        
+        alertController.addAction(emailAction)
+        alertController.addAction(translateAction)
+        alertController.addAction(cancelAction)
+        //Theme.alertController(alertController)
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func displayGoogleTranslationViaSafari(model:ReviewModel) {
+        guard let title = model.title else  { return }
+        guard let reviewText = model.comment else  { return }
+        
+        let rawUrlStr = "http://translate.google.ca?text="+title + "\n" + reviewText
+        if let urlEncoded = rawUrlStr.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet()),
+            let url = NSURL(string: urlEncoded) {
+            UIApplication.sharedApplication().openURL(url)
+        }
+    }
 }
 
 // app store
@@ -219,8 +280,35 @@ extension ReviewListViewController: SKStoreProductViewControllerDelegate {
     }
 }
 
+extension ReviewListViewController: MFMailComposeViewControllerDelegate {
+    
+    func displayReviewEmail(model:ReviewModel) {
+        if MFMailComposeViewController.canSendMail() {
+            let reviewMailComposerVC = ReviewEmail.generateSingleReviewEmail(model)
+            reviewMailComposerVC.mailComposeDelegate = self
+            Theme.mailBar(reviewMailComposerVC.navigationBar)
+            self.presentViewController(reviewMailComposerVC, animated: true, completion: nil)
+        }
+    }
+    
+    func displayTaggedReviewsEmail(models:[ReviewModel]) {
+        if MFMailComposeViewController.canSendMail() {
+            let taggedReviewsMailComposerVC = ReviewEmail.generateTaggedReviewsEmail(models)
+            taggedReviewsMailComposerVC.mailComposeDelegate = self
+            Theme.mailBar(taggedReviewsMailComposerVC.navigationBar)
+            self.presentViewController(taggedReviewsMailComposerVC, animated: true, completion: nil)
+        }
+    }
+    
+    // MARK: MFMailComposeViewControllerDelegate Method
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
+    }
+}
+
 private extension Selector {
     static let refresh = #selector(ReviewListViewController.refresh(_:))
     static let reloadData = #selector(UITableView.reloadData)
     static let displayToolbar = #selector(ReviewListViewController.displayToolbar)
+    static let onReviewOptions = #selector(ReviewListViewController.onReviewOptions)
 }

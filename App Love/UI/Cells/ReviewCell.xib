@@ -36,9 +36,16 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reviewbutton" translatesAutoresizingMaskIntoConstraints="NO" id="kcg-Mf-Cbb">
-                        <rect key="frame" x="304" y="-1" width="35" height="35"/>
-                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ii3-Xb-Qhe" userLabel="Option Button">
+                        <rect key="frame" x="309" y="-1" width="35" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="C7G-Mp-xhS"/>
+                        </constraints>
+                        <state key="normal" image="reviewbutton"/>
+                        <connections>
+                            <action selector="onReviewButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="b5g-Jn-h31"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="hGb-xk-VR7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="1lY-zs-OSc"/>
@@ -51,12 +58,11 @@
                     <constraint firstItem="hGb-xk-VR7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="9" id="DuR-6l-60V"/>
                     <constraint firstAttribute="bottomMargin" secondItem="hGb-xk-VR7" secondAttribute="bottom" constant="28" id="FfL-7r-imB"/>
                     <constraint firstItem="jkw-y3-DAF" firstAttribute="top" secondItem="hGb-xk-VR7" secondAttribute="bottom" constant="16" id="GDL-EP-bwP"/>
-                    <constraint firstItem="kcg-Mf-Cbb" firstAttribute="centerY" secondItem="iGr-QE-VJK" secondAttribute="centerY" id="Gpv-YN-V3c"/>
                     <constraint firstItem="jkw-y3-DAF" firstAttribute="top" secondItem="hGb-xk-VR7" secondAttribute="bottom" constant="16" id="Ip2-YT-4Tb"/>
+                    <constraint firstItem="ii3-Xb-Qhe" firstAttribute="leading" secondItem="iGr-QE-VJK" secondAttribute="trailing" constant="13" id="Lb1-58-5Di"/>
                     <constraint firstItem="jkw-y3-DAF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="20" id="SYT-Rw-EzP"/>
                     <constraint firstAttribute="bottomMargin" secondItem="hGb-xk-VR7" secondAttribute="bottom" constant="28" id="Sla-3b-KK0"/>
                     <constraint firstAttribute="topMargin" secondItem="iGr-QE-VJK" secondAttribute="top" id="U7i-py-qqB"/>
-                    <constraint firstItem="kcg-Mf-Cbb" firstAttribute="leading" secondItem="iGr-QE-VJK" secondAttribute="trailing" constant="8" symbolic="YES" id="Ylr-9m-kEc"/>
                     <constraint firstItem="hGb-xk-VR7" firstAttribute="top" secondItem="jkw-y3-DAF" secondAttribute="bottom" constant="2" id="YyT-vG-zmb"/>
                     <constraint firstItem="hGb-xk-VR7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="73" id="Z6z-eG-PAh"/>
                     <constraint firstItem="jkw-y3-DAF" firstAttribute="top" secondItem="hGb-xk-VR7" secondAttribute="bottom" constant="16" id="ZqV-al-8i8"/>
@@ -65,6 +71,7 @@
                     <constraint firstItem="jkw-y3-DAF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="dVr-WG-UYG"/>
                     <constraint firstItem="hGb-xk-VR7" firstAttribute="top" secondItem="jkw-y3-DAF" secondAttribute="bottom" constant="2" id="fJX-Lu-lYX"/>
                     <constraint firstAttribute="trailingMargin" secondItem="hGb-xk-VR7" secondAttribute="trailing" id="htu-J8-pQB"/>
+                    <constraint firstItem="ii3-Xb-Qhe" firstAttribute="centerY" secondItem="iGr-QE-VJK" secondAttribute="centerY" id="iCS-71-Cmx"/>
                     <constraint firstAttribute="bottomMargin" secondItem="jkw-y3-DAF" secondAttribute="bottom" priority="250" constant="19" id="j22-Io-LmT"/>
                     <constraint firstItem="hGb-xk-VR7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="9" id="nOR-5y-GmX"/>
                     <constraint firstAttribute="trailingMargin" secondItem="iGr-QE-VJK" secondAttribute="trailing" constant="40" id="nmn-h5-Xba"/>
@@ -101,7 +108,6 @@
                 <outlet property="authorLabel" destination="hGb-xk-VR7" id="dIP-dG-ZeP"/>
                 <outlet property="reviewLabel" destination="jkw-y3-DAF" id="GJG-uJ-nOD"/>
                 <outlet property="titleLabel" destination="iGr-QE-VJK" id="eAs-y3-uI3"/>
-                <outlet property="translateIcon" destination="kcg-Mf-Cbb" id="2CX-F2-juD"/>
             </connections>
             <point key="canvasLocation" x="392" y="693.5"/>
         </tableViewCell>

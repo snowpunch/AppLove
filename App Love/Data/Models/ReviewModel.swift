@@ -7,7 +7,7 @@
 //
 //  A single persons review about an app.
 //  Compatible with both JSON and XML.
-// 
+//
 
 import UIKit
 import SwiftyJSON
@@ -20,6 +20,9 @@ class ReviewModel {
     var version:String?
     var name:String?
     var territory:String?
+    var date = NSDate()
+    var flag:Bool = false
+    var reviewID:String = ""
     
     init(json:JSON) {
         self.title = json["title"]["label"].string
@@ -27,6 +30,7 @@ class ReviewModel {
         self.rating = json["im:rating"]["label"].string
         self.version = json["im:version"]["label"].string
         self.name = json["author"]["name"]["label"].string
+        setId()
     }
 
     init(xml:XMLIndexer) {
@@ -35,5 +39,12 @@ class ReviewModel {
         self.rating = xml["im:rating"].element?.text
         self.version = xml["im:version"].element?.text
         self.name = xml["author"]["name"].element?.text
+        setId()
+    }
+    
+    func setId() {
+        if let userName = self.name, userTitle = self.title {
+             self.reviewID = userName + "-" + userTitle
+        }
     }
 }

@@ -257,36 +257,15 @@ extension AppListViewController {
     }
 }
 
-
-
 extension AppListViewController: MFMailComposeViewControllerDelegate {
     
-        override func preferredStatusBarStyle() -> UIStatusBarStyle {
-            return UIStatusBarStyle.Default
-        }
-    
     func displayAppListComposerEmail() {
-        
-        let appListMailComposerVC = AppListEmail.generateAppList()
-        appListMailComposerVC.mailComposeDelegate = self
-        
-  
-        
-        Theme.mailBar(appListMailComposerVC.navigationBar)
-        
         if MFMailComposeViewController.canSendMail() {
-            
-            self.presentViewController(appListMailComposerVC, animated: true, completion: {
-                //Theme.navigationBar()
-            })
-        } else {
-            self.showSendMailErrorAlert()
+            let appListMailComposerVC = AppListEmail.generateAppList()
+            appListMailComposerVC.mailComposeDelegate = self
+            Theme.mailBar(appListMailComposerVC.navigationBar)
+            self.presentViewController(appListMailComposerVC, animated: true, completion: nil)
         }
-        
-    }
-    
-    func showSendMailErrorAlert() {
-
     }
     
     // MARK: MFMailComposeViewControllerDelegate Method
@@ -294,3 +273,4 @@ extension AppListViewController: MFMailComposeViewControllerDelegate {
         controller.dismissViewControllerAnimated(true, completion: nil)
     }
 }
+    

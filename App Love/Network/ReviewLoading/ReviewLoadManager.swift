@@ -149,6 +149,16 @@ class ReviewLoadManager: NSObject, ProgressDelegate {
         }
         return emptyArray;
     }
+    
+    func getFlaggedReviews() -> [ReviewModel] {
+        var flaggedReviews = [ReviewModel]()
+        for review in reviews {
+            if review.flag == true {
+                flaggedReviews.append(review)
+            }
+        }
+        return flaggedReviews
+    }
 }
 
 private extension Selector {

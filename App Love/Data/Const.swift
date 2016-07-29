@@ -48,4 +48,10 @@ struct Const {
         static let loadAllVersionsKey = "loadAllVersions"
         static let maxPagesToLoadKey = "maxPagesToLoad"
     }
+    
+    struct reviewOptions {
+        static let showOptions = "showOptions"
+        static let addFlag = "addFlag"
+        static let removeFlag = "removeFlag"
+    }
 }
