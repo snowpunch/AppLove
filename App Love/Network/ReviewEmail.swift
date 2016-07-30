@@ -39,7 +39,7 @@ class ReviewEmail: NSObject {
         mailComposerVC.setSubject("\(appName) Review")
         var msgBody = ReviewEmail.getReviewMessageBody(reviewModel)
         
-        let appLovePlug = "<small><br><a href='https://itunes.apple.com/app/id\(Const.appId.AppLove)'>App Love.</a></small>"
+        let appLovePlug = "<small><br><a href='https://itunes.apple.com/app/id\(Const.appId.AppLove)'>App Love</a></small>"
         msgBody += appLovePlug
         
         mailComposerVC.setMessageBody(msgBody, isHTML: true)

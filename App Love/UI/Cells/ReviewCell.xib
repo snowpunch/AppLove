@@ -16,7 +16,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGr-QE-VJK">
-                        <rect key="frame" x="13" y="8" width="283" height="17"/>
+                        <rect key="frame" x="38" y="8" width="258" height="17"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -46,6 +46,13 @@
                             <action selector="onReviewButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="b5g-Jn-h31"/>
                         </connections>
                     </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GVE-dI-bDF" userLabel="TerritoryFlagImage">
+                        <rect key="frame" x="13" y="8" width="23" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="Wvs-vI-P3s"/>
+                            <constraint firstAttribute="width" constant="23" id="eDv-G3-NzY"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="hGb-xk-VR7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="1lY-zs-OSc"/>
@@ -75,22 +82,24 @@
                     <constraint firstAttribute="bottomMargin" secondItem="jkw-y3-DAF" secondAttribute="bottom" priority="250" constant="19" id="j22-Io-LmT"/>
                     <constraint firstItem="hGb-xk-VR7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="9" id="nOR-5y-GmX"/>
                     <constraint firstAttribute="trailingMargin" secondItem="iGr-QE-VJK" secondAttribute="trailing" constant="40" id="nmn-h5-Xba"/>
+                    <constraint firstItem="GVE-dI-bDF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="ntd-cw-k6p"/>
+                    <constraint firstAttribute="topMargin" secondItem="GVE-dI-bDF" secondAttribute="top" id="pSZ-Tx-G5h"/>
                     <constraint firstItem="iGr-QE-VJK" firstAttribute="top" secondItem="hGb-xk-VR7" secondAttribute="bottom" constant="-3" id="rsG-CD-U27"/>
                     <constraint firstItem="jkw-y3-DAF" firstAttribute="top" secondItem="iGr-QE-VJK" secondAttribute="bottom" constant="-2" id="t6c-Eb-BeI"/>
-                    <constraint firstItem="iGr-QE-VJK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="tjk-3g-6bO"/>
+                    <constraint firstItem="iGr-QE-VJK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="30" id="tjk-3g-6bO"/>
                     <constraint firstItem="jkw-y3-DAF" firstAttribute="top" secondItem="iGr-QE-VJK" secondAttribute="bottom" constant="3" id="uYm-sH-XmA"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
-                        <exclude reference="8pI-tx-a7k"/>
-                        <exclude reference="AUG-0z-7sE"/>
-                        <exclude reference="ZxM-aD-u6c"/>
-                        <exclude reference="rsG-CD-U27"/>
                         <exclude reference="GDL-EP-bwP"/>
                         <exclude reference="Ip2-YT-4Tb"/>
                         <exclude reference="SYT-Rw-EzP"/>
                         <exclude reference="ZqV-al-8i8"/>
                         <exclude reference="t6c-Eb-BeI"/>
+                        <exclude reference="8pI-tx-a7k"/>
+                        <exclude reference="AUG-0z-7sE"/>
+                        <exclude reference="ZxM-aD-u6c"/>
+                        <exclude reference="rsG-CD-U27"/>
                         <exclude reference="1lY-zs-OSc"/>
                         <exclude reference="3W6-yj-oOh"/>
                         <exclude reference="7oB-GS-TcH"/>
@@ -106,6 +115,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="authorLabel" destination="hGb-xk-VR7" id="dIP-dG-ZeP"/>
+                <outlet property="flagImage" destination="GVE-dI-bDF" id="s5a-6B-Xdk"/>
                 <outlet property="reviewLabel" destination="jkw-y3-DAF" id="GJG-uJ-nOD"/>
                 <outlet property="titleLabel" destination="iGr-QE-VJK" id="eAs-y3-uI3"/>
             </connections>

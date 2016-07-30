@@ -128,9 +128,10 @@ class ReviewListViewController: UIViewController {
 //        guard let territory = dic["territory"] as? String else { return }
 //        guard loaderPieces[territory] != nil else { return }
         guard let model = dic["reviewModel"] as? ReviewModel else { return }
+        guard let button = dic["button"] as? UIButton else { return }
 //        guard let box = loaderPieces[territory] else { return }
 //        box.updateProgress(loadState)
-        displayReviewOptions(model)
+        displayReviewOptions(model, button:button)
     }
 
     
@@ -178,7 +179,7 @@ extension ReviewListViewController {
     }
     
     func removeEmptyTerritories(button: UIBarButtonItem){
-        let alertController = UIAlertController(title: "Territory Options", message: "To hand pick territories use the side menu.", preferredStyle: .ActionSheet)
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
 
         let loadAllAction = UIAlertAction(title: "Load All Territories", style: .Default) { action -> Void in
             TerritoryMgr.sharedInst.selectAllTerritories()
@@ -209,18 +210,32 @@ extension ReviewListViewController {
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
-    func displayReviewOptions(model:ReviewModel) {
+    //- (void) tableView: (UITableView *) tableView accessoryButtonTappedForRowWithIndexPath: (NSIndexPath *) indexPath{ ... }
+    
+//    func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        return UITableViewCell()
+//    }
+    
+
+    func displayReviewOptions(model:ReviewModel, button:UIButton) {
         
         guard let title = model.title else { return }
 
+//        if (UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad)
+//        {
+//            print("ipad")
+//        }
+//        else {
+//            print("iPhone)")
+//        }
         
         let alertController = UIAlertController(title:nil, message: title, preferredStyle: .ActionSheet)
-        let addFlagAction = UIAlertAction(title: "Flag", style: .Default) { action -> Void in
-            model.flag = true;
-        }
-        let removeFlagAction = UIAlertAction(title: "Remove Flag", style: .Default) { action -> Void in
-            model.flag = false;
-        }
+//        let addFlagAction = UIAlertAction(title: "Flag", style: .Default) { action -> Void in
+//            model.flag = true;
+//        }
+//        let removeFlagAction = UIAlertAction(title: "Remove Flag", style: .Default) { action -> Void in
+//            model.flag = false;
+//        }
 
         let emailAction = UIAlertAction(title: "Email", style: .Default) { action -> Void in
             self.displayReviewEmail(model)
@@ -231,16 +246,32 @@ extension ReviewListViewController {
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
         
-        if model.flag == false {
-             alertController.addAction(addFlagAction)
-        }
-        else {
-            alertController.addAction(removeFlagAction)
-        }
+//        if model.flag == false {
+//             alertController.addAction(addFlagAction)
+//        }
+//        else {
+//            alertController.addAction(removeFlagAction)
+//        }
         
         alertController.addAction(emailAction)
         alertController.addAction(translateAction)
         alertController.addAction(cancelAction)
+        
+        if let popOverPresentationController : UIPopoverPresentationController = alertController.popoverPresentationController {
+            popOverPresentationController.sourceView                = button
+            popOverPresentationController.sourceRect                = button.bounds
+            popOverPresentationController.permittedArrowDirections = [.Right]
+        }
+        
+//        if let popoverController = alertController.popoverPresentationController {
+////            popoverController.barButtonItem = sender
+//            let h = self.view.bounds.height/2
+//            let w = self.view.bounds.width
+//           popoverController.sourceRect = CGRect(x:w,y:h-100, width: 100,height: 100)
+//            popoverController.sourceView = self.view
+//            popoverController.permittedArrowDirections = [.Right]
+//        }
+        
         //Theme.alertController(alertController)
         self.presentViewController(alertController, animated: true, completion: nil)
     }

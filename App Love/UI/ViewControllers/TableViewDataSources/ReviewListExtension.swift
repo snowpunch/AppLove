@@ -17,7 +17,8 @@ extension ReviewListViewController: UITableViewDataSource {
         self.tableView.registerNib(UINib(nibName: "ReviewHeaderCell", bundle: nil), forCellReuseIdentifier: "ReviewHeaderCellID")
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 44
-        self.tableView.estimatedSectionHeaderHeight = 90;
+        self.tableView.estimatedSectionHeaderHeight = 90
+        self.tableView.allowsSelection = false
     }
     
     func updateHeaderPosition() {

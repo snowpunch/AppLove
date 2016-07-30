@@ -53,6 +53,7 @@ class ReviewParser: NSObject {
                     let review = ReviewModel(json: json)
                     if (review.name != nil) {
                         review.territory = fullTerritoryName
+                        review.territoryCode = pageInfo.territory
                         reviewsArray.append(review)
                     }
                 }

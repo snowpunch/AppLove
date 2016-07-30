@@ -13,6 +13,7 @@ import Foundation
 
 class ReviewCell: UITableViewCell {
 
+    @IBOutlet weak var flagImage: UIImageView!
     @IBOutlet weak var authorLabel: UILabel! 
     @IBOutlet weak var reviewLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -40,15 +41,10 @@ class ReviewCell: UITableViewCell {
         else {
             authorLabel.text = ""
         }
-    }
-    
-    // todo: could be pre-calculated and added to model.
-    func isEnglishCountry(territory:String) -> Bool {
-        if territory == "United States" || territory == "Canada"
-        || territory == "United Kingdom" || territory == "Australia" {
-            return true
+        
+        if let territoryCode = model.territoryCode {
+            flagImage.image = UIImage(named:territoryCode)
         }
-        return false
     }
     
     func addStars(rating:Int) {
@@ -85,9 +81,9 @@ class ReviewCell: UITableViewCell {
         stars.removeAll()
     }
     
-    @IBAction func onReviewButton(sender: AnyObject) {
+    @IBAction func onReviewButton(button: UIButton) {
         if let modelData = self.model {
-            let data:[String:AnyObject] = ["reviewModel":modelData]
+            let data:[String:AnyObject] = ["reviewModel":modelData, "button":button]
             let nc = NSNotificationCenter.defaultCenter()
             nc.postNotificationName(Const.reviewOptions.showOptions, object:nil, userInfo:data)
         }

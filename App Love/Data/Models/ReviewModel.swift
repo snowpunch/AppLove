@@ -20,6 +20,7 @@ class ReviewModel {
     var version:String?
     var name:String?
     var territory:String?
+    var territoryCode:String?
     var date = NSDate()
     var flag:Bool = false
     var reviewID:String = ""
