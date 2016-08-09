@@ -325,7 +325,7 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lL5-qb-5Lk">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lL5-qb-5Lk">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -505,52 +505,34 @@
                                                 <action selector="onSwitchPressed:" destination="fNb-ot-lWH" eventType="valueChanged" id="7oG-Ku-7ha"/>
                                             </connections>
                                         </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kc4-N4-qwx">
-                                            <rect key="frame" x="93" y="11" width="41" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="41" id="x8J-nb-39h"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWN-Dv-ESE">
-                                            <rect key="frame" x="142" y="11" width="450" height="21"/>
+                                            <rect key="frame" x="120" y="11" width="472" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="US2-OR-fEZ" userLabel="TerritoryFlagImage">
-                                            <rect key="frame" x="65" y="13" width="23" height="17"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="US2-OR-fEZ" userLabel="TerritoryFlagImage">
+                                            <rect key="frame" x="67" y="5" width="46" height="34"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="17" id="JOe-SW-x9e"/>
-                                                <constraint firstAttribute="width" constant="23" id="c6n-kr-z9S"/>
+                                                <constraint firstAttribute="height" constant="34" id="JOe-SW-x9e"/>
+                                                <constraint firstAttribute="width" constant="46" id="c6n-kr-z9S"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Kc4-N4-qwx" firstAttribute="leading" secondItem="Ivm-5e-EHw" secondAttribute="trailing" constant="8" id="11h-IF-qDn"/>
-                                        <constraint firstItem="nWN-Dv-ESE" firstAttribute="leading" secondItem="Kc4-N4-qwx" secondAttribute="trailing" constant="8" id="GT0-H3-xUJ"/>
-                                        <constraint firstItem="US2-OR-fEZ" firstAttribute="leading" secondItem="fmN-uV-N8X" secondAttribute="leadingMargin" constant="57" id="Kuz-5n-Lff"/>
-                                        <constraint firstItem="Kc4-N4-qwx" firstAttribute="centerY" secondItem="Ivm-5e-EHw" secondAttribute="centerY" id="Kym-8u-LeH"/>
-                                        <constraint firstItem="US2-OR-fEZ" firstAttribute="top" secondItem="fmN-uV-N8X" secondAttribute="topMargin" constant="5" id="LMr-yr-Wjo"/>
-                                        <constraint firstItem="Kc4-N4-qwx" firstAttribute="leading" secondItem="Ivm-5e-EHw" secondAttribute="trailing" constant="36" id="f1C-lL-Krw"/>
+                                        <constraint firstItem="US2-OR-fEZ" firstAttribute="leading" secondItem="fmN-uV-N8X" secondAttribute="leadingMargin" constant="59" id="Kuz-5n-Lff"/>
+                                        <constraint firstItem="US2-OR-fEZ" firstAttribute="top" secondItem="fmN-uV-N8X" secondAttribute="topMargin" constant="-3" id="LMr-yr-Wjo"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="Ivm-5e-EHw" secondAttribute="leading" id="hGY-45-XHB"/>
                                         <constraint firstItem="Ivm-5e-EHw" firstAttribute="centerY" secondItem="fmN-uV-N8X" secondAttribute="centerY" id="kmS-YW-atZ"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="nWN-Dv-ESE" secondAttribute="trailing" id="ko5-YR-44q"/>
-                                        <constraint firstItem="nWN-Dv-ESE" firstAttribute="leading" secondItem="Kc4-N4-qwx" secondAttribute="trailing" constant="8" id="pzJ-u4-0t7"/>
                                         <constraint firstItem="nWN-Dv-ESE" firstAttribute="centerY" secondItem="Ivm-5e-EHw" secondAttribute="centerY" id="scr-oy-RxX"/>
                                     </constraints>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="11h-IF-qDn"/>
-                                            <exclude reference="pzJ-u4-0t7"/>
-                                        </mask>
-                                    </variation>
                                 </tableViewCellContentView>
+                                <constraints>
+                                    <constraint firstItem="nWN-Dv-ESE" firstAttribute="leading" secondItem="fNb-ot-lWH" secondAttribute="leading" constant="120" id="oNT-A8-qzk"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="addSwitch" destination="Ivm-5e-EHw" id="11g-IH-w7K"/>
-                                    <outlet property="codeLabel" destination="Kc4-N4-qwx" id="Pyj-h9-Qov"/>
                                     <outlet property="countryLabel" destination="nWN-Dv-ESE" id="MTu-qe-uEC"/>
                                     <outlet property="territoryFlagImage" destination="US2-OR-fEZ" id="Xf4-OI-CPy"/>
                                 </connections>

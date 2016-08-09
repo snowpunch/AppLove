@@ -57,7 +57,6 @@
 		0CDF4E2D1D09DADC00CE1622 /* HamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDF4E2C1D09DADC00CE1622 /* HamburgerButton.swift */; };
 		0CDF4E2F1D09DB6D00CE1622 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDF4E2E1D09DB6D00CE1622 /* SideMenuViewController.swift */; };
 		0CDF4E311D0A032500CE1622 /* ElasticModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDF4E301D0A032500CE1622 /* ElasticModalViewController.swift */; };
-		0CDF4E351D0B5B6E00CE1622 /* SevenSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDF4E341D0B5B6E00CE1622 /* SevenSwitch.swift */; };
 		0CE288F21CB30AA7008A309A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE288F11CB30AA7008A309A /* Theme.swift */; };
 		0CE288F71CB31483008A309A /* LoadingProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE288F51CB31483008A309A /* LoadingProgressBar.swift */; };
 		0CE288FB1CB32022008A309A /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE288FA1CB32022008A309A /* Const.swift */; };
@@ -122,7 +121,6 @@
 		0CDF4E2C1D09DADC00CE1622 /* HamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerButton.swift; sourceTree = "<group>"; };
 		0CDF4E2E1D09DB6D00CE1622 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		0CDF4E301D0A032500CE1622 /* ElasticModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElasticModalViewController.swift; sourceTree = "<group>"; };
-		0CDF4E341D0B5B6E00CE1622 /* SevenSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SevenSwitch.swift; sourceTree = "<group>"; };
 		0CE288F11CB30AA7008A309A /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		0CE288F51CB31483008A309A /* LoadingProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingProgressBar.swift; sourceTree = "<group>"; };
 		0CE288FA1CB32022008A309A /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
@@ -356,7 +354,6 @@
 		0CE289201CB5A294008A309A /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				0CDF4E341D0B5B6E00CE1622 /* SevenSwitch.swift */,
 				0CDF4E301D0A032500CE1622 /* ElasticModalViewController.swift */,
 				0CDF4E2C1D09DADC00CE1622 /* HamburgerButton.swift */,
 				0CE289211CB5A294008A309A /* SWXMLHash.swift */,
@@ -520,7 +517,6 @@
 				0C6D7F031CAF2A5C008AD13B /* ReviewHeaderCell.swift in Sources */,
 				0C6D7F0D1CAF2A5C008AD13B /* SelectCountryViewController.swift in Sources */,
 				0CC22FFC1CB9663100FFF10A /* TerritoryBar.swift in Sources */,
-				0CDF4E351D0B5B6E00CE1622 /* SevenSwitch.swift in Sources */,
 				0C4B513E1D49886200F8EA2C /* AppListEmail.swift in Sources */,
 				0C6D7EF81CAF2A5C008AD13B /* AppInfo.swift in Sources */,
 				0C6D7F011CAF2A5C008AD13B /* ReviewCell.swift in Sources */,
