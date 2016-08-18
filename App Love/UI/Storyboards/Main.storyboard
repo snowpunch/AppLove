@@ -111,7 +111,7 @@
         <!--App Love-->
         <scene sceneID="1jE-tw-2EP">
             <objects>
-                <viewController id="NVk-Cm-fE5" customClass="AppListViewController" customModule="App_Love" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NVk-Cm-fE5" customClass="AppListViewVC" customModule="App_Love" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AGQ-wF-zhG"/>
                         <viewControllerLayoutGuide type="bottom" id="6bV-Mn-C7b"/>

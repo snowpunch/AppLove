@@ -38,7 +38,6 @@
 		0C6D7F021CAF2A5C008AD13B /* ReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6D7EE11CAF2A5C008AD13B /* ReviewCell.xib */; };
 		0C6D7F061CAF2A5C008AD13B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C6D7EE71CAF2A5C008AD13B /* LaunchScreen.storyboard */; };
 		0C6D7F071CAF2A5C008AD13B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C6D7EE81CAF2A5C008AD13B /* Main.storyboard */; };
-		0C6D7F091CAF2A5C008AD13B /* AppListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6D7EEB1CAF2A5C008AD13B /* AppListViewController.swift */; };
 		0C6D7F0A1CAF2A5C008AD13B /* AppSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6D7EEC1CAF2A5C008AD13B /* AppSearchViewController.swift */; };
 		0C6D7F0B1CAF2A5C008AD13B /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6D7EED1CAF2A5C008AD13B /* HelpViewController.swift */; };
 		0C6D7F0C1CAF2A5C008AD13B /* ReviewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6D7EEE1CAF2A5C008AD13B /* ReviewListViewController.swift */; };
@@ -46,6 +45,10 @@
 		0C6D7F111CAF2ADB008AD13B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6D7F0F1CAF2ADB008AD13B /* AppDelegate.swift */; };
 		0C6D7F121CAF2ADB008AD13B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C6D7F101CAF2ADB008AD13B /* Info.plist */; };
 		0C979D421D66474600FFC49E /* String+truncate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C979D411D66474600FFC49E /* String+truncate.swift */; };
+		0C979D481D666A1E00FFC49E /* AppListVC+SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C979D471D666A1E00FFC49E /* AppListVC+SideMenu.swift */; };
+		0C979D4A1D6676D300FFC49E /* AppListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C979D491D6676D300FFC49E /* AppListVC.swift */; };
+		0C979D4C1D6678FE00FFC49E /* AppListVC+ElasticTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C979D4B1D6678FE00FFC49E /* AppListVC+ElasticTransition.swift */; };
+		0C979D4E1D667B3300FFC49E /* AppListViewVC+TVDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C979D4D1D667B3300FFC49E /* AppListViewVC+TVDataSource.swift */; };
 		0CA8F9081D2EE73B002F49F1 /* NSNotificationCenter+sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA8F9071D2EE73B002F49F1 /* NSNotificationCenter+sugar.swift */; };
 		0CB6E9E41D0C932B009316E8 /* GlobalSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB6E9E31D0C932B009316E8 /* GlobalSplitViewController.swift */; };
 		0CB6E9E81D0DD936009316E8 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB6E9E71D0DD936009316E8 /* MenuButton.swift */; };
@@ -57,7 +60,6 @@
 		0CDF4E311D0A032500CE1622 /* ElasticModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDF4E301D0A032500CE1622 /* ElasticModalViewController.swift */; };
 		0CE288F21CB30AA7008A309A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE288F11CB30AA7008A309A /* Theme.swift */; };
 		0CE288FB1CB32022008A309A /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE288FA1CB32022008A309A /* Const.swift */; };
-		0CE288FF1CB35BC6008A309A /* AppListExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE288FE1CB35BC6008A309A /* AppListExtension.swift */; };
 		0CE289011CB35C33008A309A /* AppSearchExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE289001CB35C33008A309A /* AppSearchExtension.swift */; };
 		0CE289031CB35C53008A309A /* ReviewListExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE289021CB35C53008A309A /* ReviewListExtension.swift */; };
 		0CE289131CB578B4008A309A /* LoadReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE289121CB578B4008A309A /* LoadReviews.swift */; };
@@ -99,7 +101,6 @@
 		0C6D7EE11CAF2A5C008AD13B /* ReviewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewCell.xib; sourceTree = "<group>"; };
 		0C6D7EE71CAF2A5C008AD13B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C6D7EE81CAF2A5C008AD13B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		0C6D7EEB1CAF2A5C008AD13B /* AppListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppListViewController.swift; sourceTree = "<group>"; };
 		0C6D7EEC1CAF2A5C008AD13B /* AppSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSearchViewController.swift; sourceTree = "<group>"; };
 		0C6D7EED1CAF2A5C008AD13B /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		0C6D7EEE1CAF2A5C008AD13B /* ReviewListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewListViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +108,10 @@
 		0C6D7F0F1CAF2ADB008AD13B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C6D7F101CAF2ADB008AD13B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C979D411D66474600FFC49E /* String+truncate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+truncate.swift"; sourceTree = "<group>"; };
+		0C979D471D666A1E00FFC49E /* AppListVC+SideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppListVC+SideMenu.swift"; sourceTree = "<group>"; };
+		0C979D491D6676D300FFC49E /* AppListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppListVC.swift; sourceTree = "<group>"; };
+		0C979D4B1D6678FE00FFC49E /* AppListVC+ElasticTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppListVC+ElasticTransition.swift"; sourceTree = "<group>"; };
+		0C979D4D1D667B3300FFC49E /* AppListViewVC+TVDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppListViewVC+TVDataSource.swift"; sourceTree = "<group>"; };
 		0CA8F9071D2EE73B002F49F1 /* NSNotificationCenter+sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotificationCenter+sugar.swift"; sourceTree = "<group>"; };
 		0CB6E9E31D0C932B009316E8 /* GlobalSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalSplitViewController.swift; sourceTree = "<group>"; };
 		0CB6E9E71D0DD936009316E8 /* MenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
@@ -118,7 +123,6 @@
 		0CDF4E301D0A032500CE1622 /* ElasticModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElasticModalViewController.swift; sourceTree = "<group>"; };
 		0CE288F11CB30AA7008A309A /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		0CE288FA1CB32022008A309A /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
-		0CE288FE1CB35BC6008A309A /* AppListExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppListExtension.swift; sourceTree = "<group>"; };
 		0CE289001CB35C33008A309A /* AppSearchExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSearchExtension.swift; sourceTree = "<group>"; };
 		0CE289021CB35C53008A309A /* ReviewListExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewListExtension.swift; sourceTree = "<group>"; };
 		0CE289121CB578B4008A309A /* LoadReviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadReviews.swift; sourceTree = "<group>"; };
@@ -279,9 +283,10 @@
 		0C6D7EE91CAF2A5C008AD13B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0C979D441D664BCF00FFC49E /* Extensions */,
 				0CE288FD1CB35B6C008A309A /* TableViewDataSources */,
 				0CDF4E2E1D09DB6D00CE1622 /* SideMenuViewController.swift */,
-				0C6D7EEB1CAF2A5C008AD13B /* AppListViewController.swift */,
+				0C979D491D6676D300FFC49E /* AppListVC.swift */,
 				0C6D7EEC1CAF2A5C008AD13B /* AppSearchViewController.swift */,
 				0C6D7EEE1CAF2A5C008AD13B /* ReviewListViewController.swift */,
 				0C6D7EEF1CAF2A5C008AD13B /* SelectCountryViewController.swift */,
@@ -301,6 +306,16 @@
 			);
 			name = "Supporting files";
 			path = "Data/Supporting files";
+			sourceTree = "<group>";
+		};
+		0C979D441D664BCF00FFC49E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0C979D4D1D667B3300FFC49E /* AppListViewVC+TVDataSource.swift */,
+				0C979D471D666A1E00FFC49E /* AppListVC+SideMenu.swift */,
+				0C979D4B1D6678FE00FFC49E /* AppListVC+ElasticTransition.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		0CA8F9061D2EE6FD002F49F1 /* Extensions */ = {
@@ -325,7 +340,6 @@
 		0CE288FD1CB35B6C008A309A /* TableViewDataSources */ = {
 			isa = PBXGroup;
 			children = (
-				0CE288FE1CB35BC6008A309A /* AppListExtension.swift */,
 				0CE289001CB35C33008A309A /* AppSearchExtension.swift */,
 				0CE289021CB35C53008A309A /* ReviewListExtension.swift */,
 				0CC230051CC40C6B00FFF10A /* SelectCountryExtension.swift */,
@@ -491,13 +505,15 @@
 			files = (
 				0C979D421D66474600FFC49E /* String+truncate.swift in Sources */,
 				0CDF4E311D0A032500CE1622 /* ElasticModalViewController.swift in Sources */,
+				0C979D481D666A1E00FFC49E /* AppListVC+SideMenu.swift in Sources */,
 				0C4B513A1D47C8F900F8EA2C /* Defaults.swift in Sources */,
 				0C6D7EF11CAF2A5C008AD13B /* CacheManager.swift in Sources */,
 				0CB6E9E81D0DD936009316E8 /* MenuButton.swift in Sources */,
 				0CE289171CB59F3E008A309A /* ReviewParser.swift in Sources */,
-				0CE288FF1CB35BC6008A309A /* AppListExtension.swift in Sources */,
+				0C979D4E1D667B3300FFC49E /* AppListViewVC+TVDataSource.swift in Sources */,
 				0C6D7F001CAF2A5C008AD13B /* CountrySelectCell.swift in Sources */,
 				0C6D7EF61CAF2A5C008AD13B /* CountryModel.swift in Sources */,
+				0C979D4C1D6678FE00FFC49E /* AppListVC+ElasticTransition.swift in Sources */,
 				0C6D7F0D1CAF2A5C008AD13B /* SelectCountryViewController.swift in Sources */,
 				0C4B513E1D49886200F8EA2C /* AppListEmail.swift in Sources */,
 				0C6D7EF81CAF2A5C008AD13B /* AppInfo.swift in Sources */,
@@ -517,10 +533,10 @@
 				0C6D7EF71CAF2A5C008AD13B /* ReviewModel.swift in Sources */,
 				0C4B51361D46AE5200F8EA2C /* LoadOptionsVC.swift in Sources */,
 				0C6D7EF01CAF2A5C008AD13B /* AppList.swift in Sources */,
-				0C6D7F091CAF2A5C008AD13B /* AppListViewController.swift in Sources */,
 				0C6D7EF21CAF2A5C008AD13B /* SearchList.swift in Sources */,
 				0C5CB8B91CCD910300B55450 /* HelpAnimation.swift in Sources */,
 				0CC230061CC40C6B00FFF10A /* SelectCountryExtension.swift in Sources */,
+				0C979D4A1D6676D300FFC49E /* AppListVC.swift in Sources */,
 				0CE289221CB5A294008A309A /* SWXMLHash.swift in Sources */,
 				0C6D7EF31CAF2A5C008AD13B /* TerritoryList.swift in Sources */,
 				0C6D7EFC1CAF2A5C008AD13B /* SearchApps.swift in Sources */,

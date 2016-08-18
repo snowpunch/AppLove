@@ -5,6 +5,8 @@
 //  Created by Woodie Dovich on 2016-07-25.
 //  Copyright © 2016 Snowpunch. All rights reserved.
 //
+//  Activated from side menu 'Load Options'
+//
 
 import UIKit
 import ElasticTransition
