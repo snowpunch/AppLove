@@ -17,6 +17,11 @@ class ReviewListViewController: UIViewController {
     var allReviews = [ReviewModel]()
     var refreshControl: UIRefreshControl!
     @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var appIcon: UIImageView!
+    @IBOutlet weak var appName: UILabel!
+    @IBOutlet weak var aveRating: UILabel!
+    var lowestIndex = 0
+    @IBOutlet weak var territoryCollection: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +36,14 @@ class ReviewListViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        ReviewLoadManager.sharedInst.loadReviews()
+        
+        if let _ = AppList.sharedInst.getSelectedModel() {
+            setupCollection()
+            ReviewLoadManager.sharedInst.loadReviews()
+        }
+        else {
+            showEmptyView()
+        }
     }
 
     override func viewWillDisappear(animated: Bool) {
@@ -51,7 +63,14 @@ class ReviewListViewController: UIViewController {
         CacheManager.sharedInst.startIgnoringCache()
         allReviews.removeAll()
         self.tableView.reloadData()
-        ReviewLoadManager.sharedInst.loadReviews()
+        if let _ = AppList.sharedInst.getSelectedModel() {
+            setupCollection()
+            ReviewLoadManager.sharedInst.loadReviews()
+            territoryCollection.reloadData()
+        }
+        else {
+            showEmptyView()
+        }
         self.refreshControl?.endRefreshing()
     }
     
@@ -64,7 +83,10 @@ class ReviewListViewController: UIViewController {
     func registerNotifications() {
         NSNotificationCenter.addObserver(self, sel: .reloadData, name: Const.load.reloadData)
         NSNotificationCenter.addObserver(self, sel: .displayToolbar, name: Const.load.displayToolbar)
-        NSNotificationCenter.addObserver(self,sel:.onReviewOptions, name: Const.reviewOptions.showOptions)
+        NSNotificationCenter.addObserver(self,sel: .onReviewOptions, name: Const.reviewOptions.showOptions)
+        NSNotificationCenter.addObserver(self,sel: .startLoading, name: Const.load.loadStart)
+        NSNotificationCenter.addObserver(self, sel: .finishedLoading, name: Const.load.allLoadingCompleted)
+        NSNotificationCenter.addObserver(self, sel: .updateLoadingCount, name:Const.load.updateAmount)
     }
     
     func unregisterNotifications() {
@@ -80,37 +102,12 @@ class ReviewListViewController: UIViewController {
         NSNotificationCenter.post(Const.load.orientationChange)
     }
     
-//    @IBAction func onStopLoadToggle(button: UIBarButtonItem) {
-//        if button.title == "Stop" {
-//            stopButtonPressed()
-//        }
-//        else if button.title == "Load" {
-//            loadButtonPressed()
-//        }
-//    }
-    
     @IBAction func onSort(sender: UIBarButtonItem) {
         displaySortActionSheet(sender)
     }
     
-//    @IBAction func onOptions(sender: UIBarButtonItem) {
-//        displayOptionsActionSheet(sender)
-//    }
-
-//    func stopButtonPressed() {
-//        ReviewLoadManager.sharedInst.cancelLoading()
-//        NSNotificationCenter.post(Const.load.reloadData)
-//        finishedRefreshing()
-//    }
-//    
-//    func loadButtonPressed() {
-//        ReviewLoadManager.sharedInst.loadReviews()
-//    }
-    
-    
     @IBAction func onAppStore(sender: AnyObject) {
         // show loading indicator.
-        
         if let appId = AppList.sharedInst.getSelectedModel()?.appId {
             showStore(appId)
         }
@@ -122,18 +119,43 @@ class ReviewListViewController: UIViewController {
     }
     
     func onReviewOptions(notification: NSNotification) {
-        
         guard let dic = notification.userInfo else { return }
-
-//        guard let territory = dic["territory"] as? String else { return }
-//        guard loaderPieces[territory] != nil else { return }
         guard let model = dic["reviewModel"] as? ReviewModel else { return }
         guard let button = dic["button"] as? UIButton else { return }
-//        guard let box = loaderPieces[territory] else { return }
-//        box.updateProgress(loadState)
         displayReviewOptions(model, button:button)
     }
+    
+    func scrollFlagsToEnd() {
+        let finalPos =  ReviewLoadManager.sharedInst.loadStateArray.count - 1
+        if finalPos > 0 {
+            let path = NSIndexPath(forItem: finalPos, inSection: 0)
+            if path != NSNotFound {
+                territoryCollection.scrollToItemAtIndexPath(path, atScrollPosition: UICollectionViewScrollPosition.CenteredHorizontally, animated: true)
+            }
+        }
+    }
 
+    func scrollFlagsToBeginning() {
+        let finalPos =  0
+        let path = NSIndexPath(forItem: finalPos, inSection: 0)
+        territoryCollection.scrollToItemAtIndexPath(path, atScrollPosition: UICollectionViewScrollPosition.CenteredHorizontally, animated: true)
+    }
+    
+    func startLoading() {
+        scrollFlagsToBeginning()
+    }
+    
+    // scrollToEndWhenFinishedLoading
+    func finishedLoading() {
+        scrollFlagsToEnd()
+        let totalReviewsLoaded = ReviewLoadManager.sharedInst.reviews.count
+        self.aveRating.text = "Reviews Loaded : "+String(totalReviewsLoaded)
+    }
+    
+    func updateLoadingCount(notification: NSNotification) {
+        let totalReviewsLoaded = ReviewLoadManager.sharedInst.reviews.count
+        self.aveRating.text = "Loading Reviews : "+String(totalReviewsLoaded)
+    }
     
     deinit {
         unregisterNotifications()
@@ -209,70 +231,29 @@ extension ReviewListViewController {
         }
         self.presentViewController(alertController, animated: true, completion: nil)
     }
-    
-    //- (void) tableView: (UITableView *) tableView accessoryButtonTappedForRowWithIndexPath: (NSIndexPath *) indexPath{ ... }
-    
-//    func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        return UITableViewCell()
-//    }
-    
 
     func displayReviewOptions(model:ReviewModel, button:UIButton) {
         
         guard let title = model.title else { return }
-
-//        if (UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad)
-//        {
-//            print("ipad")
-//        }
-//        else {
-//            print("iPhone)")
-//        }
-        
         let alertController = UIAlertController(title:nil, message: title, preferredStyle: .ActionSheet)
-//        let addFlagAction = UIAlertAction(title: "Flag", style: .Default) { action -> Void in
-//            model.flag = true;
-//        }
-//        let removeFlagAction = UIAlertAction(title: "Remove Flag", style: .Default) { action -> Void in
-//            model.flag = false;
-//        }
-
         let emailAction = UIAlertAction(title: "Email", style: .Default) { action -> Void in
             self.displayReviewEmail(model)
         }
         let translateAction = UIAlertAction(title: "Translate", style: .Default) { action -> Void in
             self.displayGoogleTranslationViaSafari(model)
         }
-        
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
-        
-//        if model.flag == false {
-//             alertController.addAction(addFlagAction)
-//        }
-//        else {
-//            alertController.addAction(removeFlagAction)
-//        }
         
         alertController.addAction(emailAction)
         alertController.addAction(translateAction)
         alertController.addAction(cancelAction)
         
         if let popOverPresentationController : UIPopoverPresentationController = alertController.popoverPresentationController {
-            popOverPresentationController.sourceView                = button
-            popOverPresentationController.sourceRect                = button.bounds
+            popOverPresentationController.sourceView = button
+            popOverPresentationController.sourceRect = button.bounds
             popOverPresentationController.permittedArrowDirections = [.Right]
         }
-        
-//        if let popoverController = alertController.popoverPresentationController {
-////            popoverController.barButtonItem = sender
-//            let h = self.view.bounds.height/2
-//            let w = self.view.bounds.width
-//           popoverController.sourceRect = CGRect(x:w,y:h-100, width: 100,height: 100)
-//            popoverController.sourceView = self.view
-//            popoverController.permittedArrowDirections = [.Right]
-//        }
-        
-        //Theme.alertController(alertController)
+
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
@@ -342,4 +323,67 @@ private extension Selector {
     static let reloadData = #selector(UITableView.reloadData)
     static let displayToolbar = #selector(ReviewListViewController.displayToolbar)
     static let onReviewOptions = #selector(ReviewListViewController.onReviewOptions)
+    static let finishedLoading = #selector(ReviewListViewController.finishedLoading)
+    static let updateLoadingCount = #selector(ReviewListViewController.updateLoadingCount)
+    static let startLoading = #selector(ReviewListViewController.startLoading)
+}
+
+extension ReviewListViewController: UICollectionViewDataSource {
+    
+    func showEmptyView() {
+        territoryCollection.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+        appName.text = "Select an App"
+        aveRating.text = "on the left"
+    }
+    
+    func setupCollection() {
+        
+        territoryCollection.delegate = self
+        territoryCollection.dataSource = self
+        territoryCollection.bounces = true
+        territoryCollection.autoresizingMask = [UIViewAutoresizing.FlexibleHeight, UIViewAutoresizing.FlexibleWidth]
+        territoryCollection.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+        territoryCollection.registerClass(TerritoryLoadCell.self, forCellWithReuseIdentifier: "territoryLoadCell")
+        territoryCollection.registerNib(UINib(nibName: "TerritoryLoadCell", bundle: nil), forCellWithReuseIdentifier: "territoryLoadCell")
+
+        // App Info
+        if let appModel = AppList.sharedInst.getSelectedModel(),
+            let urlStr = appModel.icon100,
+            let url =  NSURL(string:urlStr) {
+            appIcon.sd_setImageWithURL(url, placeholderImage: UIImage(named:"defaulticon"))
+            appName.text = appModel.appName
+            let totalReviewsLoaded = ReviewLoadManager.sharedInst.reviews.count
+            aveRating.text = "Reviews Loaded : "+String(totalReviewsLoaded)
+            territoryCollection.reloadData()
+        }
+    }
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return ReviewLoadManager.sharedInst.loadStates.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("territoryLoadCell", forIndexPath: indexPath) as! TerritoryLoadCell
+        
+        let loadState = ReviewLoadManager.sharedInst.loadStateArray[indexPath.row]
+        
+        cell.setup(loadState)
+        cell.setNeedsUpdateConstraints()
+        
+        return cell
+    }
+}
+
+extension ReviewListViewController: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+
+        let sideSize = CGSize(width: 26,height: 43)
+        return sideSize;
+    }
 }

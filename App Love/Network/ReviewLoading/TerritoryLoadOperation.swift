@@ -26,7 +26,6 @@ class TerritoryLoadOperation: NSOperation {
     var finishedOperation = false
     var loader:LoadReviews?
     var pageInfo:PageInfo
-    
     var versionsSet = Set<String>()
 
     init(pageInfo:PageInfo) {

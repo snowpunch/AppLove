@@ -18,13 +18,18 @@ class ReviewLoadManager: NSObject, ProgressDelegate {
     var loadStates = [String:LoadState]() // loading state for every territory.
     var loadingQueue:NSOperationQueue?
     var firstQuickUpdate:Bool = false
+    var loadStateArray = [LoadState]()
 
     func initializeLoadingStates() {
-        self.loadStates.removeAll()
+        loadStates.removeAll()
+        loadStateArray.removeAll()
         let territories = TerritoryMgr.sharedInst.getSelectedCountryCodes()
         for code in territories {
-            self.loadStates[code] = LoadState(territory: code)
+            let loadState =  LoadState(territory: code)
+            loadStates[code] = loadState
+            loadStateArray.append(loadState)
         }
+        
         self.firstQuickUpdate = false
     }
     
@@ -110,6 +115,8 @@ class ReviewLoadManager: NSObject, ProgressDelegate {
                     nc.postNotificationName(Const.load.updateAmount, object:nil, userInfo:data)
                 }
                 
+                // let the user read something while still loading, 
+                // after the first 99 reviews are loaded - display them.
                 if self.firstQuickUpdate == false && self.reviews.count > 99 {
                     self.updateTable()
                 }

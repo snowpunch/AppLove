@@ -5,7 +5,7 @@
 //  Created by Woodie Dovich on 2016-04-04.
 //  Copyright © 2016 Snowpunch. All rights reserved.
 //
-//  Table for App Reviews. Includes headerCell.
+//  DataSource for App Reviews.
 //  
 
 import UIKit
@@ -14,34 +14,16 @@ extension ReviewListViewController: UITableViewDataSource {
     
     func tableSetup() {
         self.tableView.registerNib(UINib(nibName: "ReviewCell", bundle: nil), forCellReuseIdentifier: "ReviewCellID")
-        self.tableView.registerNib(UINib(nibName: "ReviewHeaderCell", bundle: nil), forCellReuseIdentifier: "ReviewHeaderCellID")
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 44
-        self.tableView.estimatedSectionHeaderHeight = 90
         self.tableView.allowsSelection = false
-    }
-    
-    func updateHeaderPosition() {
-        let offset = CGPoint(x: self.tableView.contentOffset.x,y: self.tableView.contentOffset.y+1)
-        self.tableView.setContentOffset(offset, animated:true)
     }
 
     func reloadData() {
         allReviews = ReviewLoadManager.sharedInst.reviews
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.tableView.reloadData()
-            self.updateHeaderPosition()
         })
-    }
-    
-    // header
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> ReviewHeaderCell? {
-        if let headerCell = self.tableView.dequeueReusableCellWithIdentifier("ReviewHeaderCellID") as? ReviewHeaderCell,
-            let appModel = AppList.sharedInst.getSelectedModel() {
-                headerCell.setup(appModel)
-                return headerCell
-        }
-        return nil
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -51,10 +33,6 @@ extension ReviewListViewController: UITableViewDataSource {
         return cell
     }
 
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 90
-    }
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.allReviews.count;
     }

@@ -45,6 +45,15 @@ class ReviewCell: UITableViewCell {
         if let territoryCode = model.territoryCode {
             flagImage.image = UIImage(named:territoryCode)
         }
+//        else {
+//            print("error territoryCode \(model.territoryCode)")
+//            if let territoryCode = model.territoryCode {
+//                flagImage.image = UIImage(named:territoryCode)
+//            }
+//            else {
+//                print("fail again")
+//            }
+//        }
     }
     
     func addStars(rating:Int) {
@@ -91,5 +100,6 @@ class ReviewCell: UITableViewCell {
     
     override func prepareForReuse() {
         removeStars()
+        flagImage.image = nil
     }
 }

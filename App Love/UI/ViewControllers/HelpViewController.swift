@@ -27,16 +27,26 @@ class HelpViewController: ElasticModalViewController {
         let territoriesSelected = TerritoryMgr.sharedInst.getSelectedCountryCodes().count
         let allTerritories = TerritoryMgr.sharedInst.getTerritoryCount()
 
-        let helpText = "Territory Selector:\n\nYou can pick and choose which territories to load. Just a few or all \(allTerritories) territories. Currently there are \(territoriesSelected) territories selected. Up to 500 reviews can be loaded from each territory.\n\nTranslations:\n\nAfter viewing a translation, return back to app by tapping the top left corner. Google's translation service can translate to and from any language.\n\nLoading Indicator:\n\nEach piece of the loading bar represents a territory. Red represents a loading error. Blue represents (1-50) loaded reviews. Black represents 51-500 reviews. Green background means currently loading.\n\nLandscape:\n\nRotate device sideways for landscape view.\n\nCache:\n\nPull down to refresh to re-download from scratch and ignore the cache."
+        let helpText = "TIPS:\n\nCurrently there are \(territoriesSelected) territories selected out of a possible \(allTerritories).\n\nWhen selecting territories manually, the ALL button toggles between ALL and CLEAR.\n\nAfter viewing a translation, return back to this app by tapping the top left corner.\n"
 
         textView.backgroundColor = .clearColor()
         textView.text = helpText
         textView.userInteractionEnabled = false
+        textView.selectable = false
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         showAnimatedText()
+    }
+    
+    func fixCutOffTextAfterRotation() {
+        textView.scrollEnabled = false
+        textView.scrollEnabled = true
+    }
+    
+    override func willAnimateRotationToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
+        fixCutOffTextAfterRotation()
     }
     
     func showAnimatedText() {

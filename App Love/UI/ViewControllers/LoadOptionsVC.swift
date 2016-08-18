@@ -25,7 +25,6 @@ class LoadOptionsVC: UIViewController, ElasticMenuTransitionDelegate {
         super.viewDidLoad()
 
         //self.view.backgroundColor = Theme.lightestDefaultColor
-        
         initUI()
     }
     

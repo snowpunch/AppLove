@@ -13,9 +13,7 @@ import UIKit
 class TerritoryMgr: NSObject {
 
     static let sharedInst = TerritoryMgr()
-    
     private var modelDictionary = [String:CountryModel]()
-    
     private var defaultTerritories = [String]()
     
     private override init() { // enforce singleton

@@ -1,12 +1,8 @@
 //
 //  String+truncate.swift
-//  App Love
 //
-//  Created by Woodie Dovich on 2016-07-28.
-//  Copyright © 2016 Snowpunch. All rights reserved.
+//  Created by Unknown Person Online
 //
-//  truncates string and adds "..." to end.
-//  respects word boundaries in truncated sentence.
 
 import Foundation
 

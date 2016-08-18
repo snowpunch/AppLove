@@ -268,7 +268,6 @@ extension AppListViewController: MFMailComposeViewControllerDelegate {
         }
     }
     
-    // MARK: MFMailComposeViewControllerDelegate Method
     func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
         controller.dismissViewControllerAnimated(true, completion: nil)
     }
