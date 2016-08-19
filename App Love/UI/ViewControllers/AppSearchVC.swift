@@ -10,7 +10,7 @@
 
 import UIKit
 
-class AppSearchViewController: UITableViewController, UISearchBarDelegate {
+class AppSearchVC: UITableViewController, UISearchBarDelegate {
 
     var apps:[AppModel] = [AppModel]()
     @IBOutlet weak var searchBar: UISearchBar!
@@ -37,8 +37,5 @@ class AppSearchViewController: UITableViewController, UISearchBarDelegate {
                 })
             }
         }
-    }
-
-    @IBAction func onSearchTips(sender: AnyObject) {
     }
 }

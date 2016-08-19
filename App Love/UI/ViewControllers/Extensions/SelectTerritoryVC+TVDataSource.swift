@@ -10,7 +10,7 @@
 
 import UIKit
 
-extension SelectCountryViewController {
+extension SelectTerritoryVC {
     
     func tableSetup() {
         self.tableView.allowsMultipleSelection = true;

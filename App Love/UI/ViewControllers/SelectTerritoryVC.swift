@@ -10,7 +10,7 @@
 
 import UIKit
 
-class SelectCountryViewController: UITableViewController {
+class SelectTerritoryVC: UITableViewController {
 
     var countries = TerritoryMgr.sharedInst.getArrayOfModels()
     
@@ -59,7 +59,7 @@ class SelectCountryViewController: UITableViewController {
 }
 
 // action sheets
-extension SelectCountryViewController {
+extension SelectTerritoryVC {
     
     func saveDefaultTeritoriesActionSheet(button: UIBarButtonItem){
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)

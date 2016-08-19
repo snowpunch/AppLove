@@ -1,16 +1,14 @@
 //
-//  ReviewListExtension.swift
+//  ReviewListVC+TVDataSource.swift
 //  App Love
 //
-//  Created by Woodie Dovich on 2016-04-04.
+//  Created by Woodie Dovich on 2016-08-18.
 //  Copyright © 2016 Snowpunch. All rights reserved.
 //
-//  DataSource for App Reviews.
-//  
 
 import UIKit
 
-extension ReviewListViewController: UITableViewDataSource {
+extension ReviewListVC: UITableViewDataSource {
     
     func tableSetup() {
         self.tableView.registerNib(UINib(nibName: "ReviewCell", bundle: nil), forCellReuseIdentifier: "ReviewCellID")
@@ -18,7 +16,7 @@ extension ReviewListViewController: UITableViewDataSource {
         self.tableView.estimatedRowHeight = 44
         self.tableView.allowsSelection = false
     }
-
+    
     func reloadData() {
         allReviews = ReviewLoadManager.sharedInst.reviews
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
@@ -32,7 +30,7 @@ extension ReviewListViewController: UITableViewDataSource {
         cell.setup(model)
         return cell
     }
-
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.allReviews.count;
     }

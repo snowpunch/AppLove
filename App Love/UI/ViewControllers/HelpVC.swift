@@ -12,7 +12,7 @@ import UIKit
 import SpriteKit
 import SwiftyGlyphs
 
-class HelpViewController: ElasticModalViewController {
+class HelpVC: ElasticModalViewController {
 
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var skview: SKView!

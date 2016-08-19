@@ -1,16 +1,14 @@
 //
-//  AppSearchExtension.swift
+//  AppSerchVC+Search.swift
 //  App Love
 //
-//  Created by Woodie Dovich on 2016-04-04.
+//  Created by Woodie Dovich on 2016-08-18.
 //  Copyright © 2016 Snowpunch. All rights reserved.
-//
-//  Table for search results. Can multi-select rows.
 //
 
 import UIKit
 
-extension AppSearchViewController {
+extension AppSearchVC {
     
     func setTableStyle() {
         self.tableView.separatorStyle = .None

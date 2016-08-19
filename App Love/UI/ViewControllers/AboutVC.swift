@@ -13,7 +13,7 @@ import SpriteKit
 import SwiftyGlyphs
 import ElasticTransition
 
-class AboutViewController: ElasticModalViewController {
+class AboutVC: ElasticModalViewController {
 
     @IBOutlet weak var skview: SKView!
     @IBOutlet weak var textView: UITextView!
@@ -32,7 +32,7 @@ class AboutViewController: ElasticModalViewController {
     }
 
     func populateText() {
-        let aboutText = "\nDepending upon time available and how well this app is received some possible upcoming features could include:\n - Saving all reviews into Core Data to capture territories that pass the 500 threshold.\n- Highlighting new reviews upon re-loading.\n\nFull source code on Github.\n\nCheers,\nWoodie Dovich\n\n"
+        let aboutText = "\nDepending upon time available and how well this app is received some possible upcoming features could include:\n\n - Saving all reviews into Core Data to capture territories that pass the 500 threshold.\n- Highlighting new reviews upon re-loading.\n\nFull source code on Github.\n\nCheers,\nWoodie Dovich\n\n"
         
         textView.backgroundColor = .clearColor()
         textView.text = aboutText
