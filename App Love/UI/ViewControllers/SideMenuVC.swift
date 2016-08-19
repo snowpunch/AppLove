@@ -1,5 +1,5 @@
 //
-//  SideMenuViewController.swift
+//  SideMenuVC
 //  App Love
 //
 //  Created by Woodie Dovich on 2016-06-08.
@@ -10,10 +10,10 @@ import UIKit
 import ElasticTransition
 
 private extension Selector {
-    static let onMenuClose = #selector(SideMenuViewController.onMenuClose)
+    static let onMenuClose = #selector(SideMenuVC.onMenuClose)
 }
 
-class SideMenuViewController: UIViewController {
+class SideMenuVC: UIViewController {
     
     // ElasticMenu props
     var contentLength:CGFloat = 160
@@ -66,7 +66,7 @@ class SideMenuViewController: UIViewController {
     }
 }
 
-extension SideMenuViewController: ElasticMenuTransitionDelegate {
+extension SideMenuVC: ElasticMenuTransitionDelegate {
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)

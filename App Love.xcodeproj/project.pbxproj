@@ -56,13 +56,13 @@
 		0C979D641D668A4A00FFC49E /* AppSerchVC+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C979D631D668A4A00FFC49E /* AppSerchVC+Search.swift */; };
 		0C979D661D668ACC00FFC49E /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C979D651D668ACC00FFC49E /* AboutVC.swift */; };
 		0C979D681D668B7600FFC49E /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C979D671D668B7600FFC49E /* HelpVC.swift */; };
+		0C979D6A1D668C9500FFC49E /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C979D691D668C9500FFC49E /* SideMenuVC.swift */; };
+		0C979D6C1D6691C100FFC49E /* GlobalSplitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C979D6B1D6691C100FFC49E /* GlobalSplitVC.swift */; };
 		0CA8F9081D2EE73B002F49F1 /* NSNotificationCenter+sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA8F9071D2EE73B002F49F1 /* NSNotificationCenter+sugar.swift */; };
-		0CB6E9E41D0C932B009316E8 /* GlobalSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB6E9E31D0C932B009316E8 /* GlobalSplitViewController.swift */; };
 		0CB6E9E81D0DD936009316E8 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB6E9E71D0DD936009316E8 /* MenuButton.swift */; };
 		0CC230031CC2095500FFF10A /* LoadState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC230011CC2095500FFF10A /* LoadState.swift */; };
 		0CC230041CC2095500FFF10A /* PageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC230021CC2095500FFF10A /* PageInfo.swift */; };
 		0CDF4E2D1D09DADC00CE1622 /* HamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDF4E2C1D09DADC00CE1622 /* HamburgerButton.swift */; };
-		0CDF4E2F1D09DB6D00CE1622 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDF4E2E1D09DB6D00CE1622 /* SideMenuViewController.swift */; };
 		0CDF4E311D0A032500CE1622 /* ElasticModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDF4E301D0A032500CE1622 /* ElasticModalViewController.swift */; };
 		0CE288F21CB30AA7008A309A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE288F11CB30AA7008A309A /* Theme.swift */; };
 		0CE288FB1CB32022008A309A /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE288FA1CB32022008A309A /* Const.swift */; };
@@ -123,13 +123,13 @@
 		0C979D631D668A4A00FFC49E /* AppSerchVC+Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppSerchVC+Search.swift"; sourceTree = "<group>"; };
 		0C979D651D668ACC00FFC49E /* AboutVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		0C979D671D668B7600FFC49E /* HelpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
+		0C979D691D668C9500FFC49E /* SideMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		0C979D6B1D6691C100FFC49E /* GlobalSplitVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalSplitVC.swift; sourceTree = "<group>"; };
 		0CA8F9071D2EE73B002F49F1 /* NSNotificationCenter+sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotificationCenter+sugar.swift"; sourceTree = "<group>"; };
-		0CB6E9E31D0C932B009316E8 /* GlobalSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalSplitViewController.swift; sourceTree = "<group>"; };
 		0CB6E9E71D0DD936009316E8 /* MenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		0CC230011CC2095500FFF10A /* LoadState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadState.swift; sourceTree = "<group>"; };
 		0CC230021CC2095500FFF10A /* PageInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageInfo.swift; sourceTree = "<group>"; };
 		0CDF4E2C1D09DADC00CE1622 /* HamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerButton.swift; sourceTree = "<group>"; };
-		0CDF4E2E1D09DB6D00CE1622 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		0CDF4E301D0A032500CE1622 /* ElasticModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElasticModalViewController.swift; sourceTree = "<group>"; };
 		0CE288F11CB30AA7008A309A /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		0CE288FA1CB32022008A309A /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
@@ -299,8 +299,8 @@
 				0C4B51351D46AE5200F8EA2C /* LoadOptionsVC.swift */,
 				0C979D651D668ACC00FFC49E /* AboutVC.swift */,
 				0C979D671D668B7600FFC49E /* HelpVC.swift */,
-				0CB6E9E31D0C932B009316E8 /* GlobalSplitViewController.swift */,
-				0CDF4E2E1D09DB6D00CE1622 /* SideMenuViewController.swift */,
+				0C979D6B1D6691C100FFC49E /* GlobalSplitVC.swift */,
+				0C979D691D668C9500FFC49E /* SideMenuVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -537,6 +537,7 @@
 				0C6D7EFD1CAF2A5C008AD13B /* AppCell.swift in Sources */,
 				0C979D661D668ACC00FFC49E /* AboutVC.swift in Sources */,
 				0C979D621D6689BD00FFC49E /* AppSearchVC.swift in Sources */,
+				0C979D6A1D668C9500FFC49E /* SideMenuVC.swift in Sources */,
 				0CE289131CB578B4008A309A /* LoadReviews.swift in Sources */,
 				0C6D7EF71CAF2A5C008AD13B /* ReviewModel.swift in Sources */,
 				0C4B51361D46AE5200F8EA2C /* LoadOptionsVC.swift in Sources */,
@@ -550,14 +551,13 @@
 				0C979D5E1D66874300FFC49E /* SelectTerritoryVC.swift in Sources */,
 				0C6D7EFC1CAF2A5C008AD13B /* SearchApps.swift in Sources */,
 				0CE288F21CB30AA7008A309A /* Theme.swift in Sources */,
+				0C979D6C1D6691C100FFC49E /* GlobalSplitVC.swift in Sources */,
 				0C979D641D668A4A00FFC49E /* AppSerchVC+Search.swift in Sources */,
 				0C4B51401D4A948D00F8EA2C /* ReviewEmail.swift in Sources */,
 				0C554C8F1D5C139100EFEAD5 /* TerritoryLoadCell.swift in Sources */,
 				0C5CB8BF1CCD966B00B55450 /* Timing.swift in Sources */,
 				0CC230041CC2095500FFF10A /* PageInfo.swift in Sources */,
-				0CDF4E2F1D09DB6D00CE1622 /* SideMenuViewController.swift in Sources */,
 				0CE288FB1CB32022008A309A /* Const.swift in Sources */,
-				0CB6E9E41D0C932B009316E8 /* GlobalSplitViewController.swift in Sources */,
 				0C979D501D667D3F00FFC49E /* ReviewListVC.swift in Sources */,
 				0C979D5A1D6681A000FFC49E /* ReviewListVC+StoreKit.swift in Sources */,
 				0CA8F9081D2EE73B002F49F1 /* NSNotificationCenter+sugar.swift in Sources */,

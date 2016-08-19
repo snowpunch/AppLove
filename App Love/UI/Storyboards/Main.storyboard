@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="-237" y="206"/>
         </scene>
-        <!--Side Menu View Controller-->
+        <!--Side MenuVC-->
         <scene sceneID="M81-3g-Tw3">
             <objects>
-                <viewController id="SFE-65-t6s" customClass="SideMenuViewController" customModule="App_Love" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="SFE-65-t6s" customClass="SideMenuVC" customModule="App_Love" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oDM-8l-TBi"/>
                         <viewControllerLayoutGuide type="bottom" id="jUi-KE-Ill"/>
@@ -111,7 +111,7 @@
         <!--App Love-->
         <scene sceneID="1jE-tw-2EP">
             <objects>
-                <viewController id="NVk-Cm-fE5" customClass="AppListViewVC" customModule="App_Love" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NVk-Cm-fE5" customClass="AppListVC" customModule="App_Love" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AGQ-wF-zhG"/>
                         <viewControllerLayoutGuide type="bottom" id="6bV-Mn-C7b"/>
@@ -654,10 +654,10 @@
             </objects>
             <point key="canvasLocation" x="2306" y="964"/>
         </scene>
-        <!--Global Split View Controller-->
+        <!--Global SplitVC-->
         <scene sceneID="VuK-iG-V13">
             <objects>
-                <splitViewController id="YeO-fM-KIj" customClass="GlobalSplitViewController" customModule="App_Love" customModuleProvider="target" sceneMemberID="viewController">
+                <splitViewController id="YeO-fM-KIj" customClass="GlobalSplitVC" customModule="App_Love" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="N6z-7V-uz9" kind="relationship" relationship="masterViewController" id="Nap-L7-ilh"/>
                         <segue destination="qfz-5y-zE8" kind="relationship" relationship="detailViewController" id="cB5-UF-G9N"/>
@@ -755,6 +755,6 @@
         <image name="share" width="36" height="36"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1Xj-UA-kmf"/>
+        <segue reference="cB5-UF-G9N"/>
     </inferredMetricsTieBreakers>
 </document>

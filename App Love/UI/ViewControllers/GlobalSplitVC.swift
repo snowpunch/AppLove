@@ -1,5 +1,5 @@
 //
-//  GlobalSplitViewController.swift
+//  GlobalSplitVC.swift
 //  App Love
 //
 //  Created by Woodie Dovich on 2016-06-11.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GlobalSplitViewController: UISplitViewController, UISplitViewControllerDelegate {
+class GlobalSplitVC: UISplitViewController, UISplitViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -12,15 +12,15 @@ import Foundation
 import MessageUI
 
 private extension Selector {
-    static let onTerritoryOptions = #selector(AppListViewVC.onTerritoryOptions)
-    static let onLoadOptions = #selector(AppListViewVC.onLoadOptions)
-    static let onShare = #selector(AppListViewVC.onShare)
-    static let onAskReview = #selector(AppListViewVC.onAskReview)
-    static let onAbout = #selector(AppListViewVC.onAbout)
-    static let onHelp = #selector(AppListViewVC.onHelp)
+    static let onTerritoryOptions = #selector(AppListVC.onTerritoryOptions)
+    static let onLoadOptions = #selector(AppListVC.onLoadOptions)
+    static let onShare = #selector(AppListVC.onShare)
+    static let onAskReview = #selector(AppListVC.onAskReview)
+    static let onAbout = #selector(AppListVC.onAbout)
+    static let onHelp = #selector(AppListVC.onHelp)
 }
 
-extension AppListViewVC {
+extension AppListVC {
     
     func addMenuObservers() {
         NSNotificationCenter.addObserver(self, sel: .onTerritoryOptions, name: Const.sideMenu.territories)
@@ -84,7 +84,7 @@ extension AppListViewVC {
     }
 }
 
-extension AppListViewVC: MFMailComposeViewControllerDelegate {
+extension AppListVC: MFMailComposeViewControllerDelegate {
     
     func displayAppListComposerEmail() {
         if MFMailComposeViewController.canSendMail() {

@@ -1,5 +1,5 @@
 //
-//  AboutViewController.swift
+//  AboutVC.swift
 //  App Love
 //
 //  Created by Woodie Dovich on 2016-04-01.

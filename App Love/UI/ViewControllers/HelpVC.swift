@@ -1,5 +1,5 @@
 //
-//  HelpViewController.swift
+//  HelpVC.swift
 //  App Love
 //
 //  Created by Woodie Dovich on 2016-03-28.

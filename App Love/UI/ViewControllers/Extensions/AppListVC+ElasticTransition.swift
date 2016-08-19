@@ -10,7 +10,7 @@ import Foundation
 import ElasticTransition
 
 // elastic extensions
-extension AppListViewVC {
+extension AppListVC {
 
     func initElasticTransitions(){
         transition.stiffness = 0.7

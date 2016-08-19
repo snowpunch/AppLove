@@ -10,7 +10,7 @@
 
 import UIKit
 
-extension AppListViewVC: UITableViewDataSource {
+extension AppListVC: UITableViewDataSource {
     
     func initTableView() {
         let nib = UINib(nibName: "AppCell", bundle: nil)

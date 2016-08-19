@@ -12,11 +12,11 @@ import UIKit
 import ElasticTransition
 
 private extension Selector {
-    static let onMenuClose = #selector(AppListViewVC.onMenuClose)
-    static let onMenuOpen = #selector(AppListViewVC.onMenuOpen)
+    static let onMenuClose = #selector(AppListVC.onMenuClose)
+    static let onMenuOpen = #selector(AppListVC.onMenuOpen)
 }
 
-class AppListViewVC: UIViewController {
+class AppListVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var hamburgerButton: HamburgerButton!
