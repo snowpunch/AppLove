@@ -25,7 +25,7 @@ class GlobalSplitVC: UISplitViewController, UISplitViewControllerDelegate {
     }
     
     override func awakeFromNib() {
-        self.delegate = self;
+        self.delegate = self
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {

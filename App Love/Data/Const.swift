@@ -26,7 +26,6 @@ struct Const {
         static let reloadData = "reloadData"
         static let allLoadingCompleted = "allLoadingCompleted"
         static let orientationChange = "orientationChange"
-        static let displayToolbar = "displayToolbar"
     }
     
     // NSNotifications - side menu

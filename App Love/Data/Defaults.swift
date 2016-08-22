@@ -14,7 +14,7 @@ class Defaults: NSObject {
     class func setInitialDefaults() {
         let defaults = NSUserDefaults.standardUserDefaults()
         if defaults.objectForKey(Const.defaults.loadAllVersionsKey) == nil {
-            defaults.setBool(true, forKey: Const.defaults.loadAllVersionsKey)
+            defaults.setBool(false, forKey: Const.defaults.loadAllVersionsKey)
         }
         if defaults.objectForKey(Const.defaults.maxPagesToLoadKey) == nil {
             defaults.setInteger(10, forKey: Const.defaults.maxPagesToLoadKey)

@@ -5,6 +5,8 @@
 //  Created by Woodie Dovich on 2016-08-18.
 //  Copyright © 2016 Snowpunch. All rights reserved.
 //
+//  DataSource for review data. Displays user reviews.
+//
 
 import UIKit
 

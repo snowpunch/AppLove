@@ -5,8 +5,18 @@
 //  Created by Woodie Dovich on 2016-08-18.
 //  Copyright © 2016 Snowpunch. All rights reserved.
 //
+//  Territory loading control.
+//  Horrizontal UICollectionView filled with territory flags.
+//  Notifications from loader to visually show loading progress.
+//
 
 import UIKit
+
+private extension Selector {
+    static let finishedLoading = #selector(ReviewListVC.finishedLoading)
+    static let updateLoadingCount = #selector(ReviewListVC.updateLoadingCount)
+    static let startLoading = #selector(ReviewListVC.startLoading)
+}
 
 extension ReviewListVC: UICollectionViewDataSource {
     
@@ -70,8 +80,6 @@ extension ReviewListVC: UICollectionViewDelegateFlowLayout {
 // Territory Loading CollectionView
 extension ReviewListVC {
     
-
-    
     func scrollFlagsToEnd() {
         let finalPos =  ReviewLoadManager.sharedInst.loadStateArray.count - 1
         if finalPos > 0 {
@@ -83,11 +91,22 @@ extension ReviewListVC {
     }
     
     func scrollFlagsToBeginning() {
+        
+        if ReviewLoadManager.sharedInst.loadStateArray.count == 0 {
+            return
+        }
+        
         let finalPos =  0
         let path = NSIndexPath(forItem: finalPos, inSection: 0)
         territoryCollection.scrollToItemAtIndexPath(path, atScrollPosition: UICollectionViewScrollPosition.CenteredHorizontally, animated: true)
     }
-    
+
+    func registerTerritoryNotificationsForLoader() {
+        NSNotificationCenter.addObserver(self,sel: .startLoading, name: Const.load.loadStart)
+        NSNotificationCenter.addObserver(self, sel: .finishedLoading, name: Const.load.allLoadingCompleted)
+        NSNotificationCenter.addObserver(self, sel: .updateLoadingCount, name:Const.load.updateAmount)
+    }
+
     func startLoading() {
         scrollFlagsToBeginning()
     }

@@ -46,7 +46,6 @@ class ReviewLoadManager: NSObject, ProgressDelegate {
         
         let allOperationsFinishedOperation = NSBlockOperation() {
             NSNotificationCenter.post(Const.load.allLoadingCompleted)
-            NSNotificationCenter.post(Const.load.displayToolbar)
         }
         
         if let appId = AppList.sharedInst.getSelectedModel()?.appId {
