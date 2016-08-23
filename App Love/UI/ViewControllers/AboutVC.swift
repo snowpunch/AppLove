@@ -32,7 +32,7 @@ class AboutVC: ElasticModalViewController {
     }
 
     func populateText() {
-        let aboutText = "\nDepending upon time available and how well this app is received some possible upcoming features could include:\n\n - Saving all reviews into Core Data to capture territories that pass the 500 threshold.\n- Highlighting new reviews upon re-loading.\n\nFull source code on Github.\n\nCheers,\nWoodie Dovich\n\n"
+        let aboutText = "\nLet me know what you think of this app!\n\nCheers,\nWoodie Dovich\n\n"
         
         textView.backgroundColor = .clearColor()
         textView.text = aboutText

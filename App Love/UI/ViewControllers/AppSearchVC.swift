@@ -19,7 +19,7 @@ class AppSearchVC: UITableViewController, UISearchBarDelegate {
         super.viewDidLoad()
         setTableStyle()
         searchBar.delegate = self
-        searchBar.placeholder = "ie: Pokemon Go";
+        searchBar.placeholder = "ie: App Name";
         Theme.searchBar(searchBar)
     }
     

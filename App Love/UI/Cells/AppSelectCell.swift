@@ -25,13 +25,14 @@ class AppSelectCell: UITableViewCell {
         }
         
         appModel = model
-        appName.text = model.appName
-        if model.userRatingCount > 0 {
-            ratingsCountLabel.text = "\(model.userRatingCount) total ratings."
-        }
-        else {
-            ratingsCountLabel.text = "0 (or not many) loadable reviews."
-        }
+        appName.text = "Get Reviews"
+        ratingsCountLabel.text = model.appName
+//        if model.userRatingCount > 0 {
+//            ratingsCountLabel.text = "\(model.userRatingCount) total ratings."
+//        }
+//        else {
+//            ratingsCountLabel.text = "0 (or not many) loadable reviews."
+//        }
         
         if SearchList.sharedInst.hasItem(model) {
             self.addSwitch.setOn(true, animated: false)

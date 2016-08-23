@@ -24,8 +24,8 @@ class AppCell: UITableViewCell {
                 appIconImgView.sd_setImageWithURL(url, placeholderImage: UIImage(named:"defaulticon"))
         }
         
-        appNameLabel.text = model.appName
-        companyLabel.text = model.companyName
+        appNameLabel.text = "View Reviews"
+        companyLabel.text = model.appName
         
         if model.averageUserRating != 0 {
              aveRatingLabel.text = "Average Rating: "+String(model.averageUserRating)
