@@ -8,20 +8,49 @@
 //  Global constants.
 //  
 
-class Const {
-    
-    // for NSNotifications
-    static let updateAmount = "updateAmount"
-    static let dataError = "dataError"
-    static let territoryDone = "territoryDone"
-    static let territoryStart = "territoryStarted"
-    static let loadStart = "loadStart"
-    static let reloadData = "reloadData"
-    static let allLoadingCompleted = "allLoadingCompleted"
-    static let orientationChange = "orientationChange"
-    static let displayToolbar = "displayToolbar"
-    
+struct Const {
+
     // app id's
-    static let MusketSmoke = 436684234
-    static let AppLove = 1099336831
+    struct appId {
+        static let MusketSmoke = 436684234
+        static let AppLove = 1099336831
+    }
+    
+    // NSNotifications - loading
+    struct load {
+        static let updateAmount = "updateAmount"
+        static let dataError = "dataError"
+        static let territoryDone = "territoryDone"
+        static let territoryStart = "territoryStarted"
+        static let loadStart = "loadStart"
+        static let reloadData = "reloadData"
+        static let allLoadingCompleted = "allLoadingCompleted"
+        static let orientationChange = "orientationChange"
+    }
+    
+    // NSNotifications - side menu
+    struct sideMenu {
+        static let toggleMenuButton = "toggleMenuButton"
+        static let openMenu = "openMenu"
+        static let closeMenu = "closeMenu"
+        static let territories = "territories"
+        static let loadOptions = "loadOptions"
+        static let translateOptions = "translateOptions"
+        static let share = "share"
+        static let askReview = "askReview"
+        static let help = "help"
+        static let about = "about"
+    }
+    
+    // NSUserDefaults 
+    struct defaults {
+        static let loadAllVersionsKey = "loadAllVersions"
+        static let maxPagesToLoadKey = "maxPagesToLoad"
+    }
+    
+    struct reviewOptions {
+        static let showOptions = "showOptions"
+        static let addFlag = "addFlag"
+        static let removeFlag = "removeFlag"
+    }
 }

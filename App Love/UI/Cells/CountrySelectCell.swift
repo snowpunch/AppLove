@@ -12,14 +12,13 @@ import UIKit
 
 class CountrySelectCell: UITableViewCell {
 
+    @IBOutlet weak var territoryFlagImage: UIImageView!
     @IBOutlet weak var addSwitch: UISwitch!
-    @IBOutlet weak var codeLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
     weak var model:CountryModel?
     
     func setup(model:CountryModel) {
         self.model = model
-        codeLabel.text = model.code
         countryLabel.text = model.country
         
         if model.isSelected {
@@ -27,6 +26,9 @@ class CountrySelectCell: UITableViewCell {
         }
         else {
             self.addSwitch.setOn(false, animated: false)
+        }
+        if let territoryCode = model.code {
+            territoryFlagImage.image = UIImage(named:territoryCode)
         }
     }
     

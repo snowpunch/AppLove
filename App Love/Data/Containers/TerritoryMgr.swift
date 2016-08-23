@@ -13,8 +13,8 @@ import UIKit
 class TerritoryMgr: NSObject {
 
     static let sharedInst = TerritoryMgr()
-    
     private var modelDictionary = [String:CountryModel]()
+    private var defaultTerritories = [String]()
     
     private override init() { // enforce singleton
         super.init()
@@ -33,14 +33,19 @@ class TerritoryMgr: NSObject {
         return modelDictionary.count
     }
 
-    // Default 15 app store selected (out of possible 155)
-    func getDefaultCountryCodes() -> [String] {
-        return ["US","JP","GB","DE","AU","CA","IE","AT","CN","ES","IT","HR","RU","GR","PT"]
-    }
-    
     func setDefaultCountries() {
         let defaultCodes = getDefaultCountryCodes()
         for code in defaultCodes {
+            modelDictionary[code]?.isSelected = true
+        }
+    }
+    
+    func setSelectedTerritories(selectedTerritories:[String]) {
+        
+        for model in self.modelDictionary.values {
+            model.isSelected = false
+        }
+        for code in selectedTerritories {
             modelDictionary[code]?.isSelected = true
         }
     }
@@ -83,5 +88,64 @@ class TerritoryMgr: NSObject {
             return country
         }
         return nil
+    }
+}
+
+// default territories
+extension TerritoryMgr {
+    
+    func getOriginalDefaults() -> [String] {
+        defaultTerritories = ["US","JP","GB","DE","AU","CA","IE","AT","CN","SG","IT","HR","RU","GR","PT"];
+        return defaultTerritories
+    }
+    
+    func selectAllTerritories() {
+        for model in self.modelDictionary.values {
+            model.isSelected = true
+        }
+    }
+    
+    func setOriginalDefaults() {
+        let defaultCodes = getOriginalDefaults()
+        for code in defaultCodes {
+            modelDictionary[code]?.isSelected = true
+        }
+    }
+    
+    // Default 15 app store selected (out of possible 155)
+    func getDefaultCountryCodes() -> [String] {
+        if (load() == false) {
+            defaultTerritories = getOriginalDefaults()
+        }
+        save()
+        return defaultTerritories
+    }
+    
+    func getFilePath() -> String? {
+        if let documentsDirectory = NSFileManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first,
+            let pathWithFileName = documentsDirectory.URLByAppendingPathComponent("defaultTerritories").path {
+            return pathWithFileName
+        }
+        return nil
+    }
+    
+    func save() {
+        if let pathWithFileName = getFilePath() {
+            NSKeyedArchiver.archiveRootObject(defaultTerritories, toFile: pathWithFileName)
+        }
+    }
+    
+    func saveSelectedAsDefault() {
+        defaultTerritories = getSelectedCountryCodes()
+        save()
+    }
+    
+    func load() -> Bool {
+        if let pathWithFileName = getFilePath(),
+            let loadedDefaults = NSKeyedUnarchiver.unarchiveObjectWithFile(pathWithFileName) as? [String] {
+            defaultTerritories = loadedDefaults
+            return true
+        }
+        return false
     }
 }

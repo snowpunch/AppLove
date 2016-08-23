@@ -18,13 +18,18 @@ class ReviewLoadManager: NSObject, ProgressDelegate {
     var loadStates = [String:LoadState]() // loading state for every territory.
     var loadingQueue:NSOperationQueue?
     var firstQuickUpdate:Bool = false
+    var loadStateArray = [LoadState]()
 
     func initializeLoadingStates() {
-        self.loadStates.removeAll()
+        loadStates.removeAll()
+        loadStateArray.removeAll()
         let territories = TerritoryMgr.sharedInst.getSelectedCountryCodes()
         for code in territories {
-            self.loadStates[code] = LoadState(territory: code)
+            let loadState =  LoadState(territory: code)
+            loadStates[code] = loadState
+            loadStateArray.append(loadState)
         }
+        
         self.firstQuickUpdate = false
     }
     
@@ -35,16 +40,12 @@ class ReviewLoadManager: NSObject, ProgressDelegate {
         self.loadingQueue = NSOperationQueue()
         self.loadingQueue?.maxConcurrentOperationCount = 4
         setNotifications()
-        
-        let nc = NSNotificationCenter.defaultCenter()
-        nc.postNotificationName(Const.loadStart, object: nil)
+        NSNotificationCenter.post(Const.load.loadStart)
         
         let countryCodes = TerritoryMgr.sharedInst.getSelectedCountryCodes()
         
         let allOperationsFinishedOperation = NSBlockOperation() {
-            let nc = NSNotificationCenter.defaultCenter()
-            nc.postNotificationName(Const.allLoadingCompleted, object: self)
-            nc.postNotificationName(Const.displayToolbar, object: self)
+            NSNotificationCenter.post(Const.load.allLoadingCompleted)
         }
         
         if let appId = AppList.sharedInst.getSelectedModel()?.appId {
@@ -67,7 +68,7 @@ class ReviewLoadManager: NSObject, ProgressDelegate {
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             let data:[String:AnyObject] = ["territory":country]
             let nc = NSNotificationCenter.defaultCenter()
-            nc.postNotificationName(Const.territoryDone, object:nil, userInfo:data)
+            nc.postNotificationName(Const.load.territoryDone, object:nil, userInfo:data)
         })
     }
     
@@ -78,7 +79,7 @@ class ReviewLoadManager: NSObject, ProgressDelegate {
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             let data:[String:AnyObject] = ["territory":country]
             let nc = NSNotificationCenter.defaultCenter()
-            nc.postNotificationName(Const.territoryStart, object:nil, userInfo:data)
+            nc.postNotificationName(Const.load.territoryStart, object:nil, userInfo:data)
         })
     }
     
@@ -93,7 +94,7 @@ class ReviewLoadManager: NSObject, ProgressDelegate {
                 }
                 let data:[String:AnyObject] = ["error":"error","territory":territory]
                 let nc = NSNotificationCenter.defaultCenter()
-                nc.postNotificationName(Const.dataError, object:nil, userInfo:data)
+                nc.postNotificationName(Const.load.dataError, object:nil, userInfo:data)
             }
             
             if let newReviews = reviews {
@@ -110,9 +111,11 @@ class ReviewLoadManager: NSObject, ProgressDelegate {
                     loadState.error = false
                     let data:[String:AnyObject] = ["loadState":loadState,"territory":territory]
                     let nc = NSNotificationCenter.defaultCenter()
-                    nc.postNotificationName(Const.updateAmount, object:nil, userInfo:data)
+                    nc.postNotificationName(Const.load.updateAmount, object:nil, userInfo:data)
                 }
                 
+                // let the user read something while still loading, 
+                // after the first 99 reviews are loaded - display them.
                 if self.firstQuickUpdate == false && self.reviews.count > 99 {
                     self.updateTable()
                 }
@@ -121,20 +124,17 @@ class ReviewLoadManager: NSObject, ProgressDelegate {
     }
     
     func updateTable() {
-        let nc = NSNotificationCenter.defaultCenter()
-        nc.postNotificationName(Const.reloadData, object: self)
+        NSNotificationCenter.post(Const.load.reloadData)
         self.firstQuickUpdate = true
     }
     
     func setNotifications() {
-        let nc = NSNotificationCenter.defaultCenter()
-        nc.removeObserver(self)
-        nc.addObserver(self, selector: .updateTableData, name: Const.allLoadingCompleted, object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NSNotificationCenter.addObserver(self, sel:.updateTableData, name: Const.load.allLoadingCompleted)
     }
     
     func updateTableData(notification: NSNotification) {
-        let nc = NSNotificationCenter.defaultCenter()
-        nc.postNotificationName(Const.reloadData, object: self)
+        NSNotificationCenter.post(Const.load.reloadData)
     }
     
     func clearReviews() {
@@ -144,6 +144,26 @@ class ReviewLoadManager: NSObject, ProgressDelegate {
     
     func cancelLoading() {
         self.loadingQueue?.cancelAllOperations()
+    }
+    
+    func getNonEmptyTerritories() -> [String] {
+        var emptyArray = [String]()
+        for (territory,loadState) in loadStates {
+            if loadState.count > 0 {
+                emptyArray.append(territory)
+            }
+        }
+        return emptyArray;
+    }
+    
+    func getFlaggedReviews() -> [ReviewModel] {
+        var flaggedReviews = [ReviewModel]()
+        for review in reviews {
+            if review.flag == true {
+                flaggedReviews.append(review)
+            }
+        }
+        return flaggedReviews
     }
 }
 

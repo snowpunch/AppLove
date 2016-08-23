@@ -7,4 +7,5 @@ target 'App Love' do
 	pod 'SwiftyJSON'
 	pod 'SDWebImage', '~>3.7'
 	pod 'SwiftyGlyphs'
+	pod 'ElasticTransition', '~> 3.0.0'
 end
