@@ -17,6 +17,7 @@ DerivedData
 !default.perspectivev3
 xcuserdata
 App Love.xcworkspace/
+Podfile.lock
 
 ## Other
 *.xccheckout
