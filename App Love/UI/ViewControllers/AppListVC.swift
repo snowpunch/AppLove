@@ -54,21 +54,21 @@ class AppListVC: UIViewController {
         self.navigationController?.toolbarHidden = false
     }
     
-    
-    
     // apps to display initially, to check out how the app functions
     func loadDefaultApps () {
         let defaultAppIds = [Const.appId.MusketSmoke, Const.appId.AppLove]
-        
+        var count = 0
         for appId:Int in defaultAppIds {
             AppInfo.get(String(appId)) { (model, succeeded, error) -> Void in
-                
-                // add an app model
-                if let appModel = model {
-                    AppList.sharedInst.addAppModel(appModel)
+                count = count + 1
+                if succeeded {
+                    // add an app model
+                    if let appModel = model {
+                        AppList.sharedInst.addAppModel(appModel)
+                    }
                 }
                 
-                let finishedLoading = (defaultAppIds.count == AppList.sharedInst.appModels.count)
+                let finishedLoading = (defaultAppIds.count == count)
                 if (finishedLoading)
                 {
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in

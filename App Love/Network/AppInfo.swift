@@ -20,10 +20,16 @@ class AppInfo {
                 
             case .Success(let data):
                 let rootDic = data as! [String : AnyObject]
-                if let resultsArray = rootDic["results"] as? [AnyObject],
-                    let finalDic = resultsArray[0] as? [String: AnyObject] {
-                        let appStoreModel = AppModel(resultsDic:finalDic)
-                        completion(model: appStoreModel, succeeded: true , error: nil)
+                if let resultsArray = rootDic["results"] as? [AnyObject] {
+                    if resultsArray.count > 0 {
+                        if let finalDic = resultsArray[0] as? [String: AnyObject] {
+                            let appStoreModel = AppModel(resultsDic:finalDic)
+                            completion(model: appStoreModel, succeeded: true , error: nil)
+                        }
+                    }
+                    else {
+                         completion(model: nil, succeeded: false , error: nil)
+                    }
                 }
                 
             case .Failure(let error):
