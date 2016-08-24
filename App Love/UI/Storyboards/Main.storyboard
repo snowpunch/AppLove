@@ -240,7 +240,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Ratings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYA-NB-boI">
-                                            <rect key="frame" x="137" y="29" width="99" height="14"/>
+                                            <rect key="frame" x="137" y="29" width="436" height="14"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -264,6 +264,7 @@
                                         <constraint firstItem="LYA-NB-boI" firstAttribute="leading" secondItem="PDZ-lg-Bwt" secondAttribute="trailing" constant="8" id="kuR-dJ-Xrl"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="PDZ-lg-Bwt" secondAttribute="bottom" constant="2" id="n5u-MY-UJ5"/>
                                         <constraint firstItem="MtA-cS-t8B" firstAttribute="leading" secondItem="Ako-wO-vaS" secondAttribute="leadingMargin" id="o2h-uC-PlR"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="LYA-NB-boI" secondAttribute="trailing" constant="19" id="q9n-pb-xnH"/>
                                         <constraint firstItem="MtA-cS-t8B" firstAttribute="top" secondItem="C5u-0X-Xa1" secondAttribute="bottom" constant="8" id="r6o-5p-FvP"/>
                                         <constraint firstItem="MtA-cS-t8B" firstAttribute="leading" secondItem="PDZ-lg-Bwt" secondAttribute="trailing" constant="8" id="s5S-dR-NMl"/>
                                         <constraint firstItem="C5u-0X-Xa1" firstAttribute="top" secondItem="Ako-wO-vaS" secondAttribute="topMargin" id="uy9-ar-Zbs"/>
