@@ -24,6 +24,7 @@ class AppCell: UITableViewCell {
                 appIconImgView.sd_setImageWithURL(url, placeholderImage: UIImage(named:"defaulticon"))
         }
         
+        // changes here are in flux as Apple decides what is ok.
         appNameLabel.text = "View Reviews"
         companyLabel.text = model.appName
         
