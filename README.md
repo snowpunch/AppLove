@@ -13,9 +13,9 @@
 - Animated views and side menu.
 
 ## Some Details
-- Swift 2.2.1 (via Xcode 7.3.1)
+- Swift.
 - Multithreaded downloader via NSOperation.
-- MenuButton (IBDesignable) added glyph animations (and icon) designed to compliment ElasticTransition side menu opening animation.
+- MenuButton (IBDesignable) added animations to glyphs and icons designed to compliment the ElasticTransition side menu opening animation.
 - Text animations done via my own cocoapod - SwiftyGlyphs.
 
 ## Cocoapods used
