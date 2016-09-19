@@ -1,5 +1,7 @@
 ![alt tag](https://github.com/snowpunch/AppLove/blob/master/apploveicon.png?raw=true) 
-# App Love
+## App Love
+
+- Note: Swift Version 2.2 currently, will update to Swift 3/XCode 8 after cocoapods are updated to Swift 3.
 
 ## Features
 - View **iOS Customer App Reviews** across **ALL territories**.
